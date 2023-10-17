@@ -1,0 +1,8 @@
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icons/gest-car-logo-ios.png"
+  image_path_android: "assets/icons/gest-car-logo-android-round.png"
+  image_path_ios: "assets/icons/gest-car-logo-ios.png"
+  adaptive_icon_background: "#FF004AAD"
+  adaptive_icon_foreground: "assets/icons/gest-car-logo-android.png"

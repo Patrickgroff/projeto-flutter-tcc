@@ -1,0 +1,37 @@
+
+
+name: common_widgets
+description: Flutter package which share common widgets with the project.
+version: 0.0.1
+publish_to: none
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  
+  path: ^1.8.2
+  equatable: ^2.0.0
+  shimmer: ^3.0.0
+  reactive_forms: ^16.0.4
+  intl: ^0.18.0
+  bloc: ^8.0.3
+  flutter_bloc: ^8.0.1
+  mime: ^1.0.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. The lint set provided by the package is
+  # activated in the `analysis_options.yaml` file located at the root of your
+  # package. See that file for information about deactivating specific lint
+  # rules and activating additional ones.
+  flutter_lints: ^2.0.0
+
+flutter:

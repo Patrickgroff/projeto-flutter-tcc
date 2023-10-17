@@ -1,0 +1,114 @@
+{
+	// See https://go.microsoft.com/fwlink/?LinkId=733558
+	// for the documentation about the tasks.json format
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "compile flutter generator",
+			"command": "dart",
+			"args": [
+				"run",
+				"build_runner",
+				"build",
+				"--delete-conflicting-outputs"
+			],
+			"problemMatcher": [],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},
+		{
+			"type": "shell",
+			"label": "watch flutter generator",
+			"command": "dart",
+			"args": [
+				"run",
+				"build_runner",
+				"watch",
+				"--delete-conflicting-outputs"
+			],
+			"problemMatcher": [],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},
+		{
+			"type": "shell",
+			"label": "recreate app icons",
+			"command": "dart",
+			"args": [
+				"run",
+				"flutter_launcher_icons:main"
+			],
+			"problemMatcher": [],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},
+		{
+			"label": "clean build",
+			"type": "shell",
+			"command": "flutter",
+			"args": [
+				"clean"
+			]
+		},
+		{
+			"label": "pub get",
+			"type": "shell",
+			"command": "flutter",
+			"args": [
+				"pub",
+				"get"
+			]
+		},
+		{
+			"label": "Android build",
+			"type": "shell",
+			"command": "flutter",
+			"args": [
+				"build",
+				"appbundle",
+				"--release",
+				"--obfuscate",
+				"--split-debug-info=./debug/android",
+				"-t",
+				"lib/production.dart",
+				"--tree-shake-icons"
+			]
+		},
+		{
+			"label": "IOS build",
+			"type": "shell",
+			"command": "flutter",
+			"args": [
+				"build",
+				"ipa",
+				"--obfuscate",
+				"--split-debug-info=./debug/ios",
+				"-t",
+				"lib/production.dart",
+				"--tree-shake-icons"
+			]
+		},
+		{
+			"label": "Production build",
+			"dependsOrder": "sequence",
+			"dependsOn": [
+				"clean build",
+				"pub get",
+				"Android build",
+				"IOS build"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": []
+		}
+	]
+}

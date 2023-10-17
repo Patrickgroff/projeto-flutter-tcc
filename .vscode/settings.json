@@ -1,0 +1,17 @@
+{
+	"dart.lineLength": 190,
+	"[dart]": {
+		"editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        },
+		"editor.rulers": [
+			190
+		],
+	},
+	"files.exclude": {
+    "**/*.g.dart": true,
+    "**/*.gr.dart": true,
+    "**/*.freezed.dart": true,
+  },
+}
