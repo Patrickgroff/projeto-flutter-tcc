@@ -22,12 +22,76 @@ abstract class RegisterSingletonModule {
           //TODO Adicionar os scripts de criação das tabelas
           if (version == 1) {
             await db.execute(
-              '''create table IF NOT EXISTS user(
-                id INTEGER PRIMARY KEY,
-                nome TEXT not NULL,
-                telefone TEXT not NULL,
-                senha TEXT not NULL
-              )''',
+              '''
+CREATE TABLE IF NOT EXISTS usuario (
+    id       INTEGER PRIMARY KEY
+                     NOT NULL,
+    telefone TEXT    NOT NULL,
+    senha    TEXT    NOT NULL,
+    nome     TEXT    NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS veiculo (
+    id        INTEGER PRIMARY KEY
+                      NOT NULL,
+    veiculo   TEXT    NOT NULL,
+    apelido   TEXT    NOT NULL,
+    marca     TEXT    NOT NULL,
+    ano       INTEGER NOT NULL,
+    placa     TEXT    NOT NULL,
+    odometro  REAL    NOT NULL,
+    usuarioId INTEGER CONSTRAINT fk_veiculo_usuarioId_usuario_id REFERENCES usuario (id) 
+                      NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS abastecimento (
+    id              INTEGER PRIMARY KEY
+                            NOT NULL,
+    data            TEXT    NOT NULL,
+    odometro        REAL,
+    tipoCombustivel TEXT,
+    valor           REAL    NOT NULL,
+    litros          REAL    NOT NULL,
+    obervacao       TEXT,
+    veiculoId       INTEGER CONSTRAINT fk_abastecimento_veiculoId_veiculo_id REFERENCES veiculo (id) 
+                            NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS despesa (
+    id          INTEGER PRIMARY KEY
+                        NOT NULL,
+    data        TEXT    NOT NULL,
+    odometro    REAL,
+    tipoDespesa TEXT,
+    valor       REAL    NOT NULL,
+    obervacao   TEXT,
+    veiculoId   INTEGER CONSTRAINT fk_despesa_veiculoId_veiculo_id REFERENCES veiculo (id) 
+                        NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS receita (
+    id          INTEGER PRIMARY KEY
+                        NOT NULL,
+    data        TEXT    NOT NULL,
+    odometro    REAL,
+    valor       REAL    NOT NULL,
+    tipoReceita TEXT,
+    obervacao   TEXT,
+    veiculoId   INTEGER CONSTRAINT fk_receita_veiculoId_veiculo_id REFERENCES veiculo (id) 
+                        NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS servico (
+    id          INTEGER PRIMARY KEY
+                        NOT NULL,
+    data        TEXT    NOT NULL,
+    odometro    REAL,
+    tipoServico TEXT,
+    valor       REAL    NOT NULL,
+    observacao  TEXT,
+    veiculoId   INTEGER CONSTRAINT fk_servico_veiculoId_veiculo_id REFERENCES veiculo (id) 
+                        NOT NULL
+);''',
             );
           }
         },

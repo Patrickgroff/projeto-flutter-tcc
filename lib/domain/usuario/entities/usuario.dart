@@ -1,19 +1,19 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'user.freezed.dart';
-part 'user.g.dart';
+part 'usuario.freezed.dart';
+part 'usuario.g.dart';
 
 @freezed
-class User with _$User {
-  const User._();
+class Usuario with _$Usuario {
+  const Usuario._();
 
   @JsonSerializable()
-  const factory User({
+  const factory Usuario({
     @JsonKey(includeIfNull: false) required final int id,
     @JsonKey(includeIfNull: false) required final String nome,
     @JsonKey(includeIfNull: false) required final String telefone,
     @JsonKey(includeIfNull: false) required final String senha,
-  }) = _User;
+  }) = _Usuario;
 
-  factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
+  factory Usuario.fromJson(Map<String, dynamic> json) => _$UsuarioFromJson(json);
 }

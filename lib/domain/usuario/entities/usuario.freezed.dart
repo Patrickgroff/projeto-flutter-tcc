@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'user.dart';
+part of 'usuario.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,12 +14,12 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-User _$UserFromJson(Map<String, dynamic> json) {
-  return _User.fromJson(json);
+Usuario _$UsuarioFromJson(Map<String, dynamic> json) {
+  return _Usuario.fromJson(json);
 }
 
 /// @nodoc
-mixin _$User {
+mixin _$Usuario {
   @JsonKey(includeIfNull: false)
   int get id => throw _privateConstructorUsedError;
   @JsonKey(includeIfNull: false)
@@ -31,13 +31,13 @@ mixin _$User {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $UserCopyWith<User> get copyWith => throw _privateConstructorUsedError;
+  $UsuarioCopyWith<Usuario> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $UserCopyWith<$Res> {
-  factory $UserCopyWith(User value, $Res Function(User) then) =
-      _$UserCopyWithImpl<$Res, User>;
+abstract class $UsuarioCopyWith<$Res> {
+  factory $UsuarioCopyWith(Usuario value, $Res Function(Usuario) then) =
+      _$UsuarioCopyWithImpl<$Res, Usuario>;
   @useResult
   $Res call(
       {@JsonKey(includeIfNull: false) int id,
@@ -47,9 +47,9 @@ abstract class $UserCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$UserCopyWithImpl<$Res, $Val extends User>
-    implements $UserCopyWith<$Res> {
-  _$UserCopyWithImpl(this._value, this._then);
+class _$UsuarioCopyWithImpl<$Res, $Val extends Usuario>
+    implements $UsuarioCopyWith<$Res> {
+  _$UsuarioCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -86,10 +86,10 @@ class _$UserCopyWithImpl<$Res, $Val extends User>
 }
 
 /// @nodoc
-abstract class _$$UserImplCopyWith<$Res> implements $UserCopyWith<$Res> {
-  factory _$$UserImplCopyWith(
-          _$UserImpl value, $Res Function(_$UserImpl) then) =
-      __$$UserImplCopyWithImpl<$Res>;
+abstract class _$$UsuarioImplCopyWith<$Res> implements $UsuarioCopyWith<$Res> {
+  factory _$$UsuarioImplCopyWith(
+          _$UsuarioImpl value, $Res Function(_$UsuarioImpl) then) =
+      __$$UsuarioImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -100,10 +100,11 @@ abstract class _$$UserImplCopyWith<$Res> implements $UserCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$UserImplCopyWithImpl<$Res>
-    extends _$UserCopyWithImpl<$Res, _$UserImpl>
-    implements _$$UserImplCopyWith<$Res> {
-  __$$UserImplCopyWithImpl(_$UserImpl _value, $Res Function(_$UserImpl) _then)
+class __$$UsuarioImplCopyWithImpl<$Res>
+    extends _$UsuarioCopyWithImpl<$Res, _$UsuarioImpl>
+    implements _$$UsuarioImplCopyWith<$Res> {
+  __$$UsuarioImplCopyWithImpl(
+      _$UsuarioImpl _value, $Res Function(_$UsuarioImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -114,7 +115,7 @@ class __$$UserImplCopyWithImpl<$Res>
     Object? telefone = null,
     Object? senha = null,
   }) {
-    return _then(_$UserImpl(
+    return _then(_$UsuarioImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -138,16 +139,16 @@ class __$$UserImplCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable()
-class _$UserImpl extends _User {
-  const _$UserImpl(
+class _$UsuarioImpl extends _Usuario {
+  const _$UsuarioImpl(
       {@JsonKey(includeIfNull: false) required this.id,
       @JsonKey(includeIfNull: false) required this.nome,
       @JsonKey(includeIfNull: false) required this.telefone,
       @JsonKey(includeIfNull: false) required this.senha})
       : super._();
 
-  factory _$UserImpl.fromJson(Map<String, dynamic> json) =>
-      _$$UserImplFromJson(json);
+  factory _$UsuarioImpl.fromJson(Map<String, dynamic> json) =>
+      _$$UsuarioImplFromJson(json);
 
   @override
   @JsonKey(includeIfNull: false)
@@ -164,14 +165,14 @@ class _$UserImpl extends _User {
 
   @override
   String toString() {
-    return 'User(id: $id, nome: $nome, telefone: $telefone, senha: $senha)';
+    return 'Usuario(id: $id, nome: $nome, telefone: $telefone, senha: $senha)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$UserImpl &&
+            other is _$UsuarioImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.nome, nome) || other.nome == nome) &&
             (identical(other.telefone, telefone) ||
@@ -186,26 +187,27 @@ class _$UserImpl extends _User {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$UserImplCopyWith<_$UserImpl> get copyWith =>
-      __$$UserImplCopyWithImpl<_$UserImpl>(this, _$identity);
+  _$$UsuarioImplCopyWith<_$UsuarioImpl> get copyWith =>
+      __$$UsuarioImplCopyWithImpl<_$UsuarioImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$UserImplToJson(
+    return _$$UsuarioImplToJson(
       this,
     );
   }
 }
 
-abstract class _User extends User {
-  const factory _User(
-      {@JsonKey(includeIfNull: false) required final int id,
-      @JsonKey(includeIfNull: false) required final String nome,
-      @JsonKey(includeIfNull: false) required final String telefone,
-      @JsonKey(includeIfNull: false) required final String senha}) = _$UserImpl;
-  const _User._() : super._();
+abstract class _Usuario extends Usuario {
+  const factory _Usuario(
+          {@JsonKey(includeIfNull: false) required final int id,
+          @JsonKey(includeIfNull: false) required final String nome,
+          @JsonKey(includeIfNull: false) required final String telefone,
+          @JsonKey(includeIfNull: false) required final String senha}) =
+      _$UsuarioImpl;
+  const _Usuario._() : super._();
 
-  factory _User.fromJson(Map<String, dynamic> json) = _$UserImpl.fromJson;
+  factory _Usuario.fromJson(Map<String, dynamic> json) = _$UsuarioImpl.fromJson;
 
   @override
   @JsonKey(includeIfNull: false)
@@ -221,6 +223,6 @@ abstract class _User extends User {
   String get senha;
   @override
   @JsonKey(ignore: true)
-  _$$UserImplCopyWith<_$UserImpl> get copyWith =>
+  _$$UsuarioImplCopyWith<_$UsuarioImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
