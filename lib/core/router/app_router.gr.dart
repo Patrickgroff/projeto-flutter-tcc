@@ -15,19 +15,51 @@ abstract class _$AppRouter extends RootStackRouter {
 
   @override
   final Map<String, PageFactory> pagesMap = {
+    LinhaDoTempoRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const LinhaDoTempoPage(),
+      );
+    },
     LoginRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const LoginPage(),
       );
     },
-    RegisterRoute.name: (routeData) {
+    RegistrarAbastecimentoRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const RegisterPage(),
+        child: const RegistrarAbastecimentoPage(),
+      );
+    },
+    RegistrarUsuarioRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const RegistrarUsuarioPage(),
+      );
+    },
+    RegistrarVeiculoRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const RegistrarVeiculoPage(),
       );
     },
   };
+}
+
+/// generated route for
+/// [LinhaDoTempoPage]
+class LinhaDoTempoRoute extends PageRouteInfo<void> {
+  const LinhaDoTempoRoute({List<PageRouteInfo>? children})
+      : super(
+          LinhaDoTempoRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'LinhaDoTempoRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
 }
 
 /// generated route for
@@ -45,15 +77,43 @@ class LoginRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [RegisterPage]
-class RegisterRoute extends PageRouteInfo<void> {
-  const RegisterRoute({List<PageRouteInfo>? children})
+/// [RegistrarAbastecimentoPage]
+class RegistrarAbastecimentoRoute extends PageRouteInfo<void> {
+  const RegistrarAbastecimentoRoute({List<PageRouteInfo>? children})
       : super(
-          RegisterRoute.name,
+          RegistrarAbastecimentoRoute.name,
           initialChildren: children,
         );
 
-  static const String name = 'RegisterRoute';
+  static const String name = 'RegistrarAbastecimentoRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [RegistrarUsuarioPage]
+class RegistrarUsuarioRoute extends PageRouteInfo<void> {
+  const RegistrarUsuarioRoute({List<PageRouteInfo>? children})
+      : super(
+          RegistrarUsuarioRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'RegistrarUsuarioRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [RegistrarVeiculoPage]
+class RegistrarVeiculoRoute extends PageRouteInfo<void> {
+  const RegistrarVeiculoRoute({List<PageRouteInfo>? children})
+      : super(
+          RegistrarVeiculoRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'RegistrarVeiculoRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }

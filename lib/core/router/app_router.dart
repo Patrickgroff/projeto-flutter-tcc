@@ -1,6 +1,9 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:gest_car/application/linha_do_tempo/page/linha_do_tempo.page.dart';
 import 'package:gest_car/application/login/pages/login.page.dart';
-import 'package:gest_car/application/register/pages/register.page.dart';
+import 'package:gest_car/application/registrar_abastecimento/page/registrar_abastecimento.page.dart';
+import 'package:gest_car/application/registrar_usuario/page/registrar_usuario.page.dart';
+import 'package:gest_car/application/registrar_veiculo/page/registrar_veiculo.page.dart';
 import 'package:injectable/injectable.dart';
 
 part 'app_router.gr.dart';
@@ -11,6 +14,9 @@ class AppRouter extends _$AppRouter {
   @override
   List<AutoRoute> get routes => [
         AutoRoute(page: LoginRoute.page, initial: true),
-        AutoRoute(page: RegisterRoute.page),
+        AutoRoute(page: RegistrarVeiculoRoute.page),
+        AutoRoute(page: RegistrarUsuarioRoute.page),
+        AutoRoute(page: LinhaDoTempoRoute.page),
+        AutoRoute(page: RegistrarAbastecimentoRoute.page),
       ];
 }

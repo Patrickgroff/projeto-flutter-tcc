@@ -129,7 +129,7 @@ class LoginPage extends StatelessWidget {
                               text: 'Cadastre-se', style: TextStyle(color: theme.colorScheme.primary, fontWeight: FontWeight.bold),
 
                               ///TODO Ir para tela de cadastro,
-                              recognizer: TapGestureRecognizer()..onTap = () => context.router.push(const RegisterRoute()),
+                              recognizer: TapGestureRecognizer()..onTap = () => context.router.push(const RegistrarUsuarioRoute()),
                             )
                           ]),
                         ),
