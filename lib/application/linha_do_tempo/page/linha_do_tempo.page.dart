@@ -13,14 +13,25 @@ class LinhaDoTempoPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: const Text('Linha Do Tempo')),
-        body: BlocProvider(
-          create: (_) => getIt<LinhaDoTempoBloc>(),
-          child: Container(
-            child: Center(
-              child: ElevatedButton(onPressed: () => context.router.push(RegistrarAbastecimentoRoute()), child: Text("Adicionar Abastecimento")),
-            ),
+      appBar: AppBar(title: const Text('Linha Do Tempo')),
+      body: BlocProvider(
+        create: (_) => getIt<LinhaDoTempoBloc>(),
+        child: Center(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              ElevatedButton(
+                  onPressed: () => context.router.push(RegistrarAbastecimentoRoute()),
+                  child: const Text(
+                    "Adicionar Abastecimento",
+                  )),
+              ElevatedButton(onPressed: () => context.router.push(RegistrarDespesaRoute()), child: const Text("Adicionar Despesa")),
+              ElevatedButton(onPressed: () => context.router.push(RegistrarServicoRoute()), child: const Text("Adicionar Serviço")),
+              ElevatedButton(onPressed: () => context.router.push(RegistrarReceitaRoute()), child: const Text("Adicionar Receita")),
+            ],
           ),
-        ));
+        ),
+      ),
+    );
   }
 }

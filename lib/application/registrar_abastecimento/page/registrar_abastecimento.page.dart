@@ -12,7 +12,7 @@ class RegistrarAbastecimentoPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: const Text('RegistrarAbastecimento')),
+        appBar: AppBar(title: const Text('Registrar Abastecimento')),
         body: BlocProvider(
           create: (_) => getIt<RegistrarAbastecimentoBloc>(),
           child: Container(),
