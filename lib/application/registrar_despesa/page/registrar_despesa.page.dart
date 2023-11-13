@@ -14,8 +14,46 @@ class RegistrarDespesaPage extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(title: const Text('Registrar Despesa')),
         body: BlocProvider(
-          create: (_) => getIt<RegistrarDespesaBloc>(),
-          child: Container(),
-        ));
+            create: (_) => getIt<RegistrarDespesaBloc>(),
+            child: ListView(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
+                      TextField(
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(),
+                          labelText: 'Data',
+                        ),
+                      ),
+                      TextField(
+                        keyboardType: TextInputType.numberWithOptions(decimal: true),
+                        decoration: InputDecoration(border: OutlineInputBorder(), labelText: 'Odômetro'),
+                      ),
+                      TextField(
+                        decoration: InputDecoration(border: OutlineInputBorder(), labelText: 'Tipo de Despesa'),
+                      ),
+                      TextField(
+                        keyboardType: TextInputType.numberWithOptions(decimal: true),
+                        decoration: InputDecoration(border: OutlineInputBorder(), labelText: 'Valor'),
+                      ),
+                      TextField(
+                        decoration: InputDecoration(border: OutlineInputBorder(), labelText: 'Observação'),
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          ElevatedButton(
+                            onPressed: () => {},
+                            child: Text('Concluir'),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+              ],
+            )));
   }
 }

@@ -15,6 +15,12 @@ abstract class _$AppRouter extends RootStackRouter {
 
   @override
   final Map<String, PageFactory> pagesMap = {
+    EditarUsuarioRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const EditarUsuarioPage(),
+      );
+    },
     LinhaDoTempoRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -63,7 +69,27 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const RegistrarVeiculoPage(),
       );
     },
+    VeiculosRegistradosRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const VeiculosRegistradosPage(),
+      );
+    },
   };
+}
+
+/// generated route for
+/// [EditarUsuarioPage]
+class EditarUsuarioRoute extends PageRouteInfo<void> {
+  const EditarUsuarioRoute({List<PageRouteInfo>? children})
+      : super(
+          EditarUsuarioRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'EditarUsuarioRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
 }
 
 /// generated route for
@@ -174,6 +200,20 @@ class RegistrarVeiculoRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'RegistrarVeiculoRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [VeiculosRegistradosPage]
+class VeiculosRegistradosRoute extends PageRouteInfo<void> {
+  const VeiculosRegistradosRoute({List<PageRouteInfo>? children})
+      : super(
+          VeiculosRegistradosRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'VeiculosRegistradosRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }

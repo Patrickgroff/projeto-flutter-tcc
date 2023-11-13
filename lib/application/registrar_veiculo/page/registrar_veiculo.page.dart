@@ -15,10 +15,50 @@ class RegistrarVeiculoPage extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(title: const Text('Registrar Veículo')),
         body: BlocProvider(
-          create: (_) => getIt<RegistrarVeiculoBloc>(),
-          child: Center(
-            child: ElevatedButton(onPressed: () => context.router.push(LinhaDoTempoRoute()), child: Text("Linha do Tempo")),
-          ),
-        ));
+            create: (_) => getIt<RegistrarVeiculoBloc>(),
+            child: ListView(
+              children: [
+                Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: [
+                        TextField(
+                            decoration: InputDecoration(
+                          labelText: 'Veículo',
+                        )),
+                        TextField(
+                            decoration: InputDecoration(
+                          labelText: 'Apelido',
+                        )),
+                        TextField(
+                            decoration: InputDecoration(
+                          labelText: 'Marca',
+                        )),
+                        TextField(
+                            decoration: InputDecoration(
+                          labelText: 'Ano',
+                        )),
+                        TextField(
+                            decoration: InputDecoration(
+                          labelText: 'Placa',
+                        )),
+                        TextField(
+                            decoration: InputDecoration(
+                          labelText: 'Volume do Tanque',
+                        )),
+                        TextField(
+                            decoration: InputDecoration(
+                          labelText: 'Odômetro',
+                        )),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            ElevatedButton(onPressed: () => context.router.push(LinhaDoTempoRoute()), child: Text("Concluir")),
+                          ],
+                        ),
+                      ],
+                    )),
+              ],
+            )));
   }
 }

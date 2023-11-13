@@ -28,6 +28,8 @@ class LinhaDoTempoPage extends StatelessWidget {
               ElevatedButton(onPressed: () => context.router.push(RegistrarDespesaRoute()), child: const Text("Adicionar Despesa")),
               ElevatedButton(onPressed: () => context.router.push(RegistrarServicoRoute()), child: const Text("Adicionar Serviço")),
               ElevatedButton(onPressed: () => context.router.push(RegistrarReceitaRoute()), child: const Text("Adicionar Receita")),
+              ElevatedButton(onPressed: () => context.router.push(VeiculosRegistradosRoute()), child: const Text("Veículos Cadastrados")),
+              ElevatedButton(onPressed: () => context.router.push(EditarUsuarioRoute()), child: const Text("Editar Usuario")),
             ],
           ),
         ),
