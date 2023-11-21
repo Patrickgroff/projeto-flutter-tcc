@@ -11,6 +11,10 @@ abstract class IUsuarioRepository {
   /// caso retorno <code>null</code> não foi encontrado um usuario com os parametros enviados
   Future<Usuario?> findUsuario(String telefone, String senha);
 
+  /// verifica se o telefone passado como parametro ja está cadastrado no banco de dados
+  /// retorna <code>true</code> se existe e <code>false</code> caso não encontre.
+  Future<bool> findPhoneNumber(String telefone);
+
   /// salva o id do usuario passado como parametro na sessão para identificar o
   /// usuario que esta logado na aplicação para manter a
   /// sessão mesmo apos o usuario fechar o aplicativo e entrar novamente

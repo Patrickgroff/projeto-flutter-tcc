@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:flutter/material.dart';
 import 'package:gest_car/application/editar_usuario/page/editar_usuario.page.dart';
 import 'package:gest_car/application/linha_do_tempo/page/linha_do_tempo.page.dart';
 import 'package:gest_car/application/login/pages/login.page.dart';

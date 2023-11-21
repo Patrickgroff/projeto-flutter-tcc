@@ -9,10 +9,10 @@ class Usuario with _$Usuario {
 
   @JsonSerializable()
   const factory Usuario({
-    @JsonKey(includeIfNull: false) required final int id,
-    @JsonKey(includeIfNull: false) required final String nome,
-    @JsonKey(includeIfNull: false) required final String telefone,
-    @JsonKey(includeIfNull: false) required final String senha,
+    @JsonKey(includeIfNull: false) final int? id,
+    @JsonKey(includeIfNull: false) final String? nome,
+    @JsonKey(includeIfNull: false) final String? telefone,
+    @JsonKey(includeIfNull: false) final String? senha,
   }) = _Usuario;
 
   factory Usuario.fromJson(Map<String, dynamic> json) => _$UsuarioFromJson(json);

@@ -14,7 +14,7 @@ class UsuarioDBDataSource {
     return id > 0 ? usuario.copyWith(id: id) : null;
   }
 
-  Future<bool> updateUsuario(Usuario usuario, int usuarioId) async {
+  Future<bool> updateUsuario(Usuario usuario, int? usuarioId) async {
     final result = await _db.update(table, usuario.toJson(), where: "id = ?", whereArgs: [usuarioId]);
     return result > 0;
   }
@@ -22,6 +22,11 @@ class UsuarioDBDataSource {
   Future<Usuario?> findUsuario(String telefone, String senha) async {
     final result = await _db.query(table, where: "telefone = ? and senha = ?", whereArgs: [telefone, senha]);
     return result.isEmpty ? null : Usuario.fromJson(result.first);
+  }
+
+  Future<bool> findPhoneNumber(String telefone) async {
+    final result = await _db.query(table, where: "telefone = ?", whereArgs: [telefone]);
+    return result.isNotEmpty;
   }
 
   Future<Usuario?> usuarioById(int usuarioId) async {

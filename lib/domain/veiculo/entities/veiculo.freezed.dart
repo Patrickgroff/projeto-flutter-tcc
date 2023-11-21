@@ -21,21 +21,23 @@ Veiculo _$VeiculoFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Veiculo {
   @JsonKey(includeIfNull: false)
-  int get id => throw _privateConstructorUsedError;
+  int? get id => throw _privateConstructorUsedError;
   @JsonKey(includeIfNull: false)
-  String get veiculo => throw _privateConstructorUsedError;
+  String? get veiculo => throw _privateConstructorUsedError;
   @JsonKey(includeIfNull: false)
-  String get apelido => throw _privateConstructorUsedError;
+  String? get apelido => throw _privateConstructorUsedError;
   @JsonKey(includeIfNull: false)
-  String get marca => throw _privateConstructorUsedError;
+  String? get marca => throw _privateConstructorUsedError;
   @JsonKey(includeIfNull: false)
-  int get ano => throw _privateConstructorUsedError;
+  int? get ano => throw _privateConstructorUsedError;
   @JsonKey(includeIfNull: false)
-  String get placa => throw _privateConstructorUsedError;
+  String? get placa => throw _privateConstructorUsedError;
   @JsonKey(includeIfNull: false)
-  double get odometro => throw _privateConstructorUsedError;
+  double? get volumeTanque => throw _privateConstructorUsedError;
   @JsonKey(includeIfNull: false)
-  int get usuarioId => throw _privateConstructorUsedError;
+  double? get odometro => throw _privateConstructorUsedError;
+  @JsonKey(includeIfNull: false)
+  int? get usuarioId => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -48,14 +50,15 @@ abstract class $VeiculoCopyWith<$Res> {
       _$VeiculoCopyWithImpl<$Res, Veiculo>;
   @useResult
   $Res call(
-      {@JsonKey(includeIfNull: false) int id,
-      @JsonKey(includeIfNull: false) String veiculo,
-      @JsonKey(includeIfNull: false) String apelido,
-      @JsonKey(includeIfNull: false) String marca,
-      @JsonKey(includeIfNull: false) int ano,
-      @JsonKey(includeIfNull: false) String placa,
-      @JsonKey(includeIfNull: false) double odometro,
-      @JsonKey(includeIfNull: false) int usuarioId});
+      {@JsonKey(includeIfNull: false) int? id,
+      @JsonKey(includeIfNull: false) String? veiculo,
+      @JsonKey(includeIfNull: false) String? apelido,
+      @JsonKey(includeIfNull: false) String? marca,
+      @JsonKey(includeIfNull: false) int? ano,
+      @JsonKey(includeIfNull: false) String? placa,
+      @JsonKey(includeIfNull: false) double? volumeTanque,
+      @JsonKey(includeIfNull: false) double? odometro,
+      @JsonKey(includeIfNull: false) int? usuarioId});
 }
 
 /// @nodoc
@@ -71,48 +74,53 @@ class _$VeiculoCopyWithImpl<$Res, $Val extends Veiculo>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? veiculo = null,
-    Object? apelido = null,
-    Object? marca = null,
-    Object? ano = null,
-    Object? placa = null,
-    Object? odometro = null,
-    Object? usuarioId = null,
+    Object? id = freezed,
+    Object? veiculo = freezed,
+    Object? apelido = freezed,
+    Object? marca = freezed,
+    Object? ano = freezed,
+    Object? placa = freezed,
+    Object? volumeTanque = freezed,
+    Object? odometro = freezed,
+    Object? usuarioId = freezed,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      veiculo: null == veiculo
+              as int?,
+      veiculo: freezed == veiculo
           ? _value.veiculo
           : veiculo // ignore: cast_nullable_to_non_nullable
-              as String,
-      apelido: null == apelido
+              as String?,
+      apelido: freezed == apelido
           ? _value.apelido
           : apelido // ignore: cast_nullable_to_non_nullable
-              as String,
-      marca: null == marca
+              as String?,
+      marca: freezed == marca
           ? _value.marca
           : marca // ignore: cast_nullable_to_non_nullable
-              as String,
-      ano: null == ano
+              as String?,
+      ano: freezed == ano
           ? _value.ano
           : ano // ignore: cast_nullable_to_non_nullable
-              as int,
-      placa: null == placa
+              as int?,
+      placa: freezed == placa
           ? _value.placa
           : placa // ignore: cast_nullable_to_non_nullable
-              as String,
-      odometro: null == odometro
+              as String?,
+      volumeTanque: freezed == volumeTanque
+          ? _value.volumeTanque
+          : volumeTanque // ignore: cast_nullable_to_non_nullable
+              as double?,
+      odometro: freezed == odometro
           ? _value.odometro
           : odometro // ignore: cast_nullable_to_non_nullable
-              as double,
-      usuarioId: null == usuarioId
+              as double?,
+      usuarioId: freezed == usuarioId
           ? _value.usuarioId
           : usuarioId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
     ) as $Val);
   }
 }
@@ -125,14 +133,15 @@ abstract class _$$VeiculoImplCopyWith<$Res> implements $VeiculoCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {@JsonKey(includeIfNull: false) int id,
-      @JsonKey(includeIfNull: false) String veiculo,
-      @JsonKey(includeIfNull: false) String apelido,
-      @JsonKey(includeIfNull: false) String marca,
-      @JsonKey(includeIfNull: false) int ano,
-      @JsonKey(includeIfNull: false) String placa,
-      @JsonKey(includeIfNull: false) double odometro,
-      @JsonKey(includeIfNull: false) int usuarioId});
+      {@JsonKey(includeIfNull: false) int? id,
+      @JsonKey(includeIfNull: false) String? veiculo,
+      @JsonKey(includeIfNull: false) String? apelido,
+      @JsonKey(includeIfNull: false) String? marca,
+      @JsonKey(includeIfNull: false) int? ano,
+      @JsonKey(includeIfNull: false) String? placa,
+      @JsonKey(includeIfNull: false) double? volumeTanque,
+      @JsonKey(includeIfNull: false) double? odometro,
+      @JsonKey(includeIfNull: false) int? usuarioId});
 }
 
 /// @nodoc
@@ -146,48 +155,53 @@ class __$$VeiculoImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? veiculo = null,
-    Object? apelido = null,
-    Object? marca = null,
-    Object? ano = null,
-    Object? placa = null,
-    Object? odometro = null,
-    Object? usuarioId = null,
+    Object? id = freezed,
+    Object? veiculo = freezed,
+    Object? apelido = freezed,
+    Object? marca = freezed,
+    Object? ano = freezed,
+    Object? placa = freezed,
+    Object? volumeTanque = freezed,
+    Object? odometro = freezed,
+    Object? usuarioId = freezed,
   }) {
     return _then(_$VeiculoImpl(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      veiculo: null == veiculo
+              as int?,
+      veiculo: freezed == veiculo
           ? _value.veiculo
           : veiculo // ignore: cast_nullable_to_non_nullable
-              as String,
-      apelido: null == apelido
+              as String?,
+      apelido: freezed == apelido
           ? _value.apelido
           : apelido // ignore: cast_nullable_to_non_nullable
-              as String,
-      marca: null == marca
+              as String?,
+      marca: freezed == marca
           ? _value.marca
           : marca // ignore: cast_nullable_to_non_nullable
-              as String,
-      ano: null == ano
+              as String?,
+      ano: freezed == ano
           ? _value.ano
           : ano // ignore: cast_nullable_to_non_nullable
-              as int,
-      placa: null == placa
+              as int?,
+      placa: freezed == placa
           ? _value.placa
           : placa // ignore: cast_nullable_to_non_nullable
-              as String,
-      odometro: null == odometro
+              as String?,
+      volumeTanque: freezed == volumeTanque
+          ? _value.volumeTanque
+          : volumeTanque // ignore: cast_nullable_to_non_nullable
+              as double?,
+      odometro: freezed == odometro
           ? _value.odometro
           : odometro // ignore: cast_nullable_to_non_nullable
-              as double,
-      usuarioId: null == usuarioId
+              as double?,
+      usuarioId: freezed == usuarioId
           ? _value.usuarioId
           : usuarioId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
     ));
   }
 }
@@ -197,14 +211,15 @@ class __$$VeiculoImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$VeiculoImpl extends _Veiculo {
   const _$VeiculoImpl(
-      {@JsonKey(includeIfNull: false) required this.id,
-      @JsonKey(includeIfNull: false) required this.veiculo,
-      @JsonKey(includeIfNull: false) required this.apelido,
-      @JsonKey(includeIfNull: false) required this.marca,
-      @JsonKey(includeIfNull: false) required this.ano,
-      @JsonKey(includeIfNull: false) required this.placa,
-      @JsonKey(includeIfNull: false) required this.odometro,
-      @JsonKey(includeIfNull: false) required this.usuarioId})
+      {@JsonKey(includeIfNull: false) this.id,
+      @JsonKey(includeIfNull: false) this.veiculo,
+      @JsonKey(includeIfNull: false) this.apelido,
+      @JsonKey(includeIfNull: false) this.marca,
+      @JsonKey(includeIfNull: false) this.ano,
+      @JsonKey(includeIfNull: false) this.placa,
+      @JsonKey(includeIfNull: false) this.volumeTanque,
+      @JsonKey(includeIfNull: false) this.odometro,
+      @JsonKey(includeIfNull: false) this.usuarioId})
       : super._();
 
   factory _$VeiculoImpl.fromJson(Map<String, dynamic> json) =>
@@ -212,32 +227,35 @@ class _$VeiculoImpl extends _Veiculo {
 
   @override
   @JsonKey(includeIfNull: false)
-  final int id;
+  final int? id;
   @override
   @JsonKey(includeIfNull: false)
-  final String veiculo;
+  final String? veiculo;
   @override
   @JsonKey(includeIfNull: false)
-  final String apelido;
+  final String? apelido;
   @override
   @JsonKey(includeIfNull: false)
-  final String marca;
+  final String? marca;
   @override
   @JsonKey(includeIfNull: false)
-  final int ano;
+  final int? ano;
   @override
   @JsonKey(includeIfNull: false)
-  final String placa;
+  final String? placa;
   @override
   @JsonKey(includeIfNull: false)
-  final double odometro;
+  final double? volumeTanque;
   @override
   @JsonKey(includeIfNull: false)
-  final int usuarioId;
+  final double? odometro;
+  @override
+  @JsonKey(includeIfNull: false)
+  final int? usuarioId;
 
   @override
   String toString() {
-    return 'Veiculo(id: $id, veiculo: $veiculo, apelido: $apelido, marca: $marca, ano: $ano, placa: $placa, odometro: $odometro, usuarioId: $usuarioId)';
+    return 'Veiculo(id: $id, veiculo: $veiculo, apelido: $apelido, marca: $marca, ano: $ano, placa: $placa, volumeTanque: $volumeTanque, odometro: $odometro, usuarioId: $usuarioId)';
   }
 
   @override
@@ -251,6 +269,8 @@ class _$VeiculoImpl extends _Veiculo {
             (identical(other.marca, marca) || other.marca == marca) &&
             (identical(other.ano, ano) || other.ano == ano) &&
             (identical(other.placa, placa) || other.placa == placa) &&
+            (identical(other.volumeTanque, volumeTanque) ||
+                other.volumeTanque == volumeTanque) &&
             (identical(other.odometro, odometro) ||
                 other.odometro == odometro) &&
             (identical(other.usuarioId, usuarioId) ||
@@ -260,7 +280,7 @@ class _$VeiculoImpl extends _Veiculo {
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, id, veiculo, apelido, marca, ano,
-      placa, odometro, usuarioId);
+      placa, volumeTanque, odometro, usuarioId);
 
   @JsonKey(ignore: true)
   @override
@@ -278,43 +298,46 @@ class _$VeiculoImpl extends _Veiculo {
 
 abstract class _Veiculo extends Veiculo {
   const factory _Veiculo(
-          {@JsonKey(includeIfNull: false) required final int id,
-          @JsonKey(includeIfNull: false) required final String veiculo,
-          @JsonKey(includeIfNull: false) required final String apelido,
-          @JsonKey(includeIfNull: false) required final String marca,
-          @JsonKey(includeIfNull: false) required final int ano,
-          @JsonKey(includeIfNull: false) required final String placa,
-          @JsonKey(includeIfNull: false) required final double odometro,
-          @JsonKey(includeIfNull: false) required final int usuarioId}) =
-      _$VeiculoImpl;
+      {@JsonKey(includeIfNull: false) final int? id,
+      @JsonKey(includeIfNull: false) final String? veiculo,
+      @JsonKey(includeIfNull: false) final String? apelido,
+      @JsonKey(includeIfNull: false) final String? marca,
+      @JsonKey(includeIfNull: false) final int? ano,
+      @JsonKey(includeIfNull: false) final String? placa,
+      @JsonKey(includeIfNull: false) final double? volumeTanque,
+      @JsonKey(includeIfNull: false) final double? odometro,
+      @JsonKey(includeIfNull: false) final int? usuarioId}) = _$VeiculoImpl;
   const _Veiculo._() : super._();
 
   factory _Veiculo.fromJson(Map<String, dynamic> json) = _$VeiculoImpl.fromJson;
 
   @override
   @JsonKey(includeIfNull: false)
-  int get id;
+  int? get id;
   @override
   @JsonKey(includeIfNull: false)
-  String get veiculo;
+  String? get veiculo;
   @override
   @JsonKey(includeIfNull: false)
-  String get apelido;
+  String? get apelido;
   @override
   @JsonKey(includeIfNull: false)
-  String get marca;
+  String? get marca;
   @override
   @JsonKey(includeIfNull: false)
-  int get ano;
+  int? get ano;
   @override
   @JsonKey(includeIfNull: false)
-  String get placa;
+  String? get placa;
   @override
   @JsonKey(includeIfNull: false)
-  double get odometro;
+  double? get volumeTanque;
   @override
   @JsonKey(includeIfNull: false)
-  int get usuarioId;
+  double? get odometro;
+  @override
+  @JsonKey(includeIfNull: false)
+  int? get usuarioId;
   @override
   @JsonKey(ignore: true)
   _$$VeiculoImplCopyWith<_$VeiculoImpl> get copyWith =>

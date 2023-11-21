@@ -9,14 +9,15 @@ class Veiculo with _$Veiculo {
 
   @JsonSerializable()
   const factory Veiculo({
-    @JsonKey(includeIfNull: false) required final int id,
-    @JsonKey(includeIfNull: false) required final String veiculo,
-    @JsonKey(includeIfNull: false) required final String apelido,
-    @JsonKey(includeIfNull: false) required final String marca,
-    @JsonKey(includeIfNull: false) required final int ano,
-    @JsonKey(includeIfNull: false) required final String placa,
-    @JsonKey(includeIfNull: false) required final double odometro,
-    @JsonKey(includeIfNull: false) required final int usuarioId,
+    @JsonKey(includeIfNull: false) final int? id,
+    @JsonKey(includeIfNull: false) final String? veiculo,
+    @JsonKey(includeIfNull: false) final String? apelido,
+    @JsonKey(includeIfNull: false) final String? marca,
+    @JsonKey(includeIfNull: false) final int? ano,
+    @JsonKey(includeIfNull: false) final String? placa,
+    @JsonKey(includeIfNull: false) final double? volumeTanque,
+    @JsonKey(includeIfNull: false) final double? odometro,
+    @JsonKey(includeIfNull: false) final int? usuarioId,
     //TODO Add all atributes
   }) = _Veiculo;
 

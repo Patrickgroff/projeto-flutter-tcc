@@ -16,37 +16,42 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$RegistrarUsuarioEvent {
+  Usuario get usuario => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
+    required TResult Function(Usuario usuario) cadastrar,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
+    TResult? Function(Usuario usuario)? cadastrar,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function(Usuario usuario)? cadastrar,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
+    required TResult Function(_Cadastrar value) cadastrar,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
+    TResult? Function(_Cadastrar value)? cadastrar,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(_Cadastrar value)? cadastrar,
     required TResult orElse(),
   }) =>
+      throw _privateConstructorUsedError;
+
+  @JsonKey(ignore: true)
+  $RegistrarUsuarioEventCopyWith<RegistrarUsuarioEvent> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -55,6 +60,10 @@ abstract class $RegistrarUsuarioEventCopyWith<$Res> {
   factory $RegistrarUsuarioEventCopyWith(RegistrarUsuarioEvent value,
           $Res Function(RegistrarUsuarioEvent) then) =
       _$RegistrarUsuarioEventCopyWithImpl<$Res, RegistrarUsuarioEvent>;
+  @useResult
+  $Res call({Usuario usuario});
+
+  $UsuarioCopyWith<$Res> get usuario;
 }
 
 /// @nodoc
@@ -67,67 +76,119 @@ class _$RegistrarUsuarioEventCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? usuario = null,
+  }) {
+    return _then(_value.copyWith(
+      usuario: null == usuario
+          ? _value.usuario
+          : usuario // ignore: cast_nullable_to_non_nullable
+              as Usuario,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UsuarioCopyWith<$Res> get usuario {
+    return $UsuarioCopyWith<$Res>(_value.usuario, (value) {
+      return _then(_value.copyWith(usuario: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
-abstract class _$$StartedImplCopyWith<$Res> {
-  factory _$$StartedImplCopyWith(
-          _$StartedImpl value, $Res Function(_$StartedImpl) then) =
-      __$$StartedImplCopyWithImpl<$Res>;
+abstract class _$$CadastrarImplCopyWith<$Res>
+    implements $RegistrarUsuarioEventCopyWith<$Res> {
+  factory _$$CadastrarImplCopyWith(
+          _$CadastrarImpl value, $Res Function(_$CadastrarImpl) then) =
+      __$$CadastrarImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({Usuario usuario});
+
+  @override
+  $UsuarioCopyWith<$Res> get usuario;
 }
 
 /// @nodoc
-class __$$StartedImplCopyWithImpl<$Res>
-    extends _$RegistrarUsuarioEventCopyWithImpl<$Res, _$StartedImpl>
-    implements _$$StartedImplCopyWith<$Res> {
-  __$$StartedImplCopyWithImpl(
-      _$StartedImpl _value, $Res Function(_$StartedImpl) _then)
+class __$$CadastrarImplCopyWithImpl<$Res>
+    extends _$RegistrarUsuarioEventCopyWithImpl<$Res, _$CadastrarImpl>
+    implements _$$CadastrarImplCopyWith<$Res> {
+  __$$CadastrarImplCopyWithImpl(
+      _$CadastrarImpl _value, $Res Function(_$CadastrarImpl) _then)
       : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? usuario = null,
+  }) {
+    return _then(_$CadastrarImpl(
+      null == usuario
+          ? _value.usuario
+          : usuario // ignore: cast_nullable_to_non_nullable
+              as Usuario,
+    ));
+  }
 }
 
 /// @nodoc
 
-class _$StartedImpl implements _Started {
-  const _$StartedImpl();
+class _$CadastrarImpl implements _Cadastrar {
+  const _$CadastrarImpl(this.usuario);
+
+  @override
+  final Usuario usuario;
 
   @override
   String toString() {
-    return 'RegistrarUsuarioEvent.started()';
+    return 'RegistrarUsuarioEvent.cadastrar(usuario: $usuario)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$StartedImpl);
+        (other.runtimeType == runtimeType &&
+            other is _$CadastrarImpl &&
+            (identical(other.usuario, usuario) || other.usuario == usuario));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, usuario);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CadastrarImplCopyWith<_$CadastrarImpl> get copyWith =>
+      __$$CadastrarImplCopyWithImpl<_$CadastrarImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
+    required TResult Function(Usuario usuario) cadastrar,
   }) {
-    return started();
+    return cadastrar(usuario);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
+    TResult? Function(Usuario usuario)? cadastrar,
   }) {
-    return started?.call();
+    return cadastrar?.call(usuario);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function(Usuario usuario)? cadastrar,
     required TResult orElse(),
   }) {
-    if (started != null) {
-      return started();
+    if (cadastrar != null) {
+      return cadastrar(usuario);
     }
     return orElse();
   }
@@ -135,34 +196,41 @@ class _$StartedImpl implements _Started {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
+    required TResult Function(_Cadastrar value) cadastrar,
   }) {
-    return started(this);
+    return cadastrar(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
+    TResult? Function(_Cadastrar value)? cadastrar,
   }) {
-    return started?.call(this);
+    return cadastrar?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(_Cadastrar value)? cadastrar,
     required TResult orElse(),
   }) {
-    if (started != null) {
-      return started(this);
+    if (cadastrar != null) {
+      return cadastrar(this);
     }
     return orElse();
   }
 }
 
-abstract class _Started implements RegistrarUsuarioEvent {
-  const factory _Started() = _$StartedImpl;
+abstract class _Cadastrar implements RegistrarUsuarioEvent {
+  const factory _Cadastrar(final Usuario usuario) = _$CadastrarImpl;
+
+  @override
+  Usuario get usuario;
+  @override
+  @JsonKey(ignore: true)
+  _$$CadastrarImplCopyWith<_$CadastrarImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -170,32 +238,50 @@ mixin _$RegistrarUsuarioState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function() cadastrando,
+    required TResult Function(int userId) success,
+    required TResult Function(String message) error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
+    TResult? Function()? cadastrando,
+    TResult? Function(int userId)? success,
+    TResult? Function(String message)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? cadastrando,
+    TResult Function(int userId)? success,
+    TResult Function(String message)? error,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
+    required TResult Function(_Cadastrando value) cadastrando,
+    required TResult Function(_Success value) success,
+    required TResult Function(_Error value) error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
+    TResult? Function(_Cadastrando value)? cadastrando,
+    TResult? Function(_Success value)? success,
+    TResult? Function(_Error value)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
+    TResult Function(_Cadastrando value)? cadastrando,
+    TResult Function(_Success value)? success,
+    TResult Function(_Error value)? error,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -259,6 +345,9 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function() cadastrando,
+    required TResult Function(int userId) success,
+    required TResult Function(String message) error,
   }) {
     return initial();
   }
@@ -267,6 +356,9 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
+    TResult? Function()? cadastrando,
+    TResult? Function(int userId)? success,
+    TResult? Function(String message)? error,
   }) {
     return initial?.call();
   }
@@ -275,6 +367,9 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? cadastrando,
+    TResult Function(int userId)? success,
+    TResult Function(String message)? error,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -287,6 +382,9 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
+    required TResult Function(_Cadastrando value) cadastrando,
+    required TResult Function(_Success value) success,
+    required TResult Function(_Error value) error,
   }) {
     return initial(this);
   }
@@ -295,6 +393,9 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
+    TResult? Function(_Cadastrando value)? cadastrando,
+    TResult? Function(_Success value)? success,
+    TResult? Function(_Error value)? error,
   }) {
     return initial?.call(this);
   }
@@ -303,6 +404,9 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
+    TResult Function(_Cadastrando value)? cadastrando,
+    TResult Function(_Success value)? success,
+    TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -314,4 +418,408 @@ class _$InitialImpl implements _Initial {
 
 abstract class _Initial implements RegistrarUsuarioState {
   const factory _Initial() = _$InitialImpl;
+}
+
+/// @nodoc
+abstract class _$$CadastrandoImplCopyWith<$Res> {
+  factory _$$CadastrandoImplCopyWith(
+          _$CadastrandoImpl value, $Res Function(_$CadastrandoImpl) then) =
+      __$$CadastrandoImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$CadastrandoImplCopyWithImpl<$Res>
+    extends _$RegistrarUsuarioStateCopyWithImpl<$Res, _$CadastrandoImpl>
+    implements _$$CadastrandoImplCopyWith<$Res> {
+  __$$CadastrandoImplCopyWithImpl(
+      _$CadastrandoImpl _value, $Res Function(_$CadastrandoImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$CadastrandoImpl implements _Cadastrando {
+  const _$CadastrandoImpl();
+
+  @override
+  String toString() {
+    return 'RegistrarUsuarioState.cadastrando()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$CadastrandoImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() cadastrando,
+    required TResult Function(int userId) success,
+    required TResult Function(String message) error,
+  }) {
+    return cadastrando();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? cadastrando,
+    TResult? Function(int userId)? success,
+    TResult? Function(String message)? error,
+  }) {
+    return cadastrando?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? cadastrando,
+    TResult Function(int userId)? success,
+    TResult Function(String message)? error,
+    required TResult orElse(),
+  }) {
+    if (cadastrando != null) {
+      return cadastrando();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Cadastrando value) cadastrando,
+    required TResult Function(_Success value) success,
+    required TResult Function(_Error value) error,
+  }) {
+    return cadastrando(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Cadastrando value)? cadastrando,
+    TResult? Function(_Success value)? success,
+    TResult? Function(_Error value)? error,
+  }) {
+    return cadastrando?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Cadastrando value)? cadastrando,
+    TResult Function(_Success value)? success,
+    TResult Function(_Error value)? error,
+    required TResult orElse(),
+  }) {
+    if (cadastrando != null) {
+      return cadastrando(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Cadastrando implements RegistrarUsuarioState {
+  const factory _Cadastrando() = _$CadastrandoImpl;
+}
+
+/// @nodoc
+abstract class _$$SuccessImplCopyWith<$Res> {
+  factory _$$SuccessImplCopyWith(
+          _$SuccessImpl value, $Res Function(_$SuccessImpl) then) =
+      __$$SuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int userId});
+}
+
+/// @nodoc
+class __$$SuccessImplCopyWithImpl<$Res>
+    extends _$RegistrarUsuarioStateCopyWithImpl<$Res, _$SuccessImpl>
+    implements _$$SuccessImplCopyWith<$Res> {
+  __$$SuccessImplCopyWithImpl(
+      _$SuccessImpl _value, $Res Function(_$SuccessImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? userId = null,
+  }) {
+    return _then(_$SuccessImpl(
+      null == userId
+          ? _value.userId
+          : userId // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$SuccessImpl implements _Success {
+  const _$SuccessImpl(this.userId);
+
+  @override
+  final int userId;
+
+  @override
+  String toString() {
+    return 'RegistrarUsuarioState.success(userId: $userId)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SuccessImpl &&
+            (identical(other.userId, userId) || other.userId == userId));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, userId);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
+      __$$SuccessImplCopyWithImpl<_$SuccessImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() cadastrando,
+    required TResult Function(int userId) success,
+    required TResult Function(String message) error,
+  }) {
+    return success(userId);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? cadastrando,
+    TResult? Function(int userId)? success,
+    TResult? Function(String message)? error,
+  }) {
+    return success?.call(userId);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? cadastrando,
+    TResult Function(int userId)? success,
+    TResult Function(String message)? error,
+    required TResult orElse(),
+  }) {
+    if (success != null) {
+      return success(userId);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Cadastrando value) cadastrando,
+    required TResult Function(_Success value) success,
+    required TResult Function(_Error value) error,
+  }) {
+    return success(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Cadastrando value)? cadastrando,
+    TResult? Function(_Success value)? success,
+    TResult? Function(_Error value)? error,
+  }) {
+    return success?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Cadastrando value)? cadastrando,
+    TResult Function(_Success value)? success,
+    TResult Function(_Error value)? error,
+    required TResult orElse(),
+  }) {
+    if (success != null) {
+      return success(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Success implements RegistrarUsuarioState {
+  const factory _Success(final int userId) = _$SuccessImpl;
+
+  int get userId;
+  @JsonKey(ignore: true)
+  _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ErrorImplCopyWith<$Res> {
+  factory _$$ErrorImplCopyWith(
+          _$ErrorImpl value, $Res Function(_$ErrorImpl) then) =
+      __$$ErrorImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String message});
+}
+
+/// @nodoc
+class __$$ErrorImplCopyWithImpl<$Res>
+    extends _$RegistrarUsuarioStateCopyWithImpl<$Res, _$ErrorImpl>
+    implements _$$ErrorImplCopyWith<$Res> {
+  __$$ErrorImplCopyWithImpl(
+      _$ErrorImpl _value, $Res Function(_$ErrorImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = null,
+  }) {
+    return _then(_$ErrorImpl(
+      null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ErrorImpl implements _Error {
+  const _$ErrorImpl(this.message);
+
+  @override
+  final String message;
+
+  @override
+  String toString() {
+    return 'RegistrarUsuarioState.error(message: $message)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ErrorImpl &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
+      __$$ErrorImplCopyWithImpl<_$ErrorImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() cadastrando,
+    required TResult Function(int userId) success,
+    required TResult Function(String message) error,
+  }) {
+    return error(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? cadastrando,
+    TResult? Function(int userId)? success,
+    TResult? Function(String message)? error,
+  }) {
+    return error?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? cadastrando,
+    TResult Function(int userId)? success,
+    TResult Function(String message)? error,
+    required TResult orElse(),
+  }) {
+    if (error != null) {
+      return error(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Cadastrando value) cadastrando,
+    required TResult Function(_Success value) success,
+    required TResult Function(_Error value) error,
+  }) {
+    return error(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Cadastrando value)? cadastrando,
+    TResult? Function(_Success value)? success,
+    TResult? Function(_Error value)? error,
+  }) {
+    return error?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Cadastrando value)? cadastrando,
+    TResult Function(_Success value)? success,
+    TResult Function(_Error value)? error,
+    required TResult orElse(),
+  }) {
+    if (error != null) {
+      return error(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Error implements RegistrarUsuarioState {
+  const factory _Error(final String message) = _$ErrorImpl;
+
+  String get message;
+  @JsonKey(ignore: true)
+  _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

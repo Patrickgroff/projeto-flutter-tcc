@@ -7,7 +7,7 @@ import 'package:gest_car/core/injection/injection.dart';
 @RoutePage()
 class EditarUsuarioPage extends StatelessWidget {
   static const path = '/editar-usuario';
-  const EditarUsuarioPage({Key? key}) : super(key: key);
+  const EditarUsuarioPage({super.key});
 
   @override
   Widget build(BuildContext context) {

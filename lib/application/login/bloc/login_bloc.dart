@@ -18,8 +18,8 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
             emit(const LoginState.checkingCredentials());
             try {
               final usuario = await usuarioRepository.findUsuario(telefone, senha);
-              if (usuario != null) {
-                final success = await usuarioRepository.saveLoggedInUsuario(usuario.id);
+              if (usuario != null && usuario.id != null) {
+                final success = await usuarioRepository.saveLoggedInUsuario(usuario.id!);
                 if (success) {
                   emit(const LoginState.success());
                 } else {

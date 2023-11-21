@@ -14,7 +14,7 @@ import 'package:reactive_forms/reactive_forms.dart';
 @RoutePage()
 class LoginPage extends StatelessWidget {
   static const path = '/login';
-  const LoginPage({Key? key}) : super(key: key);
+  const LoginPage({super.key});
 
   @override
   Widget build(BuildContext context) {

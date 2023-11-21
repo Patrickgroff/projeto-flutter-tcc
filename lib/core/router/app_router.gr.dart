@@ -64,9 +64,16 @@ abstract class _$AppRouter extends RootStackRouter {
       );
     },
     RegistrarVeiculoRoute.name: (routeData) {
+      final pathParams = routeData.inheritedPathParams;
+      final args = routeData.argsAs<RegistrarVeiculoRouteArgs>(
+          orElse: () =>
+              RegistrarVeiculoRouteArgs(usuarioId: pathParams.getInt('id')));
       return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const RegistrarVeiculoPage(),
+        child: RegistrarVeiculoPage(
+          key: args.key,
+          usuarioId: args.usuarioId,
+        ),
       );
     },
     VeiculosRegistradosRoute.name: (routeData) {
@@ -192,16 +199,41 @@ class RegistrarUsuarioRoute extends PageRouteInfo<void> {
 
 /// generated route for
 /// [RegistrarVeiculoPage]
-class RegistrarVeiculoRoute extends PageRouteInfo<void> {
-  const RegistrarVeiculoRoute({List<PageRouteInfo>? children})
-      : super(
+class RegistrarVeiculoRoute extends PageRouteInfo<RegistrarVeiculoRouteArgs> {
+  RegistrarVeiculoRoute({
+    Key? key,
+    required int usuarioId,
+    List<PageRouteInfo>? children,
+  }) : super(
           RegistrarVeiculoRoute.name,
+          args: RegistrarVeiculoRouteArgs(
+            key: key,
+            usuarioId: usuarioId,
+          ),
+          rawPathParams: {'id': usuarioId},
           initialChildren: children,
         );
 
   static const String name = 'RegistrarVeiculoRoute';
 
-  static const PageInfo<void> page = PageInfo<void>(name);
+  static const PageInfo<RegistrarVeiculoRouteArgs> page =
+      PageInfo<RegistrarVeiculoRouteArgs>(name);
+}
+
+class RegistrarVeiculoRouteArgs {
+  const RegistrarVeiculoRouteArgs({
+    this.key,
+    required this.usuarioId,
+  });
+
+  final Key? key;
+
+  final int usuarioId;
+
+  @override
+  String toString() {
+    return 'RegistrarVeiculoRouteArgs{key: $key, usuarioId: $usuarioId}';
+  }
 }
 
 /// generated route for

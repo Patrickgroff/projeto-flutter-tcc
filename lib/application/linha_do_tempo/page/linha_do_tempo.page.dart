@@ -8,7 +8,7 @@ import 'package:gest_car/core/router/app_router.dart';
 @RoutePage()
 class LinhaDoTempoPage extends StatelessWidget {
   static const path = '/linha-do-tempo';
-  const LinhaDoTempoPage({Key? key}) : super(key: key);
+  const LinhaDoTempoPage({super.key});
 
   @override
   Widget build(BuildContext context) {

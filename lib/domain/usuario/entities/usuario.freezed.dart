@@ -21,13 +21,13 @@ Usuario _$UsuarioFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Usuario {
   @JsonKey(includeIfNull: false)
-  int get id => throw _privateConstructorUsedError;
+  int? get id => throw _privateConstructorUsedError;
   @JsonKey(includeIfNull: false)
-  String get nome => throw _privateConstructorUsedError;
+  String? get nome => throw _privateConstructorUsedError;
   @JsonKey(includeIfNull: false)
-  String get telefone => throw _privateConstructorUsedError;
+  String? get telefone => throw _privateConstructorUsedError;
   @JsonKey(includeIfNull: false)
-  String get senha => throw _privateConstructorUsedError;
+  String? get senha => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -40,10 +40,10 @@ abstract class $UsuarioCopyWith<$Res> {
       _$UsuarioCopyWithImpl<$Res, Usuario>;
   @useResult
   $Res call(
-      {@JsonKey(includeIfNull: false) int id,
-      @JsonKey(includeIfNull: false) String nome,
-      @JsonKey(includeIfNull: false) String telefone,
-      @JsonKey(includeIfNull: false) String senha});
+      {@JsonKey(includeIfNull: false) int? id,
+      @JsonKey(includeIfNull: false) String? nome,
+      @JsonKey(includeIfNull: false) String? telefone,
+      @JsonKey(includeIfNull: false) String? senha});
 }
 
 /// @nodoc
@@ -59,28 +59,28 @@ class _$UsuarioCopyWithImpl<$Res, $Val extends Usuario>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? nome = null,
-    Object? telefone = null,
-    Object? senha = null,
+    Object? id = freezed,
+    Object? nome = freezed,
+    Object? telefone = freezed,
+    Object? senha = freezed,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      nome: null == nome
+              as int?,
+      nome: freezed == nome
           ? _value.nome
           : nome // ignore: cast_nullable_to_non_nullable
-              as String,
-      telefone: null == telefone
+              as String?,
+      telefone: freezed == telefone
           ? _value.telefone
           : telefone // ignore: cast_nullable_to_non_nullable
-              as String,
-      senha: null == senha
+              as String?,
+      senha: freezed == senha
           ? _value.senha
           : senha // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ) as $Val);
   }
 }
@@ -93,10 +93,10 @@ abstract class _$$UsuarioImplCopyWith<$Res> implements $UsuarioCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {@JsonKey(includeIfNull: false) int id,
-      @JsonKey(includeIfNull: false) String nome,
-      @JsonKey(includeIfNull: false) String telefone,
-      @JsonKey(includeIfNull: false) String senha});
+      {@JsonKey(includeIfNull: false) int? id,
+      @JsonKey(includeIfNull: false) String? nome,
+      @JsonKey(includeIfNull: false) String? telefone,
+      @JsonKey(includeIfNull: false) String? senha});
 }
 
 /// @nodoc
@@ -110,28 +110,28 @@ class __$$UsuarioImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? nome = null,
-    Object? telefone = null,
-    Object? senha = null,
+    Object? id = freezed,
+    Object? nome = freezed,
+    Object? telefone = freezed,
+    Object? senha = freezed,
   }) {
     return _then(_$UsuarioImpl(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      nome: null == nome
+              as int?,
+      nome: freezed == nome
           ? _value.nome
           : nome // ignore: cast_nullable_to_non_nullable
-              as String,
-      telefone: null == telefone
+              as String?,
+      telefone: freezed == telefone
           ? _value.telefone
           : telefone // ignore: cast_nullable_to_non_nullable
-              as String,
-      senha: null == senha
+              as String?,
+      senha: freezed == senha
           ? _value.senha
           : senha // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -141,10 +141,10 @@ class __$$UsuarioImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$UsuarioImpl extends _Usuario {
   const _$UsuarioImpl(
-      {@JsonKey(includeIfNull: false) required this.id,
-      @JsonKey(includeIfNull: false) required this.nome,
-      @JsonKey(includeIfNull: false) required this.telefone,
-      @JsonKey(includeIfNull: false) required this.senha})
+      {@JsonKey(includeIfNull: false) this.id,
+      @JsonKey(includeIfNull: false) this.nome,
+      @JsonKey(includeIfNull: false) this.telefone,
+      @JsonKey(includeIfNull: false) this.senha})
       : super._();
 
   factory _$UsuarioImpl.fromJson(Map<String, dynamic> json) =>
@@ -152,16 +152,16 @@ class _$UsuarioImpl extends _Usuario {
 
   @override
   @JsonKey(includeIfNull: false)
-  final int id;
+  final int? id;
   @override
   @JsonKey(includeIfNull: false)
-  final String nome;
+  final String? nome;
   @override
   @JsonKey(includeIfNull: false)
-  final String telefone;
+  final String? telefone;
   @override
   @JsonKey(includeIfNull: false)
-  final String senha;
+  final String? senha;
 
   @override
   String toString() {
@@ -200,27 +200,26 @@ class _$UsuarioImpl extends _Usuario {
 
 abstract class _Usuario extends Usuario {
   const factory _Usuario(
-          {@JsonKey(includeIfNull: false) required final int id,
-          @JsonKey(includeIfNull: false) required final String nome,
-          @JsonKey(includeIfNull: false) required final String telefone,
-          @JsonKey(includeIfNull: false) required final String senha}) =
-      _$UsuarioImpl;
+      {@JsonKey(includeIfNull: false) final int? id,
+      @JsonKey(includeIfNull: false) final String? nome,
+      @JsonKey(includeIfNull: false) final String? telefone,
+      @JsonKey(includeIfNull: false) final String? senha}) = _$UsuarioImpl;
   const _Usuario._() : super._();
 
   factory _Usuario.fromJson(Map<String, dynamic> json) = _$UsuarioImpl.fromJson;
 
   @override
   @JsonKey(includeIfNull: false)
-  int get id;
+  int? get id;
   @override
   @JsonKey(includeIfNull: false)
-  String get nome;
+  String? get nome;
   @override
   @JsonKey(includeIfNull: false)
-  String get telefone;
+  String? get telefone;
   @override
   @JsonKey(includeIfNull: false)
-  String get senha;
+  String? get senha;
   @override
   @JsonKey(ignore: true)
   _$$UsuarioImplCopyWith<_$UsuarioImpl> get copyWith =>

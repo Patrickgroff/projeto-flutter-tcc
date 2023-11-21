@@ -35,7 +35,6 @@ CREATE TABLE IF NOT EXISTS veiculo (
     id        INTEGER PRIMARY KEY
                       NOT NULL,
     veiculo   TEXT    NOT NULL,
-    apelido   TEXT    NOT NULL,
     marca     TEXT    NOT NULL,
     ano       INTEGER NOT NULL,
     placa     TEXT    NOT NULL,

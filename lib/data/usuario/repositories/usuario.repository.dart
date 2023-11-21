@@ -13,19 +13,16 @@ class UsuarioRepository implements IUsuarioRepository {
   UsuarioRepository({required this.usuarioDB, required this.usuarioSP});
 
   @override
-  Future<Usuario?> save(Usuario value) {
-    // TODO: implement save
-    throw UnimplementedError();
-  }
+  Future<Usuario?> save(Usuario usuario) => usuarioDB.saveUsuario(usuario);
 
   @override
-  Future<bool> updateUsuario(Usuario value) async {
-    // TODO: implement updateUser
-    throw UnimplementedError();
-  }
+  Future<bool> updateUsuario(Usuario usuario) async => usuarioDB.updateUsuario(usuario, usuario.id);
 
   @override
   Future<Usuario?> findUsuario(String telefone, String senha) => usuarioDB.findUsuario(telefone, senha);
+
+  @override
+  Future<bool> findPhoneNumber(String telefone) => usuarioDB.findPhoneNumber(telefone);
 
   @override
   Future<bool> saveLoggedInUsuario(int loggedInUsuarioId) => usuarioSP.saveUsuarioIdInSession(loggedInUsuarioId);

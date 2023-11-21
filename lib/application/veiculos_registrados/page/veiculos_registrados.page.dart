@@ -7,7 +7,7 @@ import 'package:gest_car/core/injection/injection.dart';
 @RoutePage()
 class VeiculosRegistradosPage extends StatelessWidget {
   static const path = '/veiculos-registrados';
-  const VeiculosRegistradosPage({Key? key}) : super(key: key);
+  const VeiculosRegistradosPage({super.key});
 
   @override
   Widget build(BuildContext context) {
