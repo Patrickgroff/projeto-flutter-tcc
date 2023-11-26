@@ -10,7 +10,7 @@ part 'editar_usuario_bloc.freezed.dart';
 class EditarUsuarioBloc extends Bloc<EditarUsuarioEvent, EditarUsuarioState> {
   // Inject repository
   // final IEditarUsuarioRepository editarUsuarioRepository;
-  EditarUsuarioBloc(/* this.editarUsuarioRepository */) : super(_Initial()) {
+  EditarUsuarioBloc(/* this.editarUsuarioRepository */) : super(const _Initial()) {
     on<EditarUsuarioEvent>((event, emit) {
       // TODO: implement event handler
     });

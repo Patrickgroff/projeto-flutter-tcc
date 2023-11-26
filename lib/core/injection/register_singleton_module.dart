@@ -21,16 +21,15 @@ abstract class RegisterSingletonModule {
         onCreate: (db, version) async {
           //TODO Adicionar os scripts de criação das tabelas
           if (version == 1) {
-            await db.execute(
-              '''
+            await db.execute('''
 CREATE TABLE IF NOT EXISTS usuario (
     id       INTEGER PRIMARY KEY
                      NOT NULL,
     telefone TEXT    NOT NULL,
     senha    TEXT    NOT NULL,
     nome     TEXT    NOT NULL
-);
-
+);''');
+            await db.execute('''
 CREATE TABLE IF NOT EXISTS veiculo (
     id        INTEGER PRIMARY KEY
                       NOT NULL,
@@ -41,8 +40,8 @@ CREATE TABLE IF NOT EXISTS veiculo (
     odometro  REAL    NOT NULL,
     usuarioId INTEGER CONSTRAINT fk_veiculo_usuarioId_usuario_id REFERENCES usuario (id) 
                       NOT NULL
-);
-
+);''');
+            await db.execute('''
 CREATE TABLE IF NOT EXISTS abastecimento (
     id              INTEGER PRIMARY KEY
                             NOT NULL,
@@ -51,11 +50,11 @@ CREATE TABLE IF NOT EXISTS abastecimento (
     tipoCombustivel TEXT,
     valor           REAL    NOT NULL,
     litros          REAL    NOT NULL,
-    obervacao       TEXT,
+    observacao       TEXT,
     veiculoId       INTEGER CONSTRAINT fk_abastecimento_veiculoId_veiculo_id REFERENCES veiculo (id) 
                             NOT NULL
-);
-
+);''');
+            await db.execute('''
 CREATE TABLE IF NOT EXISTS despesa (
     id          INTEGER PRIMARY KEY
                         NOT NULL,
@@ -63,11 +62,11 @@ CREATE TABLE IF NOT EXISTS despesa (
     odometro    REAL,
     tipoDespesa TEXT,
     valor       REAL    NOT NULL,
-    obervacao   TEXT,
+    observacao   TEXT,
     veiculoId   INTEGER CONSTRAINT fk_despesa_veiculoId_veiculo_id REFERENCES veiculo (id) 
                         NOT NULL
-);
-
+);''');
+            await db.execute('''
 CREATE TABLE IF NOT EXISTS receita (
     id          INTEGER PRIMARY KEY
                         NOT NULL,
@@ -75,11 +74,11 @@ CREATE TABLE IF NOT EXISTS receita (
     odometro    REAL,
     valor       REAL    NOT NULL,
     tipoReceita TEXT,
-    obervacao   TEXT,
+    observacao   TEXT,
     veiculoId   INTEGER CONSTRAINT fk_receita_veiculoId_veiculo_id REFERENCES veiculo (id) 
                         NOT NULL
-);
-
+);''');
+            await db.execute('''
 CREATE TABLE IF NOT EXISTS servico (
     id          INTEGER PRIMARY KEY
                         NOT NULL,
@@ -90,8 +89,7 @@ CREATE TABLE IF NOT EXISTS servico (
     observacao  TEXT,
     veiculoId   INTEGER CONSTRAINT fk_servico_veiculoId_veiculo_id REFERENCES veiculo (id) 
                         NOT NULL
-);''',
-            );
+);''');
           }
         },
         // Set the version. This executes the onCreate function and provides a

@@ -10,7 +10,7 @@ part 'registrar_despesa_bloc.freezed.dart';
 class RegistrarDespesaBloc extends Bloc<RegistrarDespesaEvent, RegistrarDespesaState> {
   // Inject repository
   // final IRegistrarDespesaRepository registrarDespesaRepository;
-  RegistrarDespesaBloc(/* this.registrarDespesaRepository */) : super(_Initial()) {
+  RegistrarDespesaBloc(/* this.registrarDespesaRepository */) : super(const _Initial()) {
     on<RegistrarDespesaEvent>((event, emit) {
       // TODO: implement event handler
     });

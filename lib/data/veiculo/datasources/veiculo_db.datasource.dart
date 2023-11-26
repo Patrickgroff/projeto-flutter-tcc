@@ -4,12 +4,11 @@ import 'package:sqflite/sqflite.dart';
 
 @injectable
 class VeiculoDBDatasource {
-  // TODO Change table name
   static const String _table = "veiculo";
   final Database _db;
   VeiculoDBDatasource(this._db);
 
-  Future<List<Veiculo>>? get all async {
+  Future<List<Veiculo>> get all async {
     final result = await _db.query(_table);
     return result.map((item) => Veiculo.fromJson(item)).toList();
   }

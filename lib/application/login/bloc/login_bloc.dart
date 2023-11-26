@@ -12,7 +12,7 @@ part 'login_state.dart';
 @injectable
 class LoginBloc extends Bloc<LoginEvent, LoginState> {
   final IUsuarioRepository usuarioRepository;
-  LoginBloc(this.usuarioRepository) : super(_Initial()) {
+  LoginBloc(this.usuarioRepository) : super(const _Initial()) {
     on<LoginEvent>((event, emit) => event.when<FutureOr<void>>(
           login: (telefone, senha) async {
             emit(const LoginState.checkingCredentials());

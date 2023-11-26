@@ -41,32 +41,32 @@ class RegistrarReceitaPage extends StatelessWidget {
                               Spacing.v12,
                               ReactiveTextField(
                                 formControlName: 'odometro',
-                                decoration: InputDecoration(labelText: 'Odômetro', prefixIcon: Icon(Icons.pin)),
+                                decoration: const InputDecoration(labelText: 'Odômetro', prefixIcon: Icon(Icons.pin)),
                                 textInputAction: TextInputAction.next,
                               ),
                               Spacing.v12,
                               ReactiveTextField(
                                 formControlName: 'tipoReceita',
-                                decoration: InputDecoration(labelText: 'Tipo de Receita', prefixIcon: Icon(Icons.add_card)),
+                                decoration: const InputDecoration(labelText: 'Tipo de Receita', prefixIcon: Icon(Icons.add_card)),
                                 textInputAction: TextInputAction.next,
                               ),
                               Spacing.v12,
                               ReactiveTextField(
                                 formControlName: 'valor',
-                                decoration: InputDecoration(labelText: 'Valor', prefixIcon: Icon(Icons.paid)),
+                                decoration: const InputDecoration(labelText: 'Valor', prefixIcon: Icon(Icons.paid)),
                                 textInputAction: TextInputAction.next,
                               ),
                               Spacing.v12,
                               ReactiveTextField(
                                 formControlName: 'observacao',
-                                decoration: InputDecoration(labelText: 'Observação', prefixIcon: Icon(Icons.sort)),
+                                decoration: const InputDecoration(labelText: 'Observação', prefixIcon: Icon(Icons.sort)),
                                 textInputAction: TextInputAction.next,
                               ),
                               Spacing.v12,
                               Center(
                                   child: ElevatedButton(
                                 onPressed: () => {},
-                                child: Text('SALVAR'),
+                                child: const Text('SALVAR'),
                               ))
                             ],
                           ),

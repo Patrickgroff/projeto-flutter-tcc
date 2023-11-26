@@ -66,13 +66,16 @@ abstract class _$AppRouter extends RootStackRouter {
     RegistrarVeiculoRoute.name: (routeData) {
       final pathParams = routeData.inheritedPathParams;
       final args = routeData.argsAs<RegistrarVeiculoRouteArgs>(
-          orElse: () =>
-              RegistrarVeiculoRouteArgs(usuarioId: pathParams.getInt('id')));
+          orElse: () => RegistrarVeiculoRouteArgs(
+                usuarioId: pathParams.getInt('id'),
+                veiculoId: pathParams.optInt('veiculoId'),
+              ));
       return AutoRoutePage<dynamic>(
         routeData: routeData,
         child: RegistrarVeiculoPage(
           key: args.key,
           usuarioId: args.usuarioId,
+          veiculoId: args.veiculoId,
         ),
       );
     },
@@ -203,14 +206,19 @@ class RegistrarVeiculoRoute extends PageRouteInfo<RegistrarVeiculoRouteArgs> {
   RegistrarVeiculoRoute({
     Key? key,
     required int usuarioId,
+    int? veiculoId,
     List<PageRouteInfo>? children,
   }) : super(
           RegistrarVeiculoRoute.name,
           args: RegistrarVeiculoRouteArgs(
             key: key,
             usuarioId: usuarioId,
+            veiculoId: veiculoId,
           ),
-          rawPathParams: {'id': usuarioId},
+          rawPathParams: {
+            'id': usuarioId,
+            'veiculoId': veiculoId,
+          },
           initialChildren: children,
         );
 
@@ -224,15 +232,18 @@ class RegistrarVeiculoRouteArgs {
   const RegistrarVeiculoRouteArgs({
     this.key,
     required this.usuarioId,
+    this.veiculoId,
   });
 
   final Key? key;
 
   final int usuarioId;
 
+  final int? veiculoId;
+
   @override
   String toString() {
-    return 'RegistrarVeiculoRouteArgs{key: $key, usuarioId: $usuarioId}';
+    return 'RegistrarVeiculoRouteArgs{key: $key, usuarioId: $usuarioId, veiculoId: $veiculoId}';
   }
 }
 

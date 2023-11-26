@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:bloc/bloc.dart';
-import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:gest_car/domain/usuario/entities/usuario.dart';
 import 'package:gest_car/domain/usuario/repositories/usuario.repository.i.dart';
@@ -24,7 +23,6 @@ class RegistrarUsuarioBloc extends Bloc<RegistrarUsuarioEvent, RegistrarUsuarioS
             if (resultado == null || resultado.id == null) return emit(const RegistrarUsuarioState.error('Erro ao cadastrar usuario!'));
             emit(RegistrarUsuarioState.success(resultado.id!));
           } catch (e) {
-            debugPrint(e.toString());
             emit(const RegistrarUsuarioState.error('Erro ao cadastrar usuario!'));
           }
         }));

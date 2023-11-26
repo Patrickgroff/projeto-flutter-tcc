@@ -10,7 +10,7 @@ part 'veiculos_registrados_bloc.freezed.dart';
 class VeiculosRegistradosBloc extends Bloc<VeiculosRegistradosEvent, VeiculosRegistradosState> {
   // Inject repository
   // final IVeiculosRegistradosRepository veiculosRegistradosRepository;
-  VeiculosRegistradosBloc(/* this.veiculosRegistradosRepository */) : super(_Initial()) {
+  VeiculosRegistradosBloc(/* this.veiculosRegistradosRepository */) : super(const _Initial()) {
     on<VeiculosRegistradosEvent>((event, emit) {
       // TODO: implement event handler
     });

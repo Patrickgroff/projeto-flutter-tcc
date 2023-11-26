@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:gest_car/domain/usuario/entities/usuario.dart';
 
 abstract class IUsuarioRepository {
@@ -19,6 +21,9 @@ abstract class IUsuarioRepository {
   /// usuario que esta logado na aplicação para manter a
   /// sessão mesmo apos o usuario fechar o aplicativo e entrar novamente
   Future<bool> saveLoggedInUsuario(int loggedInUsuarioId);
+
+  // remove session of the user
+  FutureOr<void> logout();
 
   /// retorna usuario que esta logado atualmente na aplicação
   /// caso retorno <code>null</code> significa que não tem um usuario logado

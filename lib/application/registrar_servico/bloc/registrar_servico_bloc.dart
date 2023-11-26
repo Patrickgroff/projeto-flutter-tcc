@@ -10,7 +10,7 @@ part 'registrar_servico_bloc.freezed.dart';
 class RegistrarServicoBloc extends Bloc<RegistrarServicoEvent, RegistrarServicoState> {
   // Inject repository
   // final IRegistrarServicoRepository registrarServicoRepository;
-  RegistrarServicoBloc(/* this.registrarServicoRepository */) : super(_Initial()) {
+  RegistrarServicoBloc(/* this.registrarServicoRepository */) : super(const _Initial()) {
     on<RegistrarServicoEvent>((event, emit) {
       // TODO: implement event handler
     });

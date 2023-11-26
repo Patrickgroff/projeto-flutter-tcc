@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:gest_car/data/usuario/datasources/usuario_datasource.db.dart';
 import 'package:gest_car/data/usuario/datasources/usuario_shared_preference_datasource.db.dart';
 import 'package:gest_car/domain/usuario/entities/usuario.dart';
@@ -26,6 +28,9 @@ class UsuarioRepository implements IUsuarioRepository {
 
   @override
   Future<bool> saveLoggedInUsuario(int loggedInUsuarioId) => usuarioSP.saveUsuarioIdInSession(loggedInUsuarioId);
+
+  @override
+  Future<void> logout() async => await usuarioSP.logout();
 
   @override
   Future<Usuario?> get loggedInUsuario async {

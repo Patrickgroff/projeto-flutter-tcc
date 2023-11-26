@@ -10,7 +10,7 @@ part 'registrar_receita_bloc.freezed.dart';
 class RegistrarReceitaBloc extends Bloc<RegistrarReceitaEvent, RegistrarReceitaState> {
   // Inject repository
   // final IRegistrarReceitaRepository registrarReceitaRepository;
-  RegistrarReceitaBloc(/* this.registrarReceitaRepository */) : super(_Initial()) {
+  RegistrarReceitaBloc(/* this.registrarReceitaRepository */) : super(const _Initial()) {
     on<RegistrarReceitaEvent>((event, emit) {
       // TODO: implement event handler
     });

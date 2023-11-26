@@ -18,33 +18,39 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$LinhaDoTempoEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
+    required TResult Function() garregar,
+    required TResult Function(LinhaDoTempo item) irParaEvento,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
+    TResult? Function()? garregar,
+    TResult? Function(LinhaDoTempo item)? irParaEvento,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function()? garregar,
+    TResult Function(LinhaDoTempo item)? irParaEvento,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
+    required TResult Function(_Started value) garregar,
+    required TResult Function(_IrParaEvento value) irParaEvento,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
+    TResult? Function(_Started value)? garregar,
+    TResult? Function(_IrParaEvento value)? irParaEvento,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(_Started value)? garregar,
+    TResult Function(_IrParaEvento value)? irParaEvento,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -91,7 +97,7 @@ class _$StartedImpl implements _Started {
 
   @override
   String toString() {
-    return 'LinhaDoTempoEvent.started()';
+    return 'LinhaDoTempoEvent.garregar()';
   }
 
   @override
@@ -106,27 +112,30 @@ class _$StartedImpl implements _Started {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
+    required TResult Function() garregar,
+    required TResult Function(LinhaDoTempo item) irParaEvento,
   }) {
-    return started();
+    return garregar();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
+    TResult? Function()? garregar,
+    TResult? Function(LinhaDoTempo item)? irParaEvento,
   }) {
-    return started?.call();
+    return garregar?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function()? garregar,
+    TResult Function(LinhaDoTempo item)? irParaEvento,
     required TResult orElse(),
   }) {
-    if (started != null) {
-      return started();
+    if (garregar != null) {
+      return garregar();
     }
     return orElse();
   }
@@ -134,27 +143,30 @@ class _$StartedImpl implements _Started {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
+    required TResult Function(_Started value) garregar,
+    required TResult Function(_IrParaEvento value) irParaEvento,
   }) {
-    return started(this);
+    return garregar(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
+    TResult? Function(_Started value)? garregar,
+    TResult? Function(_IrParaEvento value)? irParaEvento,
   }) {
-    return started?.call(this);
+    return garregar?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(_Started value)? garregar,
+    TResult Function(_IrParaEvento value)? irParaEvento,
     required TResult orElse(),
   }) {
-    if (started != null) {
-      return started(this);
+    if (garregar != null) {
+      return garregar(this);
     }
     return orElse();
   }
@@ -165,36 +177,203 @@ abstract class _Started implements LinhaDoTempoEvent {
 }
 
 /// @nodoc
+abstract class _$$IrParaEventoImplCopyWith<$Res> {
+  factory _$$IrParaEventoImplCopyWith(
+          _$IrParaEventoImpl value, $Res Function(_$IrParaEventoImpl) then) =
+      __$$IrParaEventoImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({LinhaDoTempo item});
+
+  $LinhaDoTempoCopyWith<$Res> get item;
+}
+
+/// @nodoc
+class __$$IrParaEventoImplCopyWithImpl<$Res>
+    extends _$LinhaDoTempoEventCopyWithImpl<$Res, _$IrParaEventoImpl>
+    implements _$$IrParaEventoImplCopyWith<$Res> {
+  __$$IrParaEventoImplCopyWithImpl(
+      _$IrParaEventoImpl _value, $Res Function(_$IrParaEventoImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? item = null,
+  }) {
+    return _then(_$IrParaEventoImpl(
+      null == item
+          ? _value.item
+          : item // ignore: cast_nullable_to_non_nullable
+              as LinhaDoTempo,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $LinhaDoTempoCopyWith<$Res> get item {
+    return $LinhaDoTempoCopyWith<$Res>(_value.item, (value) {
+      return _then(_value.copyWith(item: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$IrParaEventoImpl implements _IrParaEvento {
+  const _$IrParaEventoImpl(this.item);
+
+  @override
+  final LinhaDoTempo item;
+
+  @override
+  String toString() {
+    return 'LinhaDoTempoEvent.irParaEvento(item: $item)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$IrParaEventoImpl &&
+            (identical(other.item, item) || other.item == item));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, item);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$IrParaEventoImplCopyWith<_$IrParaEventoImpl> get copyWith =>
+      __$$IrParaEventoImplCopyWithImpl<_$IrParaEventoImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() garregar,
+    required TResult Function(LinhaDoTempo item) irParaEvento,
+  }) {
+    return irParaEvento(item);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? garregar,
+    TResult? Function(LinhaDoTempo item)? irParaEvento,
+  }) {
+    return irParaEvento?.call(item);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? garregar,
+    TResult Function(LinhaDoTempo item)? irParaEvento,
+    required TResult orElse(),
+  }) {
+    if (irParaEvento != null) {
+      return irParaEvento(item);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) garregar,
+    required TResult Function(_IrParaEvento value) irParaEvento,
+  }) {
+    return irParaEvento(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? garregar,
+    TResult? Function(_IrParaEvento value)? irParaEvento,
+  }) {
+    return irParaEvento?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? garregar,
+    TResult Function(_IrParaEvento value)? irParaEvento,
+    required TResult orElse(),
+  }) {
+    if (irParaEvento != null) {
+      return irParaEvento(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _IrParaEvento implements LinhaDoTempoEvent {
+  const factory _IrParaEvento(final LinhaDoTempo item) = _$IrParaEventoImpl;
+
+  LinhaDoTempo get item;
+  @JsonKey(ignore: true)
+  _$$IrParaEventoImplCopyWith<_$IrParaEventoImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 mixin _$LinhaDoTempoState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function() carregando,
+    required TResult Function(List<LinhaDoTempo> items) successo,
+    required TResult Function() vazio,
+    required TResult Function(String message) erro,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
+    TResult? Function()? carregando,
+    TResult? Function(List<LinhaDoTempo> items)? successo,
+    TResult? Function()? vazio,
+    TResult? Function(String message)? erro,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? carregando,
+    TResult Function(List<LinhaDoTempo> items)? successo,
+    TResult Function()? vazio,
+    TResult Function(String message)? erro,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
+    required TResult Function(_Carregando value) carregando,
+    required TResult Function(_Successo value) successo,
+    required TResult Function(_Vazio value) vazio,
+    required TResult Function(_Erro value) erro,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
+    TResult? Function(_Carregando value)? carregando,
+    TResult? Function(_Successo value)? successo,
+    TResult? Function(_Vazio value)? vazio,
+    TResult? Function(_Erro value)? erro,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
+    TResult Function(_Carregando value)? carregando,
+    TResult Function(_Successo value)? successo,
+    TResult Function(_Vazio value)? vazio,
+    TResult Function(_Erro value)? erro,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -257,6 +436,10 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function() carregando,
+    required TResult Function(List<LinhaDoTempo> items) successo,
+    required TResult Function() vazio,
+    required TResult Function(String message) erro,
   }) {
     return initial();
   }
@@ -265,6 +448,10 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
+    TResult? Function()? carregando,
+    TResult? Function(List<LinhaDoTempo> items)? successo,
+    TResult? Function()? vazio,
+    TResult? Function(String message)? erro,
   }) {
     return initial?.call();
   }
@@ -273,6 +460,10 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? carregando,
+    TResult Function(List<LinhaDoTempo> items)? successo,
+    TResult Function()? vazio,
+    TResult Function(String message)? erro,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -285,6 +476,10 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
+    required TResult Function(_Carregando value) carregando,
+    required TResult Function(_Successo value) successo,
+    required TResult Function(_Vazio value) vazio,
+    required TResult Function(_Erro value) erro,
   }) {
     return initial(this);
   }
@@ -293,6 +488,10 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
+    TResult? Function(_Carregando value)? carregando,
+    TResult? Function(_Successo value)? successo,
+    TResult? Function(_Vazio value)? vazio,
+    TResult? Function(_Erro value)? erro,
   }) {
     return initial?.call(this);
   }
@@ -301,6 +500,10 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
+    TResult Function(_Carregando value)? carregando,
+    TResult Function(_Successo value)? successo,
+    TResult Function(_Vazio value)? vazio,
+    TResult Function(_Erro value)? erro,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -312,4 +515,551 @@ class _$InitialImpl implements _Initial {
 
 abstract class _Initial implements LinhaDoTempoState {
   const factory _Initial() = _$InitialImpl;
+}
+
+/// @nodoc
+abstract class _$$CarregandoImplCopyWith<$Res> {
+  factory _$$CarregandoImplCopyWith(
+          _$CarregandoImpl value, $Res Function(_$CarregandoImpl) then) =
+      __$$CarregandoImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$CarregandoImplCopyWithImpl<$Res>
+    extends _$LinhaDoTempoStateCopyWithImpl<$Res, _$CarregandoImpl>
+    implements _$$CarregandoImplCopyWith<$Res> {
+  __$$CarregandoImplCopyWithImpl(
+      _$CarregandoImpl _value, $Res Function(_$CarregandoImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$CarregandoImpl implements _Carregando {
+  const _$CarregandoImpl();
+
+  @override
+  String toString() {
+    return 'LinhaDoTempoState.carregando()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$CarregandoImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() carregando,
+    required TResult Function(List<LinhaDoTempo> items) successo,
+    required TResult Function() vazio,
+    required TResult Function(String message) erro,
+  }) {
+    return carregando();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? carregando,
+    TResult? Function(List<LinhaDoTempo> items)? successo,
+    TResult? Function()? vazio,
+    TResult? Function(String message)? erro,
+  }) {
+    return carregando?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? carregando,
+    TResult Function(List<LinhaDoTempo> items)? successo,
+    TResult Function()? vazio,
+    TResult Function(String message)? erro,
+    required TResult orElse(),
+  }) {
+    if (carregando != null) {
+      return carregando();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Carregando value) carregando,
+    required TResult Function(_Successo value) successo,
+    required TResult Function(_Vazio value) vazio,
+    required TResult Function(_Erro value) erro,
+  }) {
+    return carregando(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Carregando value)? carregando,
+    TResult? Function(_Successo value)? successo,
+    TResult? Function(_Vazio value)? vazio,
+    TResult? Function(_Erro value)? erro,
+  }) {
+    return carregando?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Carregando value)? carregando,
+    TResult Function(_Successo value)? successo,
+    TResult Function(_Vazio value)? vazio,
+    TResult Function(_Erro value)? erro,
+    required TResult orElse(),
+  }) {
+    if (carregando != null) {
+      return carregando(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Carregando implements LinhaDoTempoState {
+  const factory _Carregando() = _$CarregandoImpl;
+}
+
+/// @nodoc
+abstract class _$$SuccessoImplCopyWith<$Res> {
+  factory _$$SuccessoImplCopyWith(
+          _$SuccessoImpl value, $Res Function(_$SuccessoImpl) then) =
+      __$$SuccessoImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<LinhaDoTempo> items});
+}
+
+/// @nodoc
+class __$$SuccessoImplCopyWithImpl<$Res>
+    extends _$LinhaDoTempoStateCopyWithImpl<$Res, _$SuccessoImpl>
+    implements _$$SuccessoImplCopyWith<$Res> {
+  __$$SuccessoImplCopyWithImpl(
+      _$SuccessoImpl _value, $Res Function(_$SuccessoImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? items = null,
+  }) {
+    return _then(_$SuccessoImpl(
+      null == items
+          ? _value._items
+          : items // ignore: cast_nullable_to_non_nullable
+              as List<LinhaDoTempo>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$SuccessoImpl implements _Successo {
+  const _$SuccessoImpl(final List<LinhaDoTempo> items) : _items = items;
+
+  final List<LinhaDoTempo> _items;
+  @override
+  List<LinhaDoTempo> get items {
+    if (_items is EqualUnmodifiableListView) return _items;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_items);
+  }
+
+  @override
+  String toString() {
+    return 'LinhaDoTempoState.successo(items: $items)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SuccessoImpl &&
+            const DeepCollectionEquality().equals(other._items, _items));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_items));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SuccessoImplCopyWith<_$SuccessoImpl> get copyWith =>
+      __$$SuccessoImplCopyWithImpl<_$SuccessoImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() carregando,
+    required TResult Function(List<LinhaDoTempo> items) successo,
+    required TResult Function() vazio,
+    required TResult Function(String message) erro,
+  }) {
+    return successo(items);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? carregando,
+    TResult? Function(List<LinhaDoTempo> items)? successo,
+    TResult? Function()? vazio,
+    TResult? Function(String message)? erro,
+  }) {
+    return successo?.call(items);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? carregando,
+    TResult Function(List<LinhaDoTempo> items)? successo,
+    TResult Function()? vazio,
+    TResult Function(String message)? erro,
+    required TResult orElse(),
+  }) {
+    if (successo != null) {
+      return successo(items);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Carregando value) carregando,
+    required TResult Function(_Successo value) successo,
+    required TResult Function(_Vazio value) vazio,
+    required TResult Function(_Erro value) erro,
+  }) {
+    return successo(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Carregando value)? carregando,
+    TResult? Function(_Successo value)? successo,
+    TResult? Function(_Vazio value)? vazio,
+    TResult? Function(_Erro value)? erro,
+  }) {
+    return successo?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Carregando value)? carregando,
+    TResult Function(_Successo value)? successo,
+    TResult Function(_Vazio value)? vazio,
+    TResult Function(_Erro value)? erro,
+    required TResult orElse(),
+  }) {
+    if (successo != null) {
+      return successo(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Successo implements LinhaDoTempoState {
+  const factory _Successo(final List<LinhaDoTempo> items) = _$SuccessoImpl;
+
+  List<LinhaDoTempo> get items;
+  @JsonKey(ignore: true)
+  _$$SuccessoImplCopyWith<_$SuccessoImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$VazioImplCopyWith<$Res> {
+  factory _$$VazioImplCopyWith(
+          _$VazioImpl value, $Res Function(_$VazioImpl) then) =
+      __$$VazioImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$VazioImplCopyWithImpl<$Res>
+    extends _$LinhaDoTempoStateCopyWithImpl<$Res, _$VazioImpl>
+    implements _$$VazioImplCopyWith<$Res> {
+  __$$VazioImplCopyWithImpl(
+      _$VazioImpl _value, $Res Function(_$VazioImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$VazioImpl implements _Vazio {
+  const _$VazioImpl();
+
+  @override
+  String toString() {
+    return 'LinhaDoTempoState.vazio()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$VazioImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() carregando,
+    required TResult Function(List<LinhaDoTempo> items) successo,
+    required TResult Function() vazio,
+    required TResult Function(String message) erro,
+  }) {
+    return vazio();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? carregando,
+    TResult? Function(List<LinhaDoTempo> items)? successo,
+    TResult? Function()? vazio,
+    TResult? Function(String message)? erro,
+  }) {
+    return vazio?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? carregando,
+    TResult Function(List<LinhaDoTempo> items)? successo,
+    TResult Function()? vazio,
+    TResult Function(String message)? erro,
+    required TResult orElse(),
+  }) {
+    if (vazio != null) {
+      return vazio();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Carregando value) carregando,
+    required TResult Function(_Successo value) successo,
+    required TResult Function(_Vazio value) vazio,
+    required TResult Function(_Erro value) erro,
+  }) {
+    return vazio(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Carregando value)? carregando,
+    TResult? Function(_Successo value)? successo,
+    TResult? Function(_Vazio value)? vazio,
+    TResult? Function(_Erro value)? erro,
+  }) {
+    return vazio?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Carregando value)? carregando,
+    TResult Function(_Successo value)? successo,
+    TResult Function(_Vazio value)? vazio,
+    TResult Function(_Erro value)? erro,
+    required TResult orElse(),
+  }) {
+    if (vazio != null) {
+      return vazio(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Vazio implements LinhaDoTempoState {
+  const factory _Vazio() = _$VazioImpl;
+}
+
+/// @nodoc
+abstract class _$$ErroImplCopyWith<$Res> {
+  factory _$$ErroImplCopyWith(
+          _$ErroImpl value, $Res Function(_$ErroImpl) then) =
+      __$$ErroImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String message});
+}
+
+/// @nodoc
+class __$$ErroImplCopyWithImpl<$Res>
+    extends _$LinhaDoTempoStateCopyWithImpl<$Res, _$ErroImpl>
+    implements _$$ErroImplCopyWith<$Res> {
+  __$$ErroImplCopyWithImpl(_$ErroImpl _value, $Res Function(_$ErroImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = null,
+  }) {
+    return _then(_$ErroImpl(
+      null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ErroImpl implements _Erro {
+  const _$ErroImpl(this.message);
+
+  @override
+  final String message;
+
+  @override
+  String toString() {
+    return 'LinhaDoTempoState.erro(message: $message)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ErroImpl &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ErroImplCopyWith<_$ErroImpl> get copyWith =>
+      __$$ErroImplCopyWithImpl<_$ErroImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() carregando,
+    required TResult Function(List<LinhaDoTempo> items) successo,
+    required TResult Function() vazio,
+    required TResult Function(String message) erro,
+  }) {
+    return erro(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? carregando,
+    TResult? Function(List<LinhaDoTempo> items)? successo,
+    TResult? Function()? vazio,
+    TResult? Function(String message)? erro,
+  }) {
+    return erro?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? carregando,
+    TResult Function(List<LinhaDoTempo> items)? successo,
+    TResult Function()? vazio,
+    TResult Function(String message)? erro,
+    required TResult orElse(),
+  }) {
+    if (erro != null) {
+      return erro(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Carregando value) carregando,
+    required TResult Function(_Successo value) successo,
+    required TResult Function(_Vazio value) vazio,
+    required TResult Function(_Erro value) erro,
+  }) {
+    return erro(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Carregando value)? carregando,
+    TResult? Function(_Successo value)? successo,
+    TResult? Function(_Vazio value)? vazio,
+    TResult? Function(_Erro value)? erro,
+  }) {
+    return erro?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Carregando value)? carregando,
+    TResult Function(_Successo value)? successo,
+    TResult Function(_Vazio value)? vazio,
+    TResult Function(_Erro value)? erro,
+    required TResult orElse(),
+  }) {
+    if (erro != null) {
+      return erro(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Erro implements LinhaDoTempoState {
+  const factory _Erro(final String message) = _$ErroImpl;
+
+  String get message;
+  @JsonKey(ignore: true)
+  _$$ErroImplCopyWith<_$ErroImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

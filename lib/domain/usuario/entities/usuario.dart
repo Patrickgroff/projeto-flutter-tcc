@@ -15,5 +15,7 @@ class Usuario with _$Usuario {
     @JsonKey(includeIfNull: false) final String? senha,
   }) = _Usuario;
 
+  String get iniciais => nome?.trim().isNotEmpty == true ? nome!.trim().split(RegExp(' +')).map((s) => s[0]).take(2).join() : '';
+
   factory Usuario.fromJson(Map<String, dynamic> json) => _$UsuarioFromJson(json);
 }

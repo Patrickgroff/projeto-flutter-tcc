@@ -25,15 +25,11 @@ mixin _$Veiculo {
   @JsonKey(includeIfNull: false)
   String? get veiculo => throw _privateConstructorUsedError;
   @JsonKey(includeIfNull: false)
-  String? get apelido => throw _privateConstructorUsedError;
-  @JsonKey(includeIfNull: false)
   String? get marca => throw _privateConstructorUsedError;
   @JsonKey(includeIfNull: false)
   int? get ano => throw _privateConstructorUsedError;
   @JsonKey(includeIfNull: false)
   String? get placa => throw _privateConstructorUsedError;
-  @JsonKey(includeIfNull: false)
-  double? get volumeTanque => throw _privateConstructorUsedError;
   @JsonKey(includeIfNull: false)
   double? get odometro => throw _privateConstructorUsedError;
   @JsonKey(includeIfNull: false)
@@ -52,11 +48,9 @@ abstract class $VeiculoCopyWith<$Res> {
   $Res call(
       {@JsonKey(includeIfNull: false) int? id,
       @JsonKey(includeIfNull: false) String? veiculo,
-      @JsonKey(includeIfNull: false) String? apelido,
       @JsonKey(includeIfNull: false) String? marca,
       @JsonKey(includeIfNull: false) int? ano,
       @JsonKey(includeIfNull: false) String? placa,
-      @JsonKey(includeIfNull: false) double? volumeTanque,
       @JsonKey(includeIfNull: false) double? odometro,
       @JsonKey(includeIfNull: false) int? usuarioId});
 }
@@ -76,11 +70,9 @@ class _$VeiculoCopyWithImpl<$Res, $Val extends Veiculo>
   $Res call({
     Object? id = freezed,
     Object? veiculo = freezed,
-    Object? apelido = freezed,
     Object? marca = freezed,
     Object? ano = freezed,
     Object? placa = freezed,
-    Object? volumeTanque = freezed,
     Object? odometro = freezed,
     Object? usuarioId = freezed,
   }) {
@@ -92,10 +84,6 @@ class _$VeiculoCopyWithImpl<$Res, $Val extends Veiculo>
       veiculo: freezed == veiculo
           ? _value.veiculo
           : veiculo // ignore: cast_nullable_to_non_nullable
-              as String?,
-      apelido: freezed == apelido
-          ? _value.apelido
-          : apelido // ignore: cast_nullable_to_non_nullable
               as String?,
       marca: freezed == marca
           ? _value.marca
@@ -109,10 +97,6 @@ class _$VeiculoCopyWithImpl<$Res, $Val extends Veiculo>
           ? _value.placa
           : placa // ignore: cast_nullable_to_non_nullable
               as String?,
-      volumeTanque: freezed == volumeTanque
-          ? _value.volumeTanque
-          : volumeTanque // ignore: cast_nullable_to_non_nullable
-              as double?,
       odometro: freezed == odometro
           ? _value.odometro
           : odometro // ignore: cast_nullable_to_non_nullable
@@ -135,11 +119,9 @@ abstract class _$$VeiculoImplCopyWith<$Res> implements $VeiculoCopyWith<$Res> {
   $Res call(
       {@JsonKey(includeIfNull: false) int? id,
       @JsonKey(includeIfNull: false) String? veiculo,
-      @JsonKey(includeIfNull: false) String? apelido,
       @JsonKey(includeIfNull: false) String? marca,
       @JsonKey(includeIfNull: false) int? ano,
       @JsonKey(includeIfNull: false) String? placa,
-      @JsonKey(includeIfNull: false) double? volumeTanque,
       @JsonKey(includeIfNull: false) double? odometro,
       @JsonKey(includeIfNull: false) int? usuarioId});
 }
@@ -157,11 +139,9 @@ class __$$VeiculoImplCopyWithImpl<$Res>
   $Res call({
     Object? id = freezed,
     Object? veiculo = freezed,
-    Object? apelido = freezed,
     Object? marca = freezed,
     Object? ano = freezed,
     Object? placa = freezed,
-    Object? volumeTanque = freezed,
     Object? odometro = freezed,
     Object? usuarioId = freezed,
   }) {
@@ -173,10 +153,6 @@ class __$$VeiculoImplCopyWithImpl<$Res>
       veiculo: freezed == veiculo
           ? _value.veiculo
           : veiculo // ignore: cast_nullable_to_non_nullable
-              as String?,
-      apelido: freezed == apelido
-          ? _value.apelido
-          : apelido // ignore: cast_nullable_to_non_nullable
               as String?,
       marca: freezed == marca
           ? _value.marca
@@ -190,10 +166,6 @@ class __$$VeiculoImplCopyWithImpl<$Res>
           ? _value.placa
           : placa // ignore: cast_nullable_to_non_nullable
               as String?,
-      volumeTanque: freezed == volumeTanque
-          ? _value.volumeTanque
-          : volumeTanque // ignore: cast_nullable_to_non_nullable
-              as double?,
       odometro: freezed == odometro
           ? _value.odometro
           : odometro // ignore: cast_nullable_to_non_nullable
@@ -213,11 +185,9 @@ class _$VeiculoImpl extends _Veiculo {
   const _$VeiculoImpl(
       {@JsonKey(includeIfNull: false) this.id,
       @JsonKey(includeIfNull: false) this.veiculo,
-      @JsonKey(includeIfNull: false) this.apelido,
       @JsonKey(includeIfNull: false) this.marca,
       @JsonKey(includeIfNull: false) this.ano,
       @JsonKey(includeIfNull: false) this.placa,
-      @JsonKey(includeIfNull: false) this.volumeTanque,
       @JsonKey(includeIfNull: false) this.odometro,
       @JsonKey(includeIfNull: false) this.usuarioId})
       : super._();
@@ -233,9 +203,6 @@ class _$VeiculoImpl extends _Veiculo {
   final String? veiculo;
   @override
   @JsonKey(includeIfNull: false)
-  final String? apelido;
-  @override
-  @JsonKey(includeIfNull: false)
   final String? marca;
   @override
   @JsonKey(includeIfNull: false)
@@ -245,9 +212,6 @@ class _$VeiculoImpl extends _Veiculo {
   final String? placa;
   @override
   @JsonKey(includeIfNull: false)
-  final double? volumeTanque;
-  @override
-  @JsonKey(includeIfNull: false)
   final double? odometro;
   @override
   @JsonKey(includeIfNull: false)
@@ -255,7 +219,7 @@ class _$VeiculoImpl extends _Veiculo {
 
   @override
   String toString() {
-    return 'Veiculo(id: $id, veiculo: $veiculo, apelido: $apelido, marca: $marca, ano: $ano, placa: $placa, volumeTanque: $volumeTanque, odometro: $odometro, usuarioId: $usuarioId)';
+    return 'Veiculo(id: $id, veiculo: $veiculo, marca: $marca, ano: $ano, placa: $placa, odometro: $odometro, usuarioId: $usuarioId)';
   }
 
   @override
@@ -265,12 +229,9 @@ class _$VeiculoImpl extends _Veiculo {
             other is _$VeiculoImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.veiculo, veiculo) || other.veiculo == veiculo) &&
-            (identical(other.apelido, apelido) || other.apelido == apelido) &&
             (identical(other.marca, marca) || other.marca == marca) &&
             (identical(other.ano, ano) || other.ano == ano) &&
             (identical(other.placa, placa) || other.placa == placa) &&
-            (identical(other.volumeTanque, volumeTanque) ||
-                other.volumeTanque == volumeTanque) &&
             (identical(other.odometro, odometro) ||
                 other.odometro == odometro) &&
             (identical(other.usuarioId, usuarioId) ||
@@ -279,8 +240,8 @@ class _$VeiculoImpl extends _Veiculo {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, id, veiculo, apelido, marca, ano,
-      placa, volumeTanque, odometro, usuarioId);
+  int get hashCode => Object.hash(
+      runtimeType, id, veiculo, marca, ano, placa, odometro, usuarioId);
 
   @JsonKey(ignore: true)
   @override
@@ -300,11 +261,9 @@ abstract class _Veiculo extends Veiculo {
   const factory _Veiculo(
       {@JsonKey(includeIfNull: false) final int? id,
       @JsonKey(includeIfNull: false) final String? veiculo,
-      @JsonKey(includeIfNull: false) final String? apelido,
       @JsonKey(includeIfNull: false) final String? marca,
       @JsonKey(includeIfNull: false) final int? ano,
       @JsonKey(includeIfNull: false) final String? placa,
-      @JsonKey(includeIfNull: false) final double? volumeTanque,
       @JsonKey(includeIfNull: false) final double? odometro,
       @JsonKey(includeIfNull: false) final int? usuarioId}) = _$VeiculoImpl;
   const _Veiculo._() : super._();
@@ -319,9 +278,6 @@ abstract class _Veiculo extends Veiculo {
   String? get veiculo;
   @override
   @JsonKey(includeIfNull: false)
-  String? get apelido;
-  @override
-  @JsonKey(includeIfNull: false)
   String? get marca;
   @override
   @JsonKey(includeIfNull: false)
@@ -329,9 +285,6 @@ abstract class _Veiculo extends Veiculo {
   @override
   @JsonKey(includeIfNull: false)
   String? get placa;
-  @override
-  @JsonKey(includeIfNull: false)
-  double? get volumeTanque;
   @override
   @JsonKey(includeIfNull: false)
   double? get odometro;

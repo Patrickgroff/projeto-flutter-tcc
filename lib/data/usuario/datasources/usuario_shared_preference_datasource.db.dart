@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:injectable/injectable.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -10,4 +12,5 @@ class UsuarioSharedPrefDataSource {
 
   Future<bool> saveUsuarioIdInSession(int usuarioId) => _sp.setInt(key, usuarioId);
   int? getUsuarioIdInSession() => _sp.getInt(key);
+  Future<bool> logout() => _sp.remove(key);
 }

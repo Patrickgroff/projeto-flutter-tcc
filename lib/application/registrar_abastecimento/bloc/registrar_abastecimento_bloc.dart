@@ -10,7 +10,7 @@ part 'registrar_abastecimento_bloc.freezed.dart';
 class RegistrarAbastecimentoBloc extends Bloc<RegistrarAbastecimentoEvent, RegistrarAbastecimentoState> {
   // Inject repository
   // final IRegistrarAbastecimentoRepository registrarAbastecimentoRepository;
-  RegistrarAbastecimentoBloc(/* this.registrarAbastecimentoRepository */) : super(_Initial()) {
+  RegistrarAbastecimentoBloc(/* this.registrarAbastecimentoRepository */) : super(const _Initial()) {
     on<RegistrarAbastecimentoEvent>((event, emit) {
       // TODO: implement event handler
     });

@@ -71,6 +71,7 @@ class RegistrarUsuarioPage extends StatelessWidget {
                                   FilteringTextInputFormatter.singleLineFormatter,
                                 ],
                                 keyboardType: TextInputType.name,
+                                textCapitalization: TextCapitalization.words,
                                 textInputAction: TextInputAction.next,
                                 validationMessages: {
                                   ValidationMessage.required: (error) => 'O seu nome é obrigatório!',
