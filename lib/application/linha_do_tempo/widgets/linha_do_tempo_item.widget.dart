@@ -18,7 +18,8 @@ class LinhaDoTempoItemWidget extends StatelessWidget {
     final bodySmall = theme.textTheme.bodySmall?.copyWith(color: theme.textTheme.bodySmall?.color?.withOpacity(0.48));
     final title = theme.textTheme.titleLarge;
     final subtitle = theme.textTheme.bodyMedium?.copyWith(color: theme.textTheme.bodyMedium?.color?.withOpacity(0.72));
-    final dataFormatada = item.date.isBefore(DateTime.now().add(const Duration(days: 1))) ? timeago.format(item.date, locale: 'pt') : DateFormat.yMd().add_Hm().format(item.date);
+    final timeNow = DateTime.now().subtract(const Duration(days: 1));
+    final dataFormatada = item.date.isAfter(timeNow) ? timeago.format(item.date, locale: 'pt') : DateFormat.MMMd().add_Hm().format(item.date);
     final valorFormatado = NumberFormat.compactCurrency(locale: 'pt_BR', symbol: r'R$').format(item.valor);
     return TimelineTile(
       alignment: TimelineAlign.start,

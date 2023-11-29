@@ -113,7 +113,7 @@ class RegistrarVeiculoPage extends StatelessWidget {
                                     inputFormatters: [
                                       LengthLimitingTextInputFormatter(8),
                                       FilteringTextInputFormatter.singleLineFormatter,
-                                      AppBRPlacaVeiculoTextInputFormatter(),
+                                      //AppBRPlacaVeiculoTextInputFormatter(),
                                     ],
                                     keyboardType: TextInputType.text,
                                     textInputAction: TextInputAction.next,

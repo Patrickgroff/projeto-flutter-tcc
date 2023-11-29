@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gest_car/application/linha_do_tempo/bloc/linha_do_tempo_bloc.dart';
 import 'package:gest_car/application/linha_do_tempo/widgets/app_drawer.widget.dart';
+import 'package:gest_car/application/linha_do_tempo/widgets/linha_do_tempo_header_filtro.widget.dart';
 import 'package:gest_car/application/linha_do_tempo/widgets/linha_do_tempo_item.widget.dart';
 import 'package:gest_car/application/linha_do_tempo/widgets/linha_do_tempo_skeleton_item.widget.dart';
 import 'package:gest_car/core/injection/injection.dart';
@@ -16,13 +17,14 @@ class LinhaDoTempoPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Linha Do Tempo')),
       drawer: const AppDrawerWidget(),
       body: SafeArea(
         child: BlocProvider(
           create: (_) => getIt<LinhaDoTempoBloc>()..add(const LinhaDoTempoEvent.garregar()),
           child: CustomScrollView(
             slivers: [
+              const SliverAppBar(title: Text('Linha Do Tempo')),
+              LinhaDoTempoHeaderFiltroWidget(),
               BlocBuilder<LinhaDoTempoBloc, LinhaDoTempoState>(
                 buildWhen: (p, c) => c.maybeWhen(orElse: () => true, erro: (_) => false),
                 builder: (context, state) => state.maybeWhen(

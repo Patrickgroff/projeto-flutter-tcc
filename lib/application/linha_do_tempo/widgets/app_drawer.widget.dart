@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:gest_car/application/linha_do_tempo/widgets/usuario_info_drawer_header.widget.dart';
 import 'package:gest_car/core/injection/injection.dart';
 import 'package:gest_car/core/router/app_router.dart';
+import 'package:gest_car/domain/linha_do_tempo/entities/tipo_linha_do_tempo.enum.dart';
 import 'package:gest_car/domain/usuario/repositories/usuario.repository.i.dart';
 
 class AppDrawerWidget extends StatelessWidget {
@@ -22,28 +23,32 @@ class AppDrawerWidget extends StatelessWidget {
                 const UsuarioInfoDrawerHeader(),
                 ListTile(
                     title: const Text('Adicionar Abastecimento'),
-                    leading: const Icon(Icons.local_gas_station_rounded),
+                    iconColor: TipoLinhaDoTempo.abastecimento.color,
+                    leading: Icon(TipoLinhaDoTempo.abastecimento.icon),
                     onTap: () {
                       Navigator.pop(context);
                       Future.delayed(const Duration(milliseconds: 230), () => context.router.push(const RegistrarAbastecimentoRoute()));
                     }),
                 ListTile(
                     title: const Text('Adicionar Despesa'),
-                    leading: const Icon(Icons.request_quote_rounded),
+                    iconColor: TipoLinhaDoTempo.despesa.color,
+                    leading: Icon(TipoLinhaDoTempo.despesa.icon),
                     onTap: () {
                       Navigator.pop(context);
                       Future.delayed(const Duration(milliseconds: 230), () => context.router.push(const RegistrarDespesaRoute()));
                     }),
                 ListTile(
                     title: const Text('Adicionar Serviço'),
-                    leading: const Icon(Icons.build_rounded),
+                    iconColor: TipoLinhaDoTempo.servico.color,
+                    leading: Icon(TipoLinhaDoTempo.servico.icon),
                     onTap: () {
                       Navigator.pop(context);
                       Future.delayed(const Duration(milliseconds: 230), () => context.router.push(const RegistrarServicoRoute()));
                     }),
                 ListTile(
                     title: const Text('Adicionar Receita'),
-                    leading: const Icon(Icons.add_card_rounded),
+                    iconColor: TipoLinhaDoTempo.receita.color,
+                    leading: Icon(TipoLinhaDoTempo.receita.icon),
                     onTap: () {
                       Navigator.pop(context);
                       Future.delayed(const Duration(milliseconds: 230), () => context.router.push(const RegistrarReceitaRoute()));

@@ -9,6 +9,8 @@ import 'package:intl/intl.dart' hide TextDirection;
 import 'package:reactive_forms/reactive_forms.dart';
 
 part './app_br_number_text_input.formatter.dart';
+part './app_br_placa_veiculo_text_input.formatter.dart';
+part './app_reactive_filter_chip.dart';
 part './app_reactive_password_field.dart';
 part './app_required_label.widget.dart';
 part './date_time_value_accessor.dart';

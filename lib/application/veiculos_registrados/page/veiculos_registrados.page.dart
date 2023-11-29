@@ -12,7 +12,7 @@ class VeiculosRegistradosPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: const Text('Veículos Cadastrados')),
+        appBar: AppBar(title: const Text('Veículos ')),
         body: BlocProvider(
           create: (_) => getIt<VeiculosRegistradosBloc>(),
           child: Container(),
