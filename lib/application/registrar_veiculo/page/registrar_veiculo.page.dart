@@ -34,8 +34,8 @@ class RegistrarVeiculoPage extends StatelessWidget {
                           'veiculo': FormControl<String>(validators: [Validators.required, Validators.minLength(2)]),
                           'marca': FormControl<String>(validators: [Validators.required, Validators.minLength(2)]),
                           'ano': FormControl<int>(validators: [Validators.required, Validators.min(1910)]),
-                          'placa': FormControl<String>(validators: [Validators.required, Validators.minLength(8)]),
-                          'odometro': FormControl<double>(validators: [Validators.required, Validators.min(1)]),
+                          'placa': FormControl<String>(validators: [Validators.required, Validators.minLength(7)]),
+                          'odometro': FormControl<double>(validators: [Validators.required, Validators.min(0)]),
                         }),
                     builder: (context, form, _) => Padding(
                           padding: const EdgeInsets.symmetric(horizontal: Layout.small),

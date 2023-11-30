@@ -98,11 +98,14 @@ extension GetItInjectableX on _i1.GetIt {
     gh.factory<_i15.IServicoRepository>(() => _i16.ServicoRepository());
     gh.factory<_i17.LinhaDoTempoBloc>(
         () => _i17.LinhaDoTempoBloc(gh<_i11.ILinhaDoTempoRepository>()));
-    gh.factory<_i18.RegistrarAbastecimentoBloc>(
-        () => _i18.RegistrarAbastecimentoBloc());
-    gh.factory<_i19.RegistrarDespesaBloc>(() => _i19.RegistrarDespesaBloc());
-    gh.factory<_i20.RegistrarReceitaBloc>(() => _i20.RegistrarReceitaBloc());
-    gh.factory<_i21.RegistrarServicoBloc>(() => _i21.RegistrarServicoBloc());
+    gh.factory<_i18.RegistrarAbastecimentoBloc>(() =>
+        _i18.RegistrarAbastecimentoBloc(gh<_i7.IAbastecimentoRepository>()));
+    gh.factory<_i19.RegistrarDespesaBloc>(
+        () => _i19.RegistrarDespesaBloc(gh<_i9.IDespesaRepository>()));
+    gh.factory<_i20.RegistrarReceitaBloc>(
+        () => _i20.RegistrarReceitaBloc(gh<_i13.IReceitaRepository>()));
+    gh.factory<_i21.RegistrarServicoBloc>(
+        () => _i21.RegistrarServicoBloc(gh<_i15.IServicoRepository>()));
     gh.factory<_i22.UsuarioDBDataSource>(
         () => _i22.UsuarioDBDataSource(gh<_i4.Database>()));
     gh.factory<_i23.UsuarioSharedPrefDataSource>(

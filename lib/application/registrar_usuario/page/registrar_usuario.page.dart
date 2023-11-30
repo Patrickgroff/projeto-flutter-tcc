@@ -30,7 +30,7 @@ class RegistrarUsuarioPage extends StatelessWidget {
                 ),
                 child: ReactiveFormBuilder(
                   form: () => fb.group({
-                    'nome': FormControl<String>(validators: [Validators.required, Validators.minLength(6)]),
+                    'nome': FormControl<String>(validators: [Validators.required, Validators.minLength(3)]),
                     'telefone': FormControl<String>(
                       validators: [Validators.required, Validators.minLength(16)],
                       asyncValidators: [const TelefoneAsyncValidator()],
