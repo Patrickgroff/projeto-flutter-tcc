@@ -239,24 +239,24 @@ mixin _$RegistrarUsuarioState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() cadastrando,
-    required TResult Function(int userId) success,
-    required TResult Function(String message) error,
+    required TResult Function(int userId) successo,
+    required TResult Function(String message) erro,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? cadastrando,
-    TResult? Function(int userId)? success,
-    TResult? Function(String message)? error,
+    TResult? Function(int userId)? successo,
+    TResult? Function(String message)? erro,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? cadastrando,
-    TResult Function(int userId)? success,
-    TResult Function(String message)? error,
+    TResult Function(int userId)? successo,
+    TResult Function(String message)? erro,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -264,24 +264,24 @@ mixin _$RegistrarUsuarioState {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_Cadastrando value) cadastrando,
-    required TResult Function(_Success value) success,
-    required TResult Function(_Error value) error,
+    required TResult Function(_Success value) successo,
+    required TResult Function(_Error value) erro,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Cadastrando value)? cadastrando,
-    TResult? Function(_Success value)? success,
-    TResult? Function(_Error value)? error,
+    TResult? Function(_Success value)? successo,
+    TResult? Function(_Error value)? erro,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_Cadastrando value)? cadastrando,
-    TResult Function(_Success value)? success,
-    TResult Function(_Error value)? error,
+    TResult Function(_Success value)? successo,
+    TResult Function(_Error value)? erro,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -346,8 +346,8 @@ class _$InitialImpl implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() cadastrando,
-    required TResult Function(int userId) success,
-    required TResult Function(String message) error,
+    required TResult Function(int userId) successo,
+    required TResult Function(String message) erro,
   }) {
     return initial();
   }
@@ -357,8 +357,8 @@ class _$InitialImpl implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? cadastrando,
-    TResult? Function(int userId)? success,
-    TResult? Function(String message)? error,
+    TResult? Function(int userId)? successo,
+    TResult? Function(String message)? erro,
   }) {
     return initial?.call();
   }
@@ -368,8 +368,8 @@ class _$InitialImpl implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? cadastrando,
-    TResult Function(int userId)? success,
-    TResult Function(String message)? error,
+    TResult Function(int userId)? successo,
+    TResult Function(String message)? erro,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -383,8 +383,8 @@ class _$InitialImpl implements _Initial {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_Cadastrando value) cadastrando,
-    required TResult Function(_Success value) success,
-    required TResult Function(_Error value) error,
+    required TResult Function(_Success value) successo,
+    required TResult Function(_Error value) erro,
   }) {
     return initial(this);
   }
@@ -394,8 +394,8 @@ class _$InitialImpl implements _Initial {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Cadastrando value)? cadastrando,
-    TResult? Function(_Success value)? success,
-    TResult? Function(_Error value)? error,
+    TResult? Function(_Success value)? successo,
+    TResult? Function(_Error value)? erro,
   }) {
     return initial?.call(this);
   }
@@ -405,8 +405,8 @@ class _$InitialImpl implements _Initial {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_Cadastrando value)? cadastrando,
-    TResult Function(_Success value)? success,
-    TResult Function(_Error value)? error,
+    TResult Function(_Success value)? successo,
+    TResult Function(_Error value)? erro,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -460,8 +460,8 @@ class _$CadastrandoImpl implements _Cadastrando {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() cadastrando,
-    required TResult Function(int userId) success,
-    required TResult Function(String message) error,
+    required TResult Function(int userId) successo,
+    required TResult Function(String message) erro,
   }) {
     return cadastrando();
   }
@@ -471,8 +471,8 @@ class _$CadastrandoImpl implements _Cadastrando {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? cadastrando,
-    TResult? Function(int userId)? success,
-    TResult? Function(String message)? error,
+    TResult? Function(int userId)? successo,
+    TResult? Function(String message)? erro,
   }) {
     return cadastrando?.call();
   }
@@ -482,8 +482,8 @@ class _$CadastrandoImpl implements _Cadastrando {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? cadastrando,
-    TResult Function(int userId)? success,
-    TResult Function(String message)? error,
+    TResult Function(int userId)? successo,
+    TResult Function(String message)? erro,
     required TResult orElse(),
   }) {
     if (cadastrando != null) {
@@ -497,8 +497,8 @@ class _$CadastrandoImpl implements _Cadastrando {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_Cadastrando value) cadastrando,
-    required TResult Function(_Success value) success,
-    required TResult Function(_Error value) error,
+    required TResult Function(_Success value) successo,
+    required TResult Function(_Error value) erro,
   }) {
     return cadastrando(this);
   }
@@ -508,8 +508,8 @@ class _$CadastrandoImpl implements _Cadastrando {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Cadastrando value)? cadastrando,
-    TResult? Function(_Success value)? success,
-    TResult? Function(_Error value)? error,
+    TResult? Function(_Success value)? successo,
+    TResult? Function(_Error value)? erro,
   }) {
     return cadastrando?.call(this);
   }
@@ -519,8 +519,8 @@ class _$CadastrandoImpl implements _Cadastrando {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_Cadastrando value)? cadastrando,
-    TResult Function(_Success value)? success,
-    TResult Function(_Error value)? error,
+    TResult Function(_Success value)? successo,
+    TResult Function(_Error value)? erro,
     required TResult orElse(),
   }) {
     if (cadastrando != null) {
@@ -575,7 +575,7 @@ class _$SuccessImpl implements _Success {
 
   @override
   String toString() {
-    return 'RegistrarUsuarioState.success(userId: $userId)';
+    return 'RegistrarUsuarioState.successo(userId: $userId)';
   }
 
   @override
@@ -600,10 +600,10 @@ class _$SuccessImpl implements _Success {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() cadastrando,
-    required TResult Function(int userId) success,
-    required TResult Function(String message) error,
+    required TResult Function(int userId) successo,
+    required TResult Function(String message) erro,
   }) {
-    return success(userId);
+    return successo(userId);
   }
 
   @override
@@ -611,10 +611,10 @@ class _$SuccessImpl implements _Success {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? cadastrando,
-    TResult? Function(int userId)? success,
-    TResult? Function(String message)? error,
+    TResult? Function(int userId)? successo,
+    TResult? Function(String message)? erro,
   }) {
-    return success?.call(userId);
+    return successo?.call(userId);
   }
 
   @override
@@ -622,12 +622,12 @@ class _$SuccessImpl implements _Success {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? cadastrando,
-    TResult Function(int userId)? success,
-    TResult Function(String message)? error,
+    TResult Function(int userId)? successo,
+    TResult Function(String message)? erro,
     required TResult orElse(),
   }) {
-    if (success != null) {
-      return success(userId);
+    if (successo != null) {
+      return successo(userId);
     }
     return orElse();
   }
@@ -637,10 +637,10 @@ class _$SuccessImpl implements _Success {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_Cadastrando value) cadastrando,
-    required TResult Function(_Success value) success,
-    required TResult Function(_Error value) error,
+    required TResult Function(_Success value) successo,
+    required TResult Function(_Error value) erro,
   }) {
-    return success(this);
+    return successo(this);
   }
 
   @override
@@ -648,10 +648,10 @@ class _$SuccessImpl implements _Success {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Cadastrando value)? cadastrando,
-    TResult? Function(_Success value)? success,
-    TResult? Function(_Error value)? error,
+    TResult? Function(_Success value)? successo,
+    TResult? Function(_Error value)? erro,
   }) {
-    return success?.call(this);
+    return successo?.call(this);
   }
 
   @override
@@ -659,12 +659,12 @@ class _$SuccessImpl implements _Success {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_Cadastrando value)? cadastrando,
-    TResult Function(_Success value)? success,
-    TResult Function(_Error value)? error,
+    TResult Function(_Success value)? successo,
+    TResult Function(_Error value)? erro,
     required TResult orElse(),
   }) {
-    if (success != null) {
-      return success(this);
+    if (successo != null) {
+      return successo(this);
     }
     return orElse();
   }
@@ -720,7 +720,7 @@ class _$ErrorImpl implements _Error {
 
   @override
   String toString() {
-    return 'RegistrarUsuarioState.error(message: $message)';
+    return 'RegistrarUsuarioState.erro(message: $message)';
   }
 
   @override
@@ -745,10 +745,10 @@ class _$ErrorImpl implements _Error {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() cadastrando,
-    required TResult Function(int userId) success,
-    required TResult Function(String message) error,
+    required TResult Function(int userId) successo,
+    required TResult Function(String message) erro,
   }) {
-    return error(message);
+    return erro(message);
   }
 
   @override
@@ -756,10 +756,10 @@ class _$ErrorImpl implements _Error {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? cadastrando,
-    TResult? Function(int userId)? success,
-    TResult? Function(String message)? error,
+    TResult? Function(int userId)? successo,
+    TResult? Function(String message)? erro,
   }) {
-    return error?.call(message);
+    return erro?.call(message);
   }
 
   @override
@@ -767,12 +767,12 @@ class _$ErrorImpl implements _Error {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? cadastrando,
-    TResult Function(int userId)? success,
-    TResult Function(String message)? error,
+    TResult Function(int userId)? successo,
+    TResult Function(String message)? erro,
     required TResult orElse(),
   }) {
-    if (error != null) {
-      return error(message);
+    if (erro != null) {
+      return erro(message);
     }
     return orElse();
   }
@@ -782,10 +782,10 @@ class _$ErrorImpl implements _Error {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_Cadastrando value) cadastrando,
-    required TResult Function(_Success value) success,
-    required TResult Function(_Error value) error,
+    required TResult Function(_Success value) successo,
+    required TResult Function(_Error value) erro,
   }) {
-    return error(this);
+    return erro(this);
   }
 
   @override
@@ -793,10 +793,10 @@ class _$ErrorImpl implements _Error {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Cadastrando value)? cadastrando,
-    TResult? Function(_Success value)? success,
-    TResult? Function(_Error value)? error,
+    TResult? Function(_Success value)? successo,
+    TResult? Function(_Error value)? erro,
   }) {
-    return error?.call(this);
+    return erro?.call(this);
   }
 
   @override
@@ -804,12 +804,12 @@ class _$ErrorImpl implements _Error {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_Cadastrando value)? cadastrando,
-    TResult Function(_Success value)? success,
-    TResult Function(_Error value)? error,
+    TResult Function(_Success value)? successo,
+    TResult Function(_Error value)? erro,
     required TResult orElse(),
   }) {
-    if (error != null) {
-      return error(this);
+    if (erro != null) {
+      return erro(this);
     }
     return orElse();
   }

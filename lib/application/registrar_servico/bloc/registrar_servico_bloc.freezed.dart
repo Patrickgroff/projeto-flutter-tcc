@@ -16,37 +16,42 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$RegistrarServicoEvent {
+  Servico get servico => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
+    required TResult Function(Servico servico) cadastrar,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
+    TResult? Function(Servico servico)? cadastrar,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function(Servico servico)? cadastrar,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
+    required TResult Function(_Cadastrar value) cadastrar,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
+    TResult? Function(_Cadastrar value)? cadastrar,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(_Cadastrar value)? cadastrar,
     required TResult orElse(),
   }) =>
+      throw _privateConstructorUsedError;
+
+  @JsonKey(ignore: true)
+  $RegistrarServicoEventCopyWith<RegistrarServicoEvent> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -55,6 +60,10 @@ abstract class $RegistrarServicoEventCopyWith<$Res> {
   factory $RegistrarServicoEventCopyWith(RegistrarServicoEvent value,
           $Res Function(RegistrarServicoEvent) then) =
       _$RegistrarServicoEventCopyWithImpl<$Res, RegistrarServicoEvent>;
+  @useResult
+  $Res call({Servico servico});
+
+  $ServicoCopyWith<$Res> get servico;
 }
 
 /// @nodoc
@@ -67,67 +76,119 @@ class _$RegistrarServicoEventCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? servico = null,
+  }) {
+    return _then(_value.copyWith(
+      servico: null == servico
+          ? _value.servico
+          : servico // ignore: cast_nullable_to_non_nullable
+              as Servico,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ServicoCopyWith<$Res> get servico {
+    return $ServicoCopyWith<$Res>(_value.servico, (value) {
+      return _then(_value.copyWith(servico: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
-abstract class _$$StartedImplCopyWith<$Res> {
-  factory _$$StartedImplCopyWith(
-          _$StartedImpl value, $Res Function(_$StartedImpl) then) =
-      __$$StartedImplCopyWithImpl<$Res>;
+abstract class _$$CadastrarImplCopyWith<$Res>
+    implements $RegistrarServicoEventCopyWith<$Res> {
+  factory _$$CadastrarImplCopyWith(
+          _$CadastrarImpl value, $Res Function(_$CadastrarImpl) then) =
+      __$$CadastrarImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({Servico servico});
+
+  @override
+  $ServicoCopyWith<$Res> get servico;
 }
 
 /// @nodoc
-class __$$StartedImplCopyWithImpl<$Res>
-    extends _$RegistrarServicoEventCopyWithImpl<$Res, _$StartedImpl>
-    implements _$$StartedImplCopyWith<$Res> {
-  __$$StartedImplCopyWithImpl(
-      _$StartedImpl _value, $Res Function(_$StartedImpl) _then)
+class __$$CadastrarImplCopyWithImpl<$Res>
+    extends _$RegistrarServicoEventCopyWithImpl<$Res, _$CadastrarImpl>
+    implements _$$CadastrarImplCopyWith<$Res> {
+  __$$CadastrarImplCopyWithImpl(
+      _$CadastrarImpl _value, $Res Function(_$CadastrarImpl) _then)
       : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? servico = null,
+  }) {
+    return _then(_$CadastrarImpl(
+      null == servico
+          ? _value.servico
+          : servico // ignore: cast_nullable_to_non_nullable
+              as Servico,
+    ));
+  }
 }
 
 /// @nodoc
 
-class _$StartedImpl implements _Started {
-  const _$StartedImpl();
+class _$CadastrarImpl implements _Cadastrar {
+  const _$CadastrarImpl(this.servico);
+
+  @override
+  final Servico servico;
 
   @override
   String toString() {
-    return 'RegistrarServicoEvent.started()';
+    return 'RegistrarServicoEvent.cadastrar(servico: $servico)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$StartedImpl);
+        (other.runtimeType == runtimeType &&
+            other is _$CadastrarImpl &&
+            (identical(other.servico, servico) || other.servico == servico));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, servico);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CadastrarImplCopyWith<_$CadastrarImpl> get copyWith =>
+      __$$CadastrarImplCopyWithImpl<_$CadastrarImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
+    required TResult Function(Servico servico) cadastrar,
   }) {
-    return started();
+    return cadastrar(servico);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
+    TResult? Function(Servico servico)? cadastrar,
   }) {
-    return started?.call();
+    return cadastrar?.call(servico);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function(Servico servico)? cadastrar,
     required TResult orElse(),
   }) {
-    if (started != null) {
-      return started();
+    if (cadastrar != null) {
+      return cadastrar(servico);
     }
     return orElse();
   }
@@ -135,34 +196,41 @@ class _$StartedImpl implements _Started {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
+    required TResult Function(_Cadastrar value) cadastrar,
   }) {
-    return started(this);
+    return cadastrar(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
+    TResult? Function(_Cadastrar value)? cadastrar,
   }) {
-    return started?.call(this);
+    return cadastrar?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(_Cadastrar value)? cadastrar,
     required TResult orElse(),
   }) {
-    if (started != null) {
-      return started(this);
+    if (cadastrar != null) {
+      return cadastrar(this);
     }
     return orElse();
   }
 }
 
-abstract class _Started implements RegistrarServicoEvent {
-  const factory _Started() = _$StartedImpl;
+abstract class _Cadastrar implements RegistrarServicoEvent {
+  const factory _Cadastrar(final Servico servico) = _$CadastrarImpl;
+
+  @override
+  Servico get servico;
+  @override
+  @JsonKey(ignore: true)
+  _$$CadastrarImplCopyWith<_$CadastrarImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc

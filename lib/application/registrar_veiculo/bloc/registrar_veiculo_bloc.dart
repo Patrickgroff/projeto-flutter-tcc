@@ -27,6 +27,7 @@ class RegistrarVeiculoBloc extends Bloc<RegistrarVeiculoEvent, RegistrarVeiculoS
               if (resultado == null || resultado.id == null) {
                 return emit(const RegistrarVeiculoState.erro('Erro ao cadastrar veiculo!'));
               } else {
+                _repository.salvarVeiculoSelecionado(resultado.id!);
                 _usuarioRepository.saveLoggedInUsuario(usuarioId);
               }
             } else {

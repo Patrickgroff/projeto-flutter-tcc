@@ -16,38 +16,43 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$RegistrarAbastecimentoEvent {
+  Abastecimento get abastecimento => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
+    required TResult Function(Abastecimento abastecimento) cadastrar,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
+    TResult? Function(Abastecimento abastecimento)? cadastrar,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function(Abastecimento abastecimento)? cadastrar,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
+    required TResult Function(_Cadastrar value) cadastrar,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
+    TResult? Function(_Cadastrar value)? cadastrar,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(_Cadastrar value)? cadastrar,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  @JsonKey(ignore: true)
+  $RegistrarAbastecimentoEventCopyWith<RegistrarAbastecimentoEvent>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -57,6 +62,10 @@ abstract class $RegistrarAbastecimentoEventCopyWith<$Res> {
           $Res Function(RegistrarAbastecimentoEvent) then) =
       _$RegistrarAbastecimentoEventCopyWithImpl<$Res,
           RegistrarAbastecimentoEvent>;
+  @useResult
+  $Res call({Abastecimento abastecimento});
+
+  $AbastecimentoCopyWith<$Res> get abastecimento;
 }
 
 /// @nodoc
@@ -69,67 +78,120 @@ class _$RegistrarAbastecimentoEventCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? abastecimento = null,
+  }) {
+    return _then(_value.copyWith(
+      abastecimento: null == abastecimento
+          ? _value.abastecimento
+          : abastecimento // ignore: cast_nullable_to_non_nullable
+              as Abastecimento,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $AbastecimentoCopyWith<$Res> get abastecimento {
+    return $AbastecimentoCopyWith<$Res>(_value.abastecimento, (value) {
+      return _then(_value.copyWith(abastecimento: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
-abstract class _$$StartedImplCopyWith<$Res> {
-  factory _$$StartedImplCopyWith(
-          _$StartedImpl value, $Res Function(_$StartedImpl) then) =
-      __$$StartedImplCopyWithImpl<$Res>;
+abstract class _$$CadastrarImplCopyWith<$Res>
+    implements $RegistrarAbastecimentoEventCopyWith<$Res> {
+  factory _$$CadastrarImplCopyWith(
+          _$CadastrarImpl value, $Res Function(_$CadastrarImpl) then) =
+      __$$CadastrarImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({Abastecimento abastecimento});
+
+  @override
+  $AbastecimentoCopyWith<$Res> get abastecimento;
 }
 
 /// @nodoc
-class __$$StartedImplCopyWithImpl<$Res>
-    extends _$RegistrarAbastecimentoEventCopyWithImpl<$Res, _$StartedImpl>
-    implements _$$StartedImplCopyWith<$Res> {
-  __$$StartedImplCopyWithImpl(
-      _$StartedImpl _value, $Res Function(_$StartedImpl) _then)
+class __$$CadastrarImplCopyWithImpl<$Res>
+    extends _$RegistrarAbastecimentoEventCopyWithImpl<$Res, _$CadastrarImpl>
+    implements _$$CadastrarImplCopyWith<$Res> {
+  __$$CadastrarImplCopyWithImpl(
+      _$CadastrarImpl _value, $Res Function(_$CadastrarImpl) _then)
       : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? abastecimento = null,
+  }) {
+    return _then(_$CadastrarImpl(
+      null == abastecimento
+          ? _value.abastecimento
+          : abastecimento // ignore: cast_nullable_to_non_nullable
+              as Abastecimento,
+    ));
+  }
 }
 
 /// @nodoc
 
-class _$StartedImpl implements _Started {
-  const _$StartedImpl();
+class _$CadastrarImpl implements _Cadastrar {
+  const _$CadastrarImpl(this.abastecimento);
+
+  @override
+  final Abastecimento abastecimento;
 
   @override
   String toString() {
-    return 'RegistrarAbastecimentoEvent.started()';
+    return 'RegistrarAbastecimentoEvent.cadastrar(abastecimento: $abastecimento)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$StartedImpl);
+        (other.runtimeType == runtimeType &&
+            other is _$CadastrarImpl &&
+            (identical(other.abastecimento, abastecimento) ||
+                other.abastecimento == abastecimento));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, abastecimento);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CadastrarImplCopyWith<_$CadastrarImpl> get copyWith =>
+      __$$CadastrarImplCopyWithImpl<_$CadastrarImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
+    required TResult Function(Abastecimento abastecimento) cadastrar,
   }) {
-    return started();
+    return cadastrar(abastecimento);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
+    TResult? Function(Abastecimento abastecimento)? cadastrar,
   }) {
-    return started?.call();
+    return cadastrar?.call(abastecimento);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function(Abastecimento abastecimento)? cadastrar,
     required TResult orElse(),
   }) {
-    if (started != null) {
-      return started();
+    if (cadastrar != null) {
+      return cadastrar(abastecimento);
     }
     return orElse();
   }
@@ -137,34 +199,41 @@ class _$StartedImpl implements _Started {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
+    required TResult Function(_Cadastrar value) cadastrar,
   }) {
-    return started(this);
+    return cadastrar(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
+    TResult? Function(_Cadastrar value)? cadastrar,
   }) {
-    return started?.call(this);
+    return cadastrar?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(_Cadastrar value)? cadastrar,
     required TResult orElse(),
   }) {
-    if (started != null) {
-      return started(this);
+    if (cadastrar != null) {
+      return cadastrar(this);
     }
     return orElse();
   }
 }
 
-abstract class _Started implements RegistrarAbastecimentoEvent {
-  const factory _Started() = _$StartedImpl;
+abstract class _Cadastrar implements RegistrarAbastecimentoEvent {
+  const factory _Cadastrar(final Abastecimento abastecimento) = _$CadastrarImpl;
+
+  @override
+  Abastecimento get abastecimento;
+  @override
+  @JsonKey(ignore: true)
+  _$$CadastrarImplCopyWith<_$CadastrarImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc

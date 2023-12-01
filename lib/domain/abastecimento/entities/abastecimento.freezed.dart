@@ -21,21 +21,22 @@ Abastecimento _$AbastecimentoFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Abastecimento {
   @JsonKey(includeIfNull: false)
-  int get id => throw _privateConstructorUsedError;
+  int? get id => throw _privateConstructorUsedError;
   @JsonKey(includeIfNull: false)
-  String get data => throw _privateConstructorUsedError;
+  @AppDateTimeConverter()
+  DateTime? get data => throw _privateConstructorUsedError;
   @JsonKey(includeIfNull: false)
-  double get odometro => throw _privateConstructorUsedError;
+  double? get odometro => throw _privateConstructorUsedError;
   @JsonKey(includeIfNull: false)
-  String get tipoCombustivel => throw _privateConstructorUsedError;
+  String? get tipoCombustivel => throw _privateConstructorUsedError;
   @JsonKey(includeIfNull: false)
-  double get valor => throw _privateConstructorUsedError;
+  double? get valor => throw _privateConstructorUsedError;
   @JsonKey(includeIfNull: false)
-  double get litros => throw _privateConstructorUsedError;
+  double? get litros => throw _privateConstructorUsedError;
   @JsonKey(includeIfNull: false)
-  String get obervacao => throw _privateConstructorUsedError;
+  String? get observacao => throw _privateConstructorUsedError;
   @JsonKey(includeIfNull: false)
-  int get veiculoId => throw _privateConstructorUsedError;
+  int? get veiculoId => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -50,14 +51,14 @@ abstract class $AbastecimentoCopyWith<$Res> {
       _$AbastecimentoCopyWithImpl<$Res, Abastecimento>;
   @useResult
   $Res call(
-      {@JsonKey(includeIfNull: false) int id,
-      @JsonKey(includeIfNull: false) String data,
-      @JsonKey(includeIfNull: false) double odometro,
-      @JsonKey(includeIfNull: false) String tipoCombustivel,
-      @JsonKey(includeIfNull: false) double valor,
-      @JsonKey(includeIfNull: false) double litros,
-      @JsonKey(includeIfNull: false) String obervacao,
-      @JsonKey(includeIfNull: false) int veiculoId});
+      {@JsonKey(includeIfNull: false) int? id,
+      @JsonKey(includeIfNull: false) @AppDateTimeConverter() DateTime? data,
+      @JsonKey(includeIfNull: false) double? odometro,
+      @JsonKey(includeIfNull: false) String? tipoCombustivel,
+      @JsonKey(includeIfNull: false) double? valor,
+      @JsonKey(includeIfNull: false) double? litros,
+      @JsonKey(includeIfNull: false) String? observacao,
+      @JsonKey(includeIfNull: false) int? veiculoId});
 }
 
 /// @nodoc
@@ -73,48 +74,48 @@ class _$AbastecimentoCopyWithImpl<$Res, $Val extends Abastecimento>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? data = null,
-    Object? odometro = null,
-    Object? tipoCombustivel = null,
-    Object? valor = null,
-    Object? litros = null,
-    Object? obervacao = null,
-    Object? veiculoId = null,
+    Object? id = freezed,
+    Object? data = freezed,
+    Object? odometro = freezed,
+    Object? tipoCombustivel = freezed,
+    Object? valor = freezed,
+    Object? litros = freezed,
+    Object? observacao = freezed,
+    Object? veiculoId = freezed,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      data: null == data
+              as int?,
+      data: freezed == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
-              as String,
-      odometro: null == odometro
+              as DateTime?,
+      odometro: freezed == odometro
           ? _value.odometro
           : odometro // ignore: cast_nullable_to_non_nullable
-              as double,
-      tipoCombustivel: null == tipoCombustivel
+              as double?,
+      tipoCombustivel: freezed == tipoCombustivel
           ? _value.tipoCombustivel
           : tipoCombustivel // ignore: cast_nullable_to_non_nullable
-              as String,
-      valor: null == valor
+              as String?,
+      valor: freezed == valor
           ? _value.valor
           : valor // ignore: cast_nullable_to_non_nullable
-              as double,
-      litros: null == litros
+              as double?,
+      litros: freezed == litros
           ? _value.litros
           : litros // ignore: cast_nullable_to_non_nullable
-              as double,
-      obervacao: null == obervacao
-          ? _value.obervacao
-          : obervacao // ignore: cast_nullable_to_non_nullable
-              as String,
-      veiculoId: null == veiculoId
+              as double?,
+      observacao: freezed == observacao
+          ? _value.observacao
+          : observacao // ignore: cast_nullable_to_non_nullable
+              as String?,
+      veiculoId: freezed == veiculoId
           ? _value.veiculoId
           : veiculoId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
     ) as $Val);
   }
 }
@@ -128,14 +129,14 @@ abstract class _$$AbastecimentoImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(includeIfNull: false) int id,
-      @JsonKey(includeIfNull: false) String data,
-      @JsonKey(includeIfNull: false) double odometro,
-      @JsonKey(includeIfNull: false) String tipoCombustivel,
-      @JsonKey(includeIfNull: false) double valor,
-      @JsonKey(includeIfNull: false) double litros,
-      @JsonKey(includeIfNull: false) String obervacao,
-      @JsonKey(includeIfNull: false) int veiculoId});
+      {@JsonKey(includeIfNull: false) int? id,
+      @JsonKey(includeIfNull: false) @AppDateTimeConverter() DateTime? data,
+      @JsonKey(includeIfNull: false) double? odometro,
+      @JsonKey(includeIfNull: false) String? tipoCombustivel,
+      @JsonKey(includeIfNull: false) double? valor,
+      @JsonKey(includeIfNull: false) double? litros,
+      @JsonKey(includeIfNull: false) String? observacao,
+      @JsonKey(includeIfNull: false) int? veiculoId});
 }
 
 /// @nodoc
@@ -149,48 +150,48 @@ class __$$AbastecimentoImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? data = null,
-    Object? odometro = null,
-    Object? tipoCombustivel = null,
-    Object? valor = null,
-    Object? litros = null,
-    Object? obervacao = null,
-    Object? veiculoId = null,
+    Object? id = freezed,
+    Object? data = freezed,
+    Object? odometro = freezed,
+    Object? tipoCombustivel = freezed,
+    Object? valor = freezed,
+    Object? litros = freezed,
+    Object? observacao = freezed,
+    Object? veiculoId = freezed,
   }) {
     return _then(_$AbastecimentoImpl(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      data: null == data
+              as int?,
+      data: freezed == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
-              as String,
-      odometro: null == odometro
+              as DateTime?,
+      odometro: freezed == odometro
           ? _value.odometro
           : odometro // ignore: cast_nullable_to_non_nullable
-              as double,
-      tipoCombustivel: null == tipoCombustivel
+              as double?,
+      tipoCombustivel: freezed == tipoCombustivel
           ? _value.tipoCombustivel
           : tipoCombustivel // ignore: cast_nullable_to_non_nullable
-              as String,
-      valor: null == valor
+              as String?,
+      valor: freezed == valor
           ? _value.valor
           : valor // ignore: cast_nullable_to_non_nullable
-              as double,
-      litros: null == litros
+              as double?,
+      litros: freezed == litros
           ? _value.litros
           : litros // ignore: cast_nullable_to_non_nullable
-              as double,
-      obervacao: null == obervacao
-          ? _value.obervacao
-          : obervacao // ignore: cast_nullable_to_non_nullable
-              as String,
-      veiculoId: null == veiculoId
+              as double?,
+      observacao: freezed == observacao
+          ? _value.observacao
+          : observacao // ignore: cast_nullable_to_non_nullable
+              as String?,
+      veiculoId: freezed == veiculoId
           ? _value.veiculoId
           : veiculoId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
     ));
   }
 }
@@ -200,14 +201,14 @@ class __$$AbastecimentoImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$AbastecimentoImpl extends _Abastecimento {
   const _$AbastecimentoImpl(
-      {@JsonKey(includeIfNull: false) required this.id,
-      @JsonKey(includeIfNull: false) required this.data,
-      @JsonKey(includeIfNull: false) required this.odometro,
-      @JsonKey(includeIfNull: false) required this.tipoCombustivel,
-      @JsonKey(includeIfNull: false) required this.valor,
-      @JsonKey(includeIfNull: false) required this.litros,
-      @JsonKey(includeIfNull: false) required this.obervacao,
-      @JsonKey(includeIfNull: false) required this.veiculoId})
+      {@JsonKey(includeIfNull: false) this.id,
+      @JsonKey(includeIfNull: false) @AppDateTimeConverter() this.data,
+      @JsonKey(includeIfNull: false) this.odometro,
+      @JsonKey(includeIfNull: false) this.tipoCombustivel,
+      @JsonKey(includeIfNull: false) this.valor,
+      @JsonKey(includeIfNull: false) this.litros,
+      @JsonKey(includeIfNull: false) this.observacao,
+      @JsonKey(includeIfNull: false) this.veiculoId})
       : super._();
 
   factory _$AbastecimentoImpl.fromJson(Map<String, dynamic> json) =>
@@ -215,32 +216,33 @@ class _$AbastecimentoImpl extends _Abastecimento {
 
   @override
   @JsonKey(includeIfNull: false)
-  final int id;
+  final int? id;
   @override
   @JsonKey(includeIfNull: false)
-  final String data;
+  @AppDateTimeConverter()
+  final DateTime? data;
   @override
   @JsonKey(includeIfNull: false)
-  final double odometro;
+  final double? odometro;
   @override
   @JsonKey(includeIfNull: false)
-  final String tipoCombustivel;
+  final String? tipoCombustivel;
   @override
   @JsonKey(includeIfNull: false)
-  final double valor;
+  final double? valor;
   @override
   @JsonKey(includeIfNull: false)
-  final double litros;
+  final double? litros;
   @override
   @JsonKey(includeIfNull: false)
-  final String obervacao;
+  final String? observacao;
   @override
   @JsonKey(includeIfNull: false)
-  final int veiculoId;
+  final int? veiculoId;
 
   @override
   String toString() {
-    return 'Abastecimento(id: $id, data: $data, odometro: $odometro, tipoCombustivel: $tipoCombustivel, valor: $valor, litros: $litros, obervacao: $obervacao, veiculoId: $veiculoId)';
+    return 'Abastecimento(id: $id, data: $data, odometro: $odometro, tipoCombustivel: $tipoCombustivel, valor: $valor, litros: $litros, observacao: $observacao, veiculoId: $veiculoId)';
   }
 
   @override
@@ -256,8 +258,8 @@ class _$AbastecimentoImpl extends _Abastecimento {
                 other.tipoCombustivel == tipoCombustivel) &&
             (identical(other.valor, valor) || other.valor == valor) &&
             (identical(other.litros, litros) || other.litros == litros) &&
-            (identical(other.obervacao, obervacao) ||
-                other.obervacao == obervacao) &&
+            (identical(other.observacao, observacao) ||
+                other.observacao == observacao) &&
             (identical(other.veiculoId, veiculoId) ||
                 other.veiculoId == veiculoId));
   }
@@ -265,7 +267,7 @@ class _$AbastecimentoImpl extends _Abastecimento {
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, id, data, odometro,
-      tipoCombustivel, valor, litros, obervacao, veiculoId);
+      tipoCombustivel, valor, litros, observacao, veiculoId);
 
   @JsonKey(ignore: true)
   @override
@@ -283,14 +285,16 @@ class _$AbastecimentoImpl extends _Abastecimento {
 
 abstract class _Abastecimento extends Abastecimento {
   const factory _Abastecimento(
-          {@JsonKey(includeIfNull: false) required final int id,
-          @JsonKey(includeIfNull: false) required final String data,
-          @JsonKey(includeIfNull: false) required final double odometro,
-          @JsonKey(includeIfNull: false) required final String tipoCombustivel,
-          @JsonKey(includeIfNull: false) required final double valor,
-          @JsonKey(includeIfNull: false) required final double litros,
-          @JsonKey(includeIfNull: false) required final String obervacao,
-          @JsonKey(includeIfNull: false) required final int veiculoId}) =
+          {@JsonKey(includeIfNull: false) final int? id,
+          @JsonKey(includeIfNull: false)
+          @AppDateTimeConverter()
+          final DateTime? data,
+          @JsonKey(includeIfNull: false) final double? odometro,
+          @JsonKey(includeIfNull: false) final String? tipoCombustivel,
+          @JsonKey(includeIfNull: false) final double? valor,
+          @JsonKey(includeIfNull: false) final double? litros,
+          @JsonKey(includeIfNull: false) final String? observacao,
+          @JsonKey(includeIfNull: false) final int? veiculoId}) =
       _$AbastecimentoImpl;
   const _Abastecimento._() : super._();
 
@@ -299,28 +303,29 @@ abstract class _Abastecimento extends Abastecimento {
 
   @override
   @JsonKey(includeIfNull: false)
-  int get id;
+  int? get id;
   @override
   @JsonKey(includeIfNull: false)
-  String get data;
+  @AppDateTimeConverter()
+  DateTime? get data;
   @override
   @JsonKey(includeIfNull: false)
-  double get odometro;
+  double? get odometro;
   @override
   @JsonKey(includeIfNull: false)
-  String get tipoCombustivel;
+  String? get tipoCombustivel;
   @override
   @JsonKey(includeIfNull: false)
-  double get valor;
+  double? get valor;
   @override
   @JsonKey(includeIfNull: false)
-  double get litros;
+  double? get litros;
   @override
   @JsonKey(includeIfNull: false)
-  String get obervacao;
+  String? get observacao;
   @override
   @JsonKey(includeIfNull: false)
-  int get veiculoId;
+  int? get veiculoId;
   @override
   @JsonKey(ignore: true)
   _$$AbastecimentoImplCopyWith<_$AbastecimentoImpl> get copyWith =>

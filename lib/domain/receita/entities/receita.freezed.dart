@@ -21,19 +21,20 @@ Receita _$ReceitaFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Receita {
   @JsonKey(includeIfNull: false)
-  int get id => throw _privateConstructorUsedError;
+  int? get id => throw _privateConstructorUsedError;
   @JsonKey(includeIfNull: false)
-  String get data => throw _privateConstructorUsedError;
+  @AppDateTimeConverter()
+  DateTime? get data => throw _privateConstructorUsedError;
   @JsonKey(includeIfNull: false)
-  double get odometro => throw _privateConstructorUsedError;
+  double? get odometro => throw _privateConstructorUsedError;
   @JsonKey(includeIfNull: false)
-  double get valor => throw _privateConstructorUsedError;
+  double? get valor => throw _privateConstructorUsedError;
   @JsonKey(includeIfNull: false)
-  String get tipoReceita => throw _privateConstructorUsedError;
+  String? get tipoReceita => throw _privateConstructorUsedError;
   @JsonKey(includeIfNull: false)
-  String get observacao => throw _privateConstructorUsedError;
+  String? get observacao => throw _privateConstructorUsedError;
   @JsonKey(includeIfNull: false)
-  int get veiculoId => throw _privateConstructorUsedError;
+  int? get veiculoId => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -46,13 +47,13 @@ abstract class $ReceitaCopyWith<$Res> {
       _$ReceitaCopyWithImpl<$Res, Receita>;
   @useResult
   $Res call(
-      {@JsonKey(includeIfNull: false) int id,
-      @JsonKey(includeIfNull: false) String data,
-      @JsonKey(includeIfNull: false) double odometro,
-      @JsonKey(includeIfNull: false) double valor,
-      @JsonKey(includeIfNull: false) String tipoReceita,
-      @JsonKey(includeIfNull: false) String observacao,
-      @JsonKey(includeIfNull: false) int veiculoId});
+      {@JsonKey(includeIfNull: false) int? id,
+      @JsonKey(includeIfNull: false) @AppDateTimeConverter() DateTime? data,
+      @JsonKey(includeIfNull: false) double? odometro,
+      @JsonKey(includeIfNull: false) double? valor,
+      @JsonKey(includeIfNull: false) String? tipoReceita,
+      @JsonKey(includeIfNull: false) String? observacao,
+      @JsonKey(includeIfNull: false) int? veiculoId});
 }
 
 /// @nodoc
@@ -68,43 +69,43 @@ class _$ReceitaCopyWithImpl<$Res, $Val extends Receita>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? data = null,
-    Object? odometro = null,
-    Object? valor = null,
-    Object? tipoReceita = null,
-    Object? observacao = null,
-    Object? veiculoId = null,
+    Object? id = freezed,
+    Object? data = freezed,
+    Object? odometro = freezed,
+    Object? valor = freezed,
+    Object? tipoReceita = freezed,
+    Object? observacao = freezed,
+    Object? veiculoId = freezed,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      data: null == data
+              as int?,
+      data: freezed == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
-              as String,
-      odometro: null == odometro
+              as DateTime?,
+      odometro: freezed == odometro
           ? _value.odometro
           : odometro // ignore: cast_nullable_to_non_nullable
-              as double,
-      valor: null == valor
+              as double?,
+      valor: freezed == valor
           ? _value.valor
           : valor // ignore: cast_nullable_to_non_nullable
-              as double,
-      tipoReceita: null == tipoReceita
+              as double?,
+      tipoReceita: freezed == tipoReceita
           ? _value.tipoReceita
           : tipoReceita // ignore: cast_nullable_to_non_nullable
-              as String,
-      observacao: null == observacao
+              as String?,
+      observacao: freezed == observacao
           ? _value.observacao
           : observacao // ignore: cast_nullable_to_non_nullable
-              as String,
-      veiculoId: null == veiculoId
+              as String?,
+      veiculoId: freezed == veiculoId
           ? _value.veiculoId
           : veiculoId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
     ) as $Val);
   }
 }
@@ -117,13 +118,13 @@ abstract class _$$ReceitaImplCopyWith<$Res> implements $ReceitaCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {@JsonKey(includeIfNull: false) int id,
-      @JsonKey(includeIfNull: false) String data,
-      @JsonKey(includeIfNull: false) double odometro,
-      @JsonKey(includeIfNull: false) double valor,
-      @JsonKey(includeIfNull: false) String tipoReceita,
-      @JsonKey(includeIfNull: false) String observacao,
-      @JsonKey(includeIfNull: false) int veiculoId});
+      {@JsonKey(includeIfNull: false) int? id,
+      @JsonKey(includeIfNull: false) @AppDateTimeConverter() DateTime? data,
+      @JsonKey(includeIfNull: false) double? odometro,
+      @JsonKey(includeIfNull: false) double? valor,
+      @JsonKey(includeIfNull: false) String? tipoReceita,
+      @JsonKey(includeIfNull: false) String? observacao,
+      @JsonKey(includeIfNull: false) int? veiculoId});
 }
 
 /// @nodoc
@@ -137,43 +138,43 @@ class __$$ReceitaImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? data = null,
-    Object? odometro = null,
-    Object? valor = null,
-    Object? tipoReceita = null,
-    Object? observacao = null,
-    Object? veiculoId = null,
+    Object? id = freezed,
+    Object? data = freezed,
+    Object? odometro = freezed,
+    Object? valor = freezed,
+    Object? tipoReceita = freezed,
+    Object? observacao = freezed,
+    Object? veiculoId = freezed,
   }) {
     return _then(_$ReceitaImpl(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      data: null == data
+              as int?,
+      data: freezed == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
-              as String,
-      odometro: null == odometro
+              as DateTime?,
+      odometro: freezed == odometro
           ? _value.odometro
           : odometro // ignore: cast_nullable_to_non_nullable
-              as double,
-      valor: null == valor
+              as double?,
+      valor: freezed == valor
           ? _value.valor
           : valor // ignore: cast_nullable_to_non_nullable
-              as double,
-      tipoReceita: null == tipoReceita
+              as double?,
+      tipoReceita: freezed == tipoReceita
           ? _value.tipoReceita
           : tipoReceita // ignore: cast_nullable_to_non_nullable
-              as String,
-      observacao: null == observacao
+              as String?,
+      observacao: freezed == observacao
           ? _value.observacao
           : observacao // ignore: cast_nullable_to_non_nullable
-              as String,
-      veiculoId: null == veiculoId
+              as String?,
+      veiculoId: freezed == veiculoId
           ? _value.veiculoId
           : veiculoId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
     ));
   }
 }
@@ -183,13 +184,13 @@ class __$$ReceitaImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ReceitaImpl extends _Receita {
   const _$ReceitaImpl(
-      {@JsonKey(includeIfNull: false) required this.id,
-      @JsonKey(includeIfNull: false) required this.data,
-      @JsonKey(includeIfNull: false) required this.odometro,
-      @JsonKey(includeIfNull: false) required this.valor,
-      @JsonKey(includeIfNull: false) required this.tipoReceita,
-      @JsonKey(includeIfNull: false) required this.observacao,
-      @JsonKey(includeIfNull: false) required this.veiculoId})
+      {@JsonKey(includeIfNull: false) this.id,
+      @JsonKey(includeIfNull: false) @AppDateTimeConverter() this.data,
+      @JsonKey(includeIfNull: false) this.odometro,
+      @JsonKey(includeIfNull: false) this.valor,
+      @JsonKey(includeIfNull: false) this.tipoReceita,
+      @JsonKey(includeIfNull: false) this.observacao,
+      @JsonKey(includeIfNull: false) this.veiculoId})
       : super._();
 
   factory _$ReceitaImpl.fromJson(Map<String, dynamic> json) =>
@@ -197,25 +198,26 @@ class _$ReceitaImpl extends _Receita {
 
   @override
   @JsonKey(includeIfNull: false)
-  final int id;
+  final int? id;
   @override
   @JsonKey(includeIfNull: false)
-  final String data;
+  @AppDateTimeConverter()
+  final DateTime? data;
   @override
   @JsonKey(includeIfNull: false)
-  final double odometro;
+  final double? odometro;
   @override
   @JsonKey(includeIfNull: false)
-  final double valor;
+  final double? valor;
   @override
   @JsonKey(includeIfNull: false)
-  final String tipoReceita;
+  final String? tipoReceita;
   @override
   @JsonKey(includeIfNull: false)
-  final String observacao;
+  final String? observacao;
   @override
   @JsonKey(includeIfNull: false)
-  final int veiculoId;
+  final int? veiculoId;
 
   @override
   String toString() {
@@ -261,39 +263,41 @@ class _$ReceitaImpl extends _Receita {
 
 abstract class _Receita extends Receita {
   const factory _Receita(
-          {@JsonKey(includeIfNull: false) required final int id,
-          @JsonKey(includeIfNull: false) required final String data,
-          @JsonKey(includeIfNull: false) required final double odometro,
-          @JsonKey(includeIfNull: false) required final double valor,
-          @JsonKey(includeIfNull: false) required final String tipoReceita,
-          @JsonKey(includeIfNull: false) required final String observacao,
-          @JsonKey(includeIfNull: false) required final int veiculoId}) =
-      _$ReceitaImpl;
+      {@JsonKey(includeIfNull: false) final int? id,
+      @JsonKey(includeIfNull: false)
+      @AppDateTimeConverter()
+      final DateTime? data,
+      @JsonKey(includeIfNull: false) final double? odometro,
+      @JsonKey(includeIfNull: false) final double? valor,
+      @JsonKey(includeIfNull: false) final String? tipoReceita,
+      @JsonKey(includeIfNull: false) final String? observacao,
+      @JsonKey(includeIfNull: false) final int? veiculoId}) = _$ReceitaImpl;
   const _Receita._() : super._();
 
   factory _Receita.fromJson(Map<String, dynamic> json) = _$ReceitaImpl.fromJson;
 
   @override
   @JsonKey(includeIfNull: false)
-  int get id;
+  int? get id;
   @override
   @JsonKey(includeIfNull: false)
-  String get data;
+  @AppDateTimeConverter()
+  DateTime? get data;
   @override
   @JsonKey(includeIfNull: false)
-  double get odometro;
+  double? get odometro;
   @override
   @JsonKey(includeIfNull: false)
-  double get valor;
+  double? get valor;
   @override
   @JsonKey(includeIfNull: false)
-  String get tipoReceita;
+  String? get tipoReceita;
   @override
   @JsonKey(includeIfNull: false)
-  String get observacao;
+  String? get observacao;
   @override
   @JsonKey(includeIfNull: false)
-  int get veiculoId;
+  int? get veiculoId;
   @override
   @JsonKey(ignore: true)
   _$$ReceitaImplCopyWith<_$ReceitaImpl> get copyWith =>

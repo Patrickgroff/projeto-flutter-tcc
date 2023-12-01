@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gest_car/application/registrar_servico/bloc/registrar_servico_bloc.dart';
 import 'package:gest_car/core/injection/injection.dart';
-import 'package:gest_car/core/router/app_router.dart';
+import 'package:gest_car/domain/servico/entities/servico.dart';
 import 'package:reactive_forms/reactive_forms.dart';
 
 @RoutePage()
@@ -21,14 +21,14 @@ class RegistrarServicoPage extends StatelessWidget {
             child: BlocListener<RegistrarServicoBloc, RegistrarServicoState>(
                 listener: (context, state) => state.whenOrNull(
                       erro: (message) => Notifications.showSnackBarWithError(context, message: message),
-                      successo: () => context.router.pop(LinhaDoTempoRoute()),
+                      successo: () => context.router.pop(true),
                     ),
                 child: ReactiveFormBuilder(
                     form: () => fb.group({
-                          'data': FormControl<String>(),
-                          'odometro': FormControl<String>(),
+                          'data': FormControl<DateTime>(),
+                          'odometro': FormControl<double>(),
                           'tipoServico': FormControl<String>(),
-                          'valor': FormControl<String>(validators: [Validators.required, Validators.minLength(1)]),
+                          'valor': FormControl<double>(validators: [Validators.required, Validators.min(1)]),
                           'observacao': FormControl<String>(),
                         }),
                     builder: (context, form, _) => Padding(
@@ -39,10 +39,23 @@ class RegistrarServicoPage extends StatelessWidget {
                               child: Column(
                                 children: [
                                   Spacing.v12,
-                                  ReactiveTextField(
+                                  ReactiveDatePicker(
                                     formControlName: 'data',
-                                    decoration: const InputDecoration(labelText: 'Data', prefixIcon: Icon(Icons.calendar_today)),
-                                    textInputAction: TextInputAction.next,
+                                    firstDate: DateTime(2000),
+                                    lastDate: DateTime.now(),
+                                    builder: (context, picker, child) => InkWell(
+                                      onTap: picker.showPicker,
+                                      child: IgnorePointer(
+                                        child: ReactiveTextField(
+                                          formControlName: 'data',
+                                          valueAccessor: AppDateTimeValueAccessor(),
+                                          decoration: InputDecoration(
+                                            labelText: "Data",
+                                            prefixIcon: const Icon(Icons.calendar_today),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
                                   ),
                                   Spacing.v12,
                                   ReactiveTextField(
@@ -69,11 +82,16 @@ class RegistrarServicoPage extends StatelessWidget {
                                     textInputAction: TextInputAction.next,
                                   ),
                                   Spacing.v12,
-                                  Center(
-                                      child: ElevatedButton(
-                                    onPressed: () => {},
-                                    child: const Text('SALVAR'),
-                                  ))
+                                  CircularProgressStateWidget<RegistrarServicoBloc, RegistrarServicoState>(
+                                    isLoadingState: (state) => state.maybeWhen(orElse: () => false, cadastrando: () => true),
+                                    buildButton: (context, state) => AppButtonSize.medium(
+                                      child: FilledButton(
+                                        onPressed: () =>
+                                            form.valid ? context.read<RegistrarServicoBloc>().add(RegistrarServicoEvent.cadastrar(Servico.fromJson(form.value))) : form.markAllAsTouched(),
+                                        child: const Text('Salvar'),
+                                      ),
+                                    ),
+                                  ),
                                 ],
                               ),
                             ),

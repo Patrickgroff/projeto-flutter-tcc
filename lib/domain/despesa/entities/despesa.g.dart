@@ -8,24 +8,30 @@ part of 'despesa.dart';
 
 _$DespesaImpl _$$DespesaImplFromJson(Map<String, dynamic> json) =>
     _$DespesaImpl(
-      id: json['id'] as int,
-      data: json['data'] as String,
-      odometro: (json['odometro'] as num).toDouble(),
-      tipoCombustivel: json['tipoCombustivel'] as String,
-      valor: (json['valor'] as num).toDouble(),
-      litros: (json['litros'] as num).toDouble(),
-      obervacao: json['obervacao'] as String,
-      veiculoId: json['veiculoId'] as int,
+      id: json['id'] as int?,
+      data: const AppDateTimeConverter().fromJson(json['data']),
+      odometro: (json['odometro'] as num?)?.toDouble(),
+      tipoDespesa: json['tipoDespesa'] as String?,
+      valor: (json['valor'] as num?)?.toDouble(),
+      observacao: json['observacao'] as String?,
+      veiculoId: json['veiculoId'] as int?,
     );
 
-Map<String, dynamic> _$$DespesaImplToJson(_$DespesaImpl instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'data': instance.data,
-      'odometro': instance.odometro,
-      'tipoCombustivel': instance.tipoCombustivel,
-      'valor': instance.valor,
-      'litros': instance.litros,
-      'obervacao': instance.obervacao,
-      'veiculoId': instance.veiculoId,
-    };
+Map<String, dynamic> _$$DespesaImplToJson(_$DespesaImpl instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull('data', const AppDateTimeConverter().toJson(instance.data));
+  writeNotNull('odometro', instance.odometro);
+  writeNotNull('tipoDespesa', instance.tipoDespesa);
+  writeNotNull('valor', instance.valor);
+  writeNotNull('observacao', instance.observacao);
+  writeNotNull('veiculoId', instance.veiculoId);
+  return val;
+}

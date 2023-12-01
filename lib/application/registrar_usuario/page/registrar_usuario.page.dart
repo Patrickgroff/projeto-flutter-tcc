@@ -25,8 +25,8 @@ class RegistrarUsuarioPage extends StatelessWidget {
               create: (_) => getIt<RegistrarUsuarioBloc>(),
               child: BlocListener<RegistrarUsuarioBloc, RegistrarUsuarioState>(
                 listener: (context, state) => state.whenOrNull(
-                  error: (message) => Notifications.showSnackBarWithError(context, message: message),
-                  success: (usuarioId) => context.router.push(RegistrarVeiculoRoute(usuarioId: usuarioId)),
+                  erro: (message) => Notifications.showSnackBarWithError(context, message: message),
+                  successo: (usuarioId) => context.router.push(RegistrarVeiculoRoute(usuarioId: usuarioId)),
                 ),
                 child: ReactiveFormBuilder(
                   form: () => fb.group({

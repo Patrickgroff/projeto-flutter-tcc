@@ -1,3 +1,4 @@
+import 'package:common_widgets/common_widgets.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'servico.freezed.dart';
@@ -9,13 +10,13 @@ class Servico with _$Servico {
 
   @JsonSerializable()
   const factory Servico({
-    @JsonKey(includeIfNull: false) required final int id,
-    @JsonKey(includeIfNull: false) required final String data,
-    @JsonKey(includeIfNull: false) required final double odometro,
-    @JsonKey(includeIfNull: false) required final String tipoServico,
-    @JsonKey(includeIfNull: false) required final double valor,
-    @JsonKey(includeIfNull: false) required final String obervacao,
-    @JsonKey(includeIfNull: false) required final int veiculoId,
+    @JsonKey(includeIfNull: false) final int? id,
+    @JsonKey(includeIfNull: false) @AppDateTimeConverter() final DateTime? data,
+    @JsonKey(includeIfNull: false) final double? odometro,
+    @JsonKey(includeIfNull: false) final String? tipoServico,
+    @JsonKey(includeIfNull: false) final double? valor,
+    @JsonKey(includeIfNull: false) final String? observacao,
+    @JsonKey(includeIfNull: false) final int? veiculoId,
     //TODO Add all atributes
   }) = _Servico;
 

@@ -7,5 +7,5 @@ abstract class IDespesaRepository {
 
   Future<List<Despesa>> get();
 
-  Future<Despesa> byId(int id);
+  Future<Despesa?> byId(int id);
 }

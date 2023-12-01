@@ -21,19 +21,20 @@ Servico _$ServicoFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Servico {
   @JsonKey(includeIfNull: false)
-  int get id => throw _privateConstructorUsedError;
+  int? get id => throw _privateConstructorUsedError;
   @JsonKey(includeIfNull: false)
-  String get data => throw _privateConstructorUsedError;
+  @AppDateTimeConverter()
+  DateTime? get data => throw _privateConstructorUsedError;
   @JsonKey(includeIfNull: false)
-  double get odometro => throw _privateConstructorUsedError;
+  double? get odometro => throw _privateConstructorUsedError;
   @JsonKey(includeIfNull: false)
-  String get tipoServico => throw _privateConstructorUsedError;
+  String? get tipoServico => throw _privateConstructorUsedError;
   @JsonKey(includeIfNull: false)
-  double get valor => throw _privateConstructorUsedError;
+  double? get valor => throw _privateConstructorUsedError;
   @JsonKey(includeIfNull: false)
-  String get obervacao => throw _privateConstructorUsedError;
+  String? get observacao => throw _privateConstructorUsedError;
   @JsonKey(includeIfNull: false)
-  int get veiculoId => throw _privateConstructorUsedError;
+  int? get veiculoId => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -46,13 +47,13 @@ abstract class $ServicoCopyWith<$Res> {
       _$ServicoCopyWithImpl<$Res, Servico>;
   @useResult
   $Res call(
-      {@JsonKey(includeIfNull: false) int id,
-      @JsonKey(includeIfNull: false) String data,
-      @JsonKey(includeIfNull: false) double odometro,
-      @JsonKey(includeIfNull: false) String tipoServico,
-      @JsonKey(includeIfNull: false) double valor,
-      @JsonKey(includeIfNull: false) String obervacao,
-      @JsonKey(includeIfNull: false) int veiculoId});
+      {@JsonKey(includeIfNull: false) int? id,
+      @JsonKey(includeIfNull: false) @AppDateTimeConverter() DateTime? data,
+      @JsonKey(includeIfNull: false) double? odometro,
+      @JsonKey(includeIfNull: false) String? tipoServico,
+      @JsonKey(includeIfNull: false) double? valor,
+      @JsonKey(includeIfNull: false) String? observacao,
+      @JsonKey(includeIfNull: false) int? veiculoId});
 }
 
 /// @nodoc
@@ -68,43 +69,43 @@ class _$ServicoCopyWithImpl<$Res, $Val extends Servico>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? data = null,
-    Object? odometro = null,
-    Object? tipoServico = null,
-    Object? valor = null,
-    Object? obervacao = null,
-    Object? veiculoId = null,
+    Object? id = freezed,
+    Object? data = freezed,
+    Object? odometro = freezed,
+    Object? tipoServico = freezed,
+    Object? valor = freezed,
+    Object? observacao = freezed,
+    Object? veiculoId = freezed,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      data: null == data
+              as int?,
+      data: freezed == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
-              as String,
-      odometro: null == odometro
+              as DateTime?,
+      odometro: freezed == odometro
           ? _value.odometro
           : odometro // ignore: cast_nullable_to_non_nullable
-              as double,
-      tipoServico: null == tipoServico
+              as double?,
+      tipoServico: freezed == tipoServico
           ? _value.tipoServico
           : tipoServico // ignore: cast_nullable_to_non_nullable
-              as String,
-      valor: null == valor
+              as String?,
+      valor: freezed == valor
           ? _value.valor
           : valor // ignore: cast_nullable_to_non_nullable
-              as double,
-      obervacao: null == obervacao
-          ? _value.obervacao
-          : obervacao // ignore: cast_nullable_to_non_nullable
-              as String,
-      veiculoId: null == veiculoId
+              as double?,
+      observacao: freezed == observacao
+          ? _value.observacao
+          : observacao // ignore: cast_nullable_to_non_nullable
+              as String?,
+      veiculoId: freezed == veiculoId
           ? _value.veiculoId
           : veiculoId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
     ) as $Val);
   }
 }
@@ -117,13 +118,13 @@ abstract class _$$ServicoImplCopyWith<$Res> implements $ServicoCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {@JsonKey(includeIfNull: false) int id,
-      @JsonKey(includeIfNull: false) String data,
-      @JsonKey(includeIfNull: false) double odometro,
-      @JsonKey(includeIfNull: false) String tipoServico,
-      @JsonKey(includeIfNull: false) double valor,
-      @JsonKey(includeIfNull: false) String obervacao,
-      @JsonKey(includeIfNull: false) int veiculoId});
+      {@JsonKey(includeIfNull: false) int? id,
+      @JsonKey(includeIfNull: false) @AppDateTimeConverter() DateTime? data,
+      @JsonKey(includeIfNull: false) double? odometro,
+      @JsonKey(includeIfNull: false) String? tipoServico,
+      @JsonKey(includeIfNull: false) double? valor,
+      @JsonKey(includeIfNull: false) String? observacao,
+      @JsonKey(includeIfNull: false) int? veiculoId});
 }
 
 /// @nodoc
@@ -137,43 +138,43 @@ class __$$ServicoImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? data = null,
-    Object? odometro = null,
-    Object? tipoServico = null,
-    Object? valor = null,
-    Object? obervacao = null,
-    Object? veiculoId = null,
+    Object? id = freezed,
+    Object? data = freezed,
+    Object? odometro = freezed,
+    Object? tipoServico = freezed,
+    Object? valor = freezed,
+    Object? observacao = freezed,
+    Object? veiculoId = freezed,
   }) {
     return _then(_$ServicoImpl(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      data: null == data
+              as int?,
+      data: freezed == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
-              as String,
-      odometro: null == odometro
+              as DateTime?,
+      odometro: freezed == odometro
           ? _value.odometro
           : odometro // ignore: cast_nullable_to_non_nullable
-              as double,
-      tipoServico: null == tipoServico
+              as double?,
+      tipoServico: freezed == tipoServico
           ? _value.tipoServico
           : tipoServico // ignore: cast_nullable_to_non_nullable
-              as String,
-      valor: null == valor
+              as String?,
+      valor: freezed == valor
           ? _value.valor
           : valor // ignore: cast_nullable_to_non_nullable
-              as double,
-      obervacao: null == obervacao
-          ? _value.obervacao
-          : obervacao // ignore: cast_nullable_to_non_nullable
-              as String,
-      veiculoId: null == veiculoId
+              as double?,
+      observacao: freezed == observacao
+          ? _value.observacao
+          : observacao // ignore: cast_nullable_to_non_nullable
+              as String?,
+      veiculoId: freezed == veiculoId
           ? _value.veiculoId
           : veiculoId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
     ));
   }
 }
@@ -183,13 +184,13 @@ class __$$ServicoImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ServicoImpl extends _Servico {
   const _$ServicoImpl(
-      {@JsonKey(includeIfNull: false) required this.id,
-      @JsonKey(includeIfNull: false) required this.data,
-      @JsonKey(includeIfNull: false) required this.odometro,
-      @JsonKey(includeIfNull: false) required this.tipoServico,
-      @JsonKey(includeIfNull: false) required this.valor,
-      @JsonKey(includeIfNull: false) required this.obervacao,
-      @JsonKey(includeIfNull: false) required this.veiculoId})
+      {@JsonKey(includeIfNull: false) this.id,
+      @JsonKey(includeIfNull: false) @AppDateTimeConverter() this.data,
+      @JsonKey(includeIfNull: false) this.odometro,
+      @JsonKey(includeIfNull: false) this.tipoServico,
+      @JsonKey(includeIfNull: false) this.valor,
+      @JsonKey(includeIfNull: false) this.observacao,
+      @JsonKey(includeIfNull: false) this.veiculoId})
       : super._();
 
   factory _$ServicoImpl.fromJson(Map<String, dynamic> json) =>
@@ -197,29 +198,30 @@ class _$ServicoImpl extends _Servico {
 
   @override
   @JsonKey(includeIfNull: false)
-  final int id;
+  final int? id;
   @override
   @JsonKey(includeIfNull: false)
-  final String data;
+  @AppDateTimeConverter()
+  final DateTime? data;
   @override
   @JsonKey(includeIfNull: false)
-  final double odometro;
+  final double? odometro;
   @override
   @JsonKey(includeIfNull: false)
-  final String tipoServico;
+  final String? tipoServico;
   @override
   @JsonKey(includeIfNull: false)
-  final double valor;
+  final double? valor;
   @override
   @JsonKey(includeIfNull: false)
-  final String obervacao;
+  final String? observacao;
   @override
   @JsonKey(includeIfNull: false)
-  final int veiculoId;
+  final int? veiculoId;
 
   @override
   String toString() {
-    return 'Servico(id: $id, data: $data, odometro: $odometro, tipoServico: $tipoServico, valor: $valor, obervacao: $obervacao, veiculoId: $veiculoId)';
+    return 'Servico(id: $id, data: $data, odometro: $odometro, tipoServico: $tipoServico, valor: $valor, observacao: $observacao, veiculoId: $veiculoId)';
   }
 
   @override
@@ -234,8 +236,8 @@ class _$ServicoImpl extends _Servico {
             (identical(other.tipoServico, tipoServico) ||
                 other.tipoServico == tipoServico) &&
             (identical(other.valor, valor) || other.valor == valor) &&
-            (identical(other.obervacao, obervacao) ||
-                other.obervacao == obervacao) &&
+            (identical(other.observacao, observacao) ||
+                other.observacao == observacao) &&
             (identical(other.veiculoId, veiculoId) ||
                 other.veiculoId == veiculoId));
   }
@@ -243,7 +245,7 @@ class _$ServicoImpl extends _Servico {
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, id, data, odometro, tipoServico,
-      valor, obervacao, veiculoId);
+      valor, observacao, veiculoId);
 
   @JsonKey(ignore: true)
   @override
@@ -261,39 +263,41 @@ class _$ServicoImpl extends _Servico {
 
 abstract class _Servico extends Servico {
   const factory _Servico(
-          {@JsonKey(includeIfNull: false) required final int id,
-          @JsonKey(includeIfNull: false) required final String data,
-          @JsonKey(includeIfNull: false) required final double odometro,
-          @JsonKey(includeIfNull: false) required final String tipoServico,
-          @JsonKey(includeIfNull: false) required final double valor,
-          @JsonKey(includeIfNull: false) required final String obervacao,
-          @JsonKey(includeIfNull: false) required final int veiculoId}) =
-      _$ServicoImpl;
+      {@JsonKey(includeIfNull: false) final int? id,
+      @JsonKey(includeIfNull: false)
+      @AppDateTimeConverter()
+      final DateTime? data,
+      @JsonKey(includeIfNull: false) final double? odometro,
+      @JsonKey(includeIfNull: false) final String? tipoServico,
+      @JsonKey(includeIfNull: false) final double? valor,
+      @JsonKey(includeIfNull: false) final String? observacao,
+      @JsonKey(includeIfNull: false) final int? veiculoId}) = _$ServicoImpl;
   const _Servico._() : super._();
 
   factory _Servico.fromJson(Map<String, dynamic> json) = _$ServicoImpl.fromJson;
 
   @override
   @JsonKey(includeIfNull: false)
-  int get id;
+  int? get id;
   @override
   @JsonKey(includeIfNull: false)
-  String get data;
+  @AppDateTimeConverter()
+  DateTime? get data;
   @override
   @JsonKey(includeIfNull: false)
-  double get odometro;
+  double? get odometro;
   @override
   @JsonKey(includeIfNull: false)
-  String get tipoServico;
+  String? get tipoServico;
   @override
   @JsonKey(includeIfNull: false)
-  double get valor;
+  double? get valor;
   @override
   @JsonKey(includeIfNull: false)
-  String get obervacao;
+  String? get observacao;
   @override
   @JsonKey(includeIfNull: false)
-  int get veiculoId;
+  int? get veiculoId;
   @override
   @JsonKey(ignore: true)
   _$$ServicoImplCopyWith<_$ServicoImpl> get copyWith =>

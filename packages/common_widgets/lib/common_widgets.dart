@@ -14,6 +14,8 @@ export './src/empty_container/empty_container.dart';
 export './src/error_container/error_container.dart';
 // file
 export './src/file/file.dart';
+// json converters
+export './src/json/json.dart';
 // keyboard
 export './src/keyboard/keyboard.dart';
 // layout

@@ -16,37 +16,42 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$RegistrarReceitaEvent {
+  Receita get receita => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
+    required TResult Function(Receita receita) cadastrar,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
+    TResult? Function(Receita receita)? cadastrar,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function(Receita receita)? cadastrar,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
+    required TResult Function(_Cadastrar value) cadastrar,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
+    TResult? Function(_Cadastrar value)? cadastrar,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(_Cadastrar value)? cadastrar,
     required TResult orElse(),
   }) =>
+      throw _privateConstructorUsedError;
+
+  @JsonKey(ignore: true)
+  $RegistrarReceitaEventCopyWith<RegistrarReceitaEvent> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -55,6 +60,10 @@ abstract class $RegistrarReceitaEventCopyWith<$Res> {
   factory $RegistrarReceitaEventCopyWith(RegistrarReceitaEvent value,
           $Res Function(RegistrarReceitaEvent) then) =
       _$RegistrarReceitaEventCopyWithImpl<$Res, RegistrarReceitaEvent>;
+  @useResult
+  $Res call({Receita receita});
+
+  $ReceitaCopyWith<$Res> get receita;
 }
 
 /// @nodoc
@@ -67,67 +76,119 @@ class _$RegistrarReceitaEventCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? receita = null,
+  }) {
+    return _then(_value.copyWith(
+      receita: null == receita
+          ? _value.receita
+          : receita // ignore: cast_nullable_to_non_nullable
+              as Receita,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ReceitaCopyWith<$Res> get receita {
+    return $ReceitaCopyWith<$Res>(_value.receita, (value) {
+      return _then(_value.copyWith(receita: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
-abstract class _$$StartedImplCopyWith<$Res> {
-  factory _$$StartedImplCopyWith(
-          _$StartedImpl value, $Res Function(_$StartedImpl) then) =
-      __$$StartedImplCopyWithImpl<$Res>;
+abstract class _$$CadastrarImplCopyWith<$Res>
+    implements $RegistrarReceitaEventCopyWith<$Res> {
+  factory _$$CadastrarImplCopyWith(
+          _$CadastrarImpl value, $Res Function(_$CadastrarImpl) then) =
+      __$$CadastrarImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({Receita receita});
+
+  @override
+  $ReceitaCopyWith<$Res> get receita;
 }
 
 /// @nodoc
-class __$$StartedImplCopyWithImpl<$Res>
-    extends _$RegistrarReceitaEventCopyWithImpl<$Res, _$StartedImpl>
-    implements _$$StartedImplCopyWith<$Res> {
-  __$$StartedImplCopyWithImpl(
-      _$StartedImpl _value, $Res Function(_$StartedImpl) _then)
+class __$$CadastrarImplCopyWithImpl<$Res>
+    extends _$RegistrarReceitaEventCopyWithImpl<$Res, _$CadastrarImpl>
+    implements _$$CadastrarImplCopyWith<$Res> {
+  __$$CadastrarImplCopyWithImpl(
+      _$CadastrarImpl _value, $Res Function(_$CadastrarImpl) _then)
       : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? receita = null,
+  }) {
+    return _then(_$CadastrarImpl(
+      null == receita
+          ? _value.receita
+          : receita // ignore: cast_nullable_to_non_nullable
+              as Receita,
+    ));
+  }
 }
 
 /// @nodoc
 
-class _$StartedImpl implements _Started {
-  const _$StartedImpl();
+class _$CadastrarImpl implements _Cadastrar {
+  const _$CadastrarImpl(this.receita);
+
+  @override
+  final Receita receita;
 
   @override
   String toString() {
-    return 'RegistrarReceitaEvent.started()';
+    return 'RegistrarReceitaEvent.cadastrar(receita: $receita)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$StartedImpl);
+        (other.runtimeType == runtimeType &&
+            other is _$CadastrarImpl &&
+            (identical(other.receita, receita) || other.receita == receita));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, receita);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CadastrarImplCopyWith<_$CadastrarImpl> get copyWith =>
+      __$$CadastrarImplCopyWithImpl<_$CadastrarImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
+    required TResult Function(Receita receita) cadastrar,
   }) {
-    return started();
+    return cadastrar(receita);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
+    TResult? Function(Receita receita)? cadastrar,
   }) {
-    return started?.call();
+    return cadastrar?.call(receita);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function(Receita receita)? cadastrar,
     required TResult orElse(),
   }) {
-    if (started != null) {
-      return started();
+    if (cadastrar != null) {
+      return cadastrar(receita);
     }
     return orElse();
   }
@@ -135,34 +196,41 @@ class _$StartedImpl implements _Started {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
+    required TResult Function(_Cadastrar value) cadastrar,
   }) {
-    return started(this);
+    return cadastrar(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
+    TResult? Function(_Cadastrar value)? cadastrar,
   }) {
-    return started?.call(this);
+    return cadastrar?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(_Cadastrar value)? cadastrar,
     required TResult orElse(),
   }) {
-    if (started != null) {
-      return started(this);
+    if (cadastrar != null) {
+      return cadastrar(this);
     }
     return orElse();
   }
 }
 
-abstract class _Started implements RegistrarReceitaEvent {
-  const factory _Started() = _$StartedImpl;
+abstract class _Cadastrar implements RegistrarReceitaEvent {
+  const factory _Cadastrar(final Receita receita) = _$CadastrarImpl;
+
+  @override
+  Receita get receita;
+  @override
+  @JsonKey(ignore: true)
+  _$$CadastrarImplCopyWith<_$CadastrarImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc

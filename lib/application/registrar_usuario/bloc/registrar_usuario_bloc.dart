@@ -20,10 +20,10 @@ class RegistrarUsuarioBloc extends Bloc<RegistrarUsuarioEvent, RegistrarUsuarioS
 
           try {
             final resultado = await _usuarioRepository.save(usuario);
-            if (resultado == null || resultado.id == null) return emit(const RegistrarUsuarioState.error('Erro ao cadastrar usuario!'));
-            emit(RegistrarUsuarioState.success(resultado.id!));
+            if (resultado == null || resultado.id == null) return emit(const RegistrarUsuarioState.erro('Erro ao cadastrar usuario!'));
+            emit(RegistrarUsuarioState.successo(resultado.id!));
           } catch (e) {
-            emit(const RegistrarUsuarioState.error('Erro ao cadastrar usuario!'));
+            emit(const RegistrarUsuarioState.erro('Erro ao cadastrar usuario!'));
           }
         }));
   }
