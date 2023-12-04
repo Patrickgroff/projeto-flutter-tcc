@@ -1,5 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:gest_car/application/linha_do_tempo/bloc/linha_do_tempo_bloc.dart';
 import 'package:gest_car/application/linha_do_tempo/widgets/usuario_info_drawer_header.widget.dart';
 import 'package:gest_car/core/injection/injection.dart';
 import 'package:gest_car/core/router/app_router.dart';
@@ -11,6 +13,7 @@ class AppDrawerWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final linhaDoTempoBloc = context.read<LinhaDoTempoBloc>();
     return Drawer(
         child: SafeArea(
       top: false,
@@ -27,7 +30,12 @@ class AppDrawerWidget extends StatelessWidget {
                     leading: Icon(TipoLinhaDoTempo.abastecimento.icon),
                     onTap: () {
                       Navigator.pop(context);
-                      Future.delayed(const Duration(milliseconds: 230), () => context.router.push(const RegistrarAbastecimentoRoute()));
+                      Future.delayed(const Duration(milliseconds: 230), () async {
+                        final isRecarregar = await context.router.push<bool?>(const RegistrarAbastecimentoRoute());
+                        if (isRecarregar == true) {
+                          linhaDoTempoBloc.add(const LinhaDoTempoEvent.carregar());
+                        }
+                      });
                     }),
                 ListTile(
                     title: const Text('Adicionar Despesa'),
@@ -35,7 +43,12 @@ class AppDrawerWidget extends StatelessWidget {
                     leading: Icon(TipoLinhaDoTempo.despesa.icon),
                     onTap: () {
                       Navigator.pop(context);
-                      Future.delayed(const Duration(milliseconds: 230), () => context.router.push(const RegistrarDespesaRoute()));
+                      Future.delayed(const Duration(milliseconds: 230), () async {
+                        final isRecarregar = await context.router.push<bool?>(const RegistrarDespesaRoute());
+                        if (isRecarregar == true) {
+                          linhaDoTempoBloc.add(const LinhaDoTempoEvent.carregar());
+                        }
+                      });
                     }),
                 ListTile(
                     title: const Text('Adicionar Serviço'),
@@ -43,7 +56,12 @@ class AppDrawerWidget extends StatelessWidget {
                     leading: Icon(TipoLinhaDoTempo.servico.icon),
                     onTap: () {
                       Navigator.pop(context);
-                      Future.delayed(const Duration(milliseconds: 230), () => context.router.push(const RegistrarServicoRoute()));
+                      Future.delayed(const Duration(milliseconds: 230), () async {
+                        final isRecarregar = await context.router.push<bool?>(const RegistrarServicoRoute());
+                        if (isRecarregar == true) {
+                          linhaDoTempoBloc.add(const LinhaDoTempoEvent.carregar());
+                        }
+                      });
                     }),
                 ListTile(
                     title: const Text('Adicionar Receita'),
@@ -51,14 +69,24 @@ class AppDrawerWidget extends StatelessWidget {
                     leading: Icon(TipoLinhaDoTempo.receita.icon),
                     onTap: () {
                       Navigator.pop(context);
-                      Future.delayed(const Duration(milliseconds: 230), () => context.router.push(const RegistrarReceitaRoute()));
+                      Future.delayed(const Duration(milliseconds: 230), () async {
+                        final isRecarregar = await context.router.push<bool?>(const RegistrarReceitaRoute());
+                        if (isRecarregar == true) {
+                          linhaDoTempoBloc.add(const LinhaDoTempoEvent.carregar());
+                        }
+                      });
                     }),
                 ListTile(
                     title: const Text('Veículos Cadastrados'),
                     leading: const Icon(Icons.directions_car_rounded),
                     onTap: () {
                       Navigator.pop(context);
-                      Future.delayed(const Duration(milliseconds: 230), () => context.router.push(const VeiculosRegistradosRoute()));
+                      Future.delayed(const Duration(milliseconds: 230), () async {
+                        final isRecarregar = await context.router.push<bool?>(const VeiculosRegistradosRoute());
+                        if (isRecarregar == true) {
+                          linhaDoTempoBloc.add(const LinhaDoTempoEvent.carregar());
+                        }
+                      });
                     }),
               ],
             ),

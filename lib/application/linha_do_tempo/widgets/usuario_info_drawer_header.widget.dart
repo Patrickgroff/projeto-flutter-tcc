@@ -11,7 +11,7 @@ class UsuarioInfoDrawerHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     return BlocProvider(
-      create: (context) => getIt<UsuarioInfoCubit>()..buscarUsuarioLogado(),
+      create: (_) => getIt<UsuarioInfoCubit>()..buscarUsuarioLogado(),
       child: DrawerHeader(
         decoration: BoxDecoration(color: theme.colorScheme.primary),
         child: BlocBuilder<UsuarioInfoCubit, UsuarioInfoState>(

@@ -13,15 +13,18 @@ class ErrorContainerWidget extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          DefaultTextStyle(
-              style: theme.textTheme.titleLarge!.copyWith(color: textColor ?? Colors.black45),
-              textAlign: TextAlign.center,
-              child: Padding(padding: const EdgeInsets.all(12.0), child: message)),
+          IconTheme(
+            data: theme.iconTheme.copyWith(color: textColor ?? Colors.black45),
+            child: DefaultTextStyle(
+                style: theme.textTheme.titleLarge!.copyWith(color: textColor ?? Colors.black45),
+                textAlign: TextAlign.center,
+                child: Padding(padding: const EdgeInsets.all(12.0), child: message)),
+          ),
           if (onPressed != null)
             OutlinedButton.icon(
               onPressed: onPressed,
               icon: const Icon(Icons.restart_alt_rounded),
-              label: const Text('Executar novamente'),
+              label: const Text('Tentar novamente'),
               style: OutlinedButton.styleFrom(
                   foregroundColor: Colors.red,
                   side: BorderSide(

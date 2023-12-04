@@ -18,38 +18,45 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$LinhaDoTempoEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() garregar,
+    required TResult Function() iniciarFiltroListener,
+    required TResult Function() carregar,
     required TResult Function(LinhaDoTempo item) irParaEvento,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? garregar,
+    TResult? Function()? iniciarFiltroListener,
+    TResult? Function()? carregar,
     TResult? Function(LinhaDoTempo item)? irParaEvento,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? garregar,
+    TResult Function()? iniciarFiltroListener,
+    TResult Function()? carregar,
     TResult Function(LinhaDoTempo item)? irParaEvento,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) garregar,
+    required TResult Function(_IniciarFiltroListener value)
+        iniciarFiltroListener,
+    required TResult Function(_Carregar value) carregar,
     required TResult Function(_IrParaEvento value) irParaEvento,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? garregar,
+    TResult? Function(_IniciarFiltroListener value)? iniciarFiltroListener,
+    TResult? Function(_Carregar value)? carregar,
     TResult? Function(_IrParaEvento value)? irParaEvento,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? garregar,
+    TResult Function(_IniciarFiltroListener value)? iniciarFiltroListener,
+    TResult Function(_Carregar value)? carregar,
     TResult Function(_IrParaEvento value)? irParaEvento,
     required TResult orElse(),
   }) =>
@@ -75,35 +82,37 @@ class _$LinhaDoTempoEventCopyWithImpl<$Res, $Val extends LinhaDoTempoEvent>
 }
 
 /// @nodoc
-abstract class _$$StartedImplCopyWith<$Res> {
-  factory _$$StartedImplCopyWith(
-          _$StartedImpl value, $Res Function(_$StartedImpl) then) =
-      __$$StartedImplCopyWithImpl<$Res>;
+abstract class _$$IniciarFiltroListenerImplCopyWith<$Res> {
+  factory _$$IniciarFiltroListenerImplCopyWith(
+          _$IniciarFiltroListenerImpl value,
+          $Res Function(_$IniciarFiltroListenerImpl) then) =
+      __$$IniciarFiltroListenerImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$StartedImplCopyWithImpl<$Res>
-    extends _$LinhaDoTempoEventCopyWithImpl<$Res, _$StartedImpl>
-    implements _$$StartedImplCopyWith<$Res> {
-  __$$StartedImplCopyWithImpl(
-      _$StartedImpl _value, $Res Function(_$StartedImpl) _then)
+class __$$IniciarFiltroListenerImplCopyWithImpl<$Res>
+    extends _$LinhaDoTempoEventCopyWithImpl<$Res, _$IniciarFiltroListenerImpl>
+    implements _$$IniciarFiltroListenerImplCopyWith<$Res> {
+  __$$IniciarFiltroListenerImplCopyWithImpl(_$IniciarFiltroListenerImpl _value,
+      $Res Function(_$IniciarFiltroListenerImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$StartedImpl implements _Started {
-  const _$StartedImpl();
+class _$IniciarFiltroListenerImpl implements _IniciarFiltroListener {
+  const _$IniciarFiltroListenerImpl();
 
   @override
   String toString() {
-    return 'LinhaDoTempoEvent.garregar()';
+    return 'LinhaDoTempoEvent.iniciarFiltroListener()';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$StartedImpl);
+        (other.runtimeType == runtimeType &&
+            other is _$IniciarFiltroListenerImpl);
   }
 
   @override
@@ -112,30 +121,33 @@ class _$StartedImpl implements _Started {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() garregar,
+    required TResult Function() iniciarFiltroListener,
+    required TResult Function() carregar,
     required TResult Function(LinhaDoTempo item) irParaEvento,
   }) {
-    return garregar();
+    return iniciarFiltroListener();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? garregar,
+    TResult? Function()? iniciarFiltroListener,
+    TResult? Function()? carregar,
     TResult? Function(LinhaDoTempo item)? irParaEvento,
   }) {
-    return garregar?.call();
+    return iniciarFiltroListener?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? garregar,
+    TResult Function()? iniciarFiltroListener,
+    TResult Function()? carregar,
     TResult Function(LinhaDoTempo item)? irParaEvento,
     required TResult orElse(),
   }) {
-    if (garregar != null) {
-      return garregar();
+    if (iniciarFiltroListener != null) {
+      return iniciarFiltroListener();
     }
     return orElse();
   }
@@ -143,37 +155,150 @@ class _$StartedImpl implements _Started {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) garregar,
+    required TResult Function(_IniciarFiltroListener value)
+        iniciarFiltroListener,
+    required TResult Function(_Carregar value) carregar,
     required TResult Function(_IrParaEvento value) irParaEvento,
   }) {
-    return garregar(this);
+    return iniciarFiltroListener(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? garregar,
+    TResult? Function(_IniciarFiltroListener value)? iniciarFiltroListener,
+    TResult? Function(_Carregar value)? carregar,
     TResult? Function(_IrParaEvento value)? irParaEvento,
   }) {
-    return garregar?.call(this);
+    return iniciarFiltroListener?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? garregar,
+    TResult Function(_IniciarFiltroListener value)? iniciarFiltroListener,
+    TResult Function(_Carregar value)? carregar,
     TResult Function(_IrParaEvento value)? irParaEvento,
     required TResult orElse(),
   }) {
-    if (garregar != null) {
-      return garregar(this);
+    if (iniciarFiltroListener != null) {
+      return iniciarFiltroListener(this);
     }
     return orElse();
   }
 }
 
-abstract class _Started implements LinhaDoTempoEvent {
-  const factory _Started() = _$StartedImpl;
+abstract class _IniciarFiltroListener implements LinhaDoTempoEvent {
+  const factory _IniciarFiltroListener() = _$IniciarFiltroListenerImpl;
+}
+
+/// @nodoc
+abstract class _$$CarregarImplCopyWith<$Res> {
+  factory _$$CarregarImplCopyWith(
+          _$CarregarImpl value, $Res Function(_$CarregarImpl) then) =
+      __$$CarregarImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$CarregarImplCopyWithImpl<$Res>
+    extends _$LinhaDoTempoEventCopyWithImpl<$Res, _$CarregarImpl>
+    implements _$$CarregarImplCopyWith<$Res> {
+  __$$CarregarImplCopyWithImpl(
+      _$CarregarImpl _value, $Res Function(_$CarregarImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$CarregarImpl implements _Carregar {
+  const _$CarregarImpl();
+
+  @override
+  String toString() {
+    return 'LinhaDoTempoEvent.carregar()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$CarregarImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() iniciarFiltroListener,
+    required TResult Function() carregar,
+    required TResult Function(LinhaDoTempo item) irParaEvento,
+  }) {
+    return carregar();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? iniciarFiltroListener,
+    TResult? Function()? carregar,
+    TResult? Function(LinhaDoTempo item)? irParaEvento,
+  }) {
+    return carregar?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? iniciarFiltroListener,
+    TResult Function()? carregar,
+    TResult Function(LinhaDoTempo item)? irParaEvento,
+    required TResult orElse(),
+  }) {
+    if (carregar != null) {
+      return carregar();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_IniciarFiltroListener value)
+        iniciarFiltroListener,
+    required TResult Function(_Carregar value) carregar,
+    required TResult Function(_IrParaEvento value) irParaEvento,
+  }) {
+    return carregar(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_IniciarFiltroListener value)? iniciarFiltroListener,
+    TResult? Function(_Carregar value)? carregar,
+    TResult? Function(_IrParaEvento value)? irParaEvento,
+  }) {
+    return carregar?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_IniciarFiltroListener value)? iniciarFiltroListener,
+    TResult Function(_Carregar value)? carregar,
+    TResult Function(_IrParaEvento value)? irParaEvento,
+    required TResult orElse(),
+  }) {
+    if (carregar != null) {
+      return carregar(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Carregar implements LinhaDoTempoEvent {
+  const factory _Carregar() = _$CarregarImpl;
 }
 
 /// @nodoc
@@ -250,7 +375,8 @@ class _$IrParaEventoImpl implements _IrParaEvento {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() garregar,
+    required TResult Function() iniciarFiltroListener,
+    required TResult Function() carregar,
     required TResult Function(LinhaDoTempo item) irParaEvento,
   }) {
     return irParaEvento(item);
@@ -259,7 +385,8 @@ class _$IrParaEventoImpl implements _IrParaEvento {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? garregar,
+    TResult? Function()? iniciarFiltroListener,
+    TResult? Function()? carregar,
     TResult? Function(LinhaDoTempo item)? irParaEvento,
   }) {
     return irParaEvento?.call(item);
@@ -268,7 +395,8 @@ class _$IrParaEventoImpl implements _IrParaEvento {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? garregar,
+    TResult Function()? iniciarFiltroListener,
+    TResult Function()? carregar,
     TResult Function(LinhaDoTempo item)? irParaEvento,
     required TResult orElse(),
   }) {
@@ -281,7 +409,9 @@ class _$IrParaEventoImpl implements _IrParaEvento {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) garregar,
+    required TResult Function(_IniciarFiltroListener value)
+        iniciarFiltroListener,
+    required TResult Function(_Carregar value) carregar,
     required TResult Function(_IrParaEvento value) irParaEvento,
   }) {
     return irParaEvento(this);
@@ -290,7 +420,8 @@ class _$IrParaEventoImpl implements _IrParaEvento {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? garregar,
+    TResult? Function(_IniciarFiltroListener value)? iniciarFiltroListener,
+    TResult? Function(_Carregar value)? carregar,
     TResult? Function(_IrParaEvento value)? irParaEvento,
   }) {
     return irParaEvento?.call(this);
@@ -299,7 +430,8 @@ class _$IrParaEventoImpl implements _IrParaEvento {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? garregar,
+    TResult Function(_IniciarFiltroListener value)? iniciarFiltroListener,
+    TResult Function(_Carregar value)? carregar,
     TResult Function(_IrParaEvento value)? irParaEvento,
     required TResult orElse(),
   }) {

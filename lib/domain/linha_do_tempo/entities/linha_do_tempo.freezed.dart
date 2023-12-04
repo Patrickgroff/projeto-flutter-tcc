@@ -23,17 +23,22 @@ mixin _$LinhaDoTempo {
   @JsonKey(includeIfNull: false)
   int get id => throw _privateConstructorUsedError;
   @JsonKey(includeIfNull: false)
-  TipoLinhaDoTempo get tipo => throw _privateConstructorUsedError;
-  @JsonKey(includeIfNull: false)
   String get titulo => throw _privateConstructorUsedError;
   @JsonKey(includeIfNull: false)
-  String get observacao => throw _privateConstructorUsedError;
+  String? get observacao => throw _privateConstructorUsedError;
+  @JsonKey(includeIfNull: false)
+  TipoLinhaDoTempo get tipo => throw _privateConstructorUsedError;
   @JsonKey(includeIfNull: false)
   double get valor => throw _privateConstructorUsedError;
   @JsonKey(includeIfNull: false)
-  int get odometro => throw _privateConstructorUsedError;
+  double? get litros => throw _privateConstructorUsedError;
   @JsonKey(includeIfNull: false)
-  DateTime get date => throw _privateConstructorUsedError;
+  double? get odometro => throw _privateConstructorUsedError;
+  @JsonKey(includeIfNull: false)
+  int? get veiculoId => throw _privateConstructorUsedError;
+  @JsonKey(includeIfNull: false)
+  @AppDateTimeConverter()
+  DateTime? get data => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -49,12 +54,14 @@ abstract class $LinhaDoTempoCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(includeIfNull: false) int id,
-      @JsonKey(includeIfNull: false) TipoLinhaDoTempo tipo,
       @JsonKey(includeIfNull: false) String titulo,
-      @JsonKey(includeIfNull: false) String observacao,
+      @JsonKey(includeIfNull: false) String? observacao,
+      @JsonKey(includeIfNull: false) TipoLinhaDoTempo tipo,
       @JsonKey(includeIfNull: false) double valor,
-      @JsonKey(includeIfNull: false) int odometro,
-      @JsonKey(includeIfNull: false) DateTime date});
+      @JsonKey(includeIfNull: false) double? litros,
+      @JsonKey(includeIfNull: false) double? odometro,
+      @JsonKey(includeIfNull: false) int? veiculoId,
+      @JsonKey(includeIfNull: false) @AppDateTimeConverter() DateTime? data});
 }
 
 /// @nodoc
@@ -71,42 +78,52 @@ class _$LinhaDoTempoCopyWithImpl<$Res, $Val extends LinhaDoTempo>
   @override
   $Res call({
     Object? id = null,
-    Object? tipo = null,
     Object? titulo = null,
-    Object? observacao = null,
+    Object? observacao = freezed,
+    Object? tipo = null,
     Object? valor = null,
-    Object? odometro = null,
-    Object? date = null,
+    Object? litros = freezed,
+    Object? odometro = freezed,
+    Object? veiculoId = freezed,
+    Object? data = freezed,
   }) {
     return _then(_value.copyWith(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      tipo: null == tipo
-          ? _value.tipo
-          : tipo // ignore: cast_nullable_to_non_nullable
-              as TipoLinhaDoTempo,
       titulo: null == titulo
           ? _value.titulo
           : titulo // ignore: cast_nullable_to_non_nullable
               as String,
-      observacao: null == observacao
+      observacao: freezed == observacao
           ? _value.observacao
           : observacao // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
+      tipo: null == tipo
+          ? _value.tipo
+          : tipo // ignore: cast_nullable_to_non_nullable
+              as TipoLinhaDoTempo,
       valor: null == valor
           ? _value.valor
           : valor // ignore: cast_nullable_to_non_nullable
               as double,
-      odometro: null == odometro
+      litros: freezed == litros
+          ? _value.litros
+          : litros // ignore: cast_nullable_to_non_nullable
+              as double?,
+      odometro: freezed == odometro
           ? _value.odometro
           : odometro // ignore: cast_nullable_to_non_nullable
-              as int,
-      date: null == date
-          ? _value.date
-          : date // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as double?,
+      veiculoId: freezed == veiculoId
+          ? _value.veiculoId
+          : veiculoId // ignore: cast_nullable_to_non_nullable
+              as int?,
+      data: freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
     ) as $Val);
   }
 }
@@ -121,12 +138,14 @@ abstract class _$$LinhaDoTempoImplCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(includeIfNull: false) int id,
-      @JsonKey(includeIfNull: false) TipoLinhaDoTempo tipo,
       @JsonKey(includeIfNull: false) String titulo,
-      @JsonKey(includeIfNull: false) String observacao,
+      @JsonKey(includeIfNull: false) String? observacao,
+      @JsonKey(includeIfNull: false) TipoLinhaDoTempo tipo,
       @JsonKey(includeIfNull: false) double valor,
-      @JsonKey(includeIfNull: false) int odometro,
-      @JsonKey(includeIfNull: false) DateTime date});
+      @JsonKey(includeIfNull: false) double? litros,
+      @JsonKey(includeIfNull: false) double? odometro,
+      @JsonKey(includeIfNull: false) int? veiculoId,
+      @JsonKey(includeIfNull: false) @AppDateTimeConverter() DateTime? data});
 }
 
 /// @nodoc
@@ -141,42 +160,52 @@ class __$$LinhaDoTempoImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? id = null,
-    Object? tipo = null,
     Object? titulo = null,
-    Object? observacao = null,
+    Object? observacao = freezed,
+    Object? tipo = null,
     Object? valor = null,
-    Object? odometro = null,
-    Object? date = null,
+    Object? litros = freezed,
+    Object? odometro = freezed,
+    Object? veiculoId = freezed,
+    Object? data = freezed,
   }) {
     return _then(_$LinhaDoTempoImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      tipo: null == tipo
-          ? _value.tipo
-          : tipo // ignore: cast_nullable_to_non_nullable
-              as TipoLinhaDoTempo,
       titulo: null == titulo
           ? _value.titulo
           : titulo // ignore: cast_nullable_to_non_nullable
               as String,
-      observacao: null == observacao
+      observacao: freezed == observacao
           ? _value.observacao
           : observacao // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
+      tipo: null == tipo
+          ? _value.tipo
+          : tipo // ignore: cast_nullable_to_non_nullable
+              as TipoLinhaDoTempo,
       valor: null == valor
           ? _value.valor
           : valor // ignore: cast_nullable_to_non_nullable
               as double,
-      odometro: null == odometro
+      litros: freezed == litros
+          ? _value.litros
+          : litros // ignore: cast_nullable_to_non_nullable
+              as double?,
+      odometro: freezed == odometro
           ? _value.odometro
           : odometro // ignore: cast_nullable_to_non_nullable
-              as int,
-      date: null == date
-          ? _value.date
-          : date // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as double?,
+      veiculoId: freezed == veiculoId
+          ? _value.veiculoId
+          : veiculoId // ignore: cast_nullable_to_non_nullable
+              as int?,
+      data: freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
     ));
   }
 }
@@ -187,12 +216,14 @@ class __$$LinhaDoTempoImplCopyWithImpl<$Res>
 class _$LinhaDoTempoImpl extends _LinhaDoTempo {
   const _$LinhaDoTempoImpl(
       {@JsonKey(includeIfNull: false) required this.id,
-      @JsonKey(includeIfNull: false) required this.tipo,
       @JsonKey(includeIfNull: false) required this.titulo,
       @JsonKey(includeIfNull: false) required this.observacao,
+      @JsonKey(includeIfNull: false) required this.tipo,
       @JsonKey(includeIfNull: false) required this.valor,
+      @JsonKey(includeIfNull: false) required this.litros,
       @JsonKey(includeIfNull: false) required this.odometro,
-      @JsonKey(includeIfNull: false) required this.date})
+      @JsonKey(includeIfNull: false) required this.veiculoId,
+      @JsonKey(includeIfNull: false) @AppDateTimeConverter() this.data})
       : super._();
 
   factory _$LinhaDoTempoImpl.fromJson(Map<String, dynamic> json) =>
@@ -203,26 +234,33 @@ class _$LinhaDoTempoImpl extends _LinhaDoTempo {
   final int id;
   @override
   @JsonKey(includeIfNull: false)
-  final TipoLinhaDoTempo tipo;
-  @override
-  @JsonKey(includeIfNull: false)
   final String titulo;
   @override
   @JsonKey(includeIfNull: false)
-  final String observacao;
+  final String? observacao;
+  @override
+  @JsonKey(includeIfNull: false)
+  final TipoLinhaDoTempo tipo;
   @override
   @JsonKey(includeIfNull: false)
   final double valor;
   @override
   @JsonKey(includeIfNull: false)
-  final int odometro;
+  final double? litros;
   @override
   @JsonKey(includeIfNull: false)
-  final DateTime date;
+  final double? odometro;
+  @override
+  @JsonKey(includeIfNull: false)
+  final int? veiculoId;
+  @override
+  @JsonKey(includeIfNull: false)
+  @AppDateTimeConverter()
+  final DateTime? data;
 
   @override
   String toString() {
-    return 'LinhaDoTempo(id: $id, tipo: $tipo, titulo: $titulo, observacao: $observacao, valor: $valor, odometro: $odometro, date: $date)';
+    return 'LinhaDoTempo(id: $id, titulo: $titulo, observacao: $observacao, tipo: $tipo, valor: $valor, litros: $litros, odometro: $odometro, veiculoId: $veiculoId, data: $data)';
   }
 
   @override
@@ -231,20 +269,23 @@ class _$LinhaDoTempoImpl extends _LinhaDoTempo {
         (other.runtimeType == runtimeType &&
             other is _$LinhaDoTempoImpl &&
             (identical(other.id, id) || other.id == id) &&
-            (identical(other.tipo, tipo) || other.tipo == tipo) &&
             (identical(other.titulo, titulo) || other.titulo == titulo) &&
             (identical(other.observacao, observacao) ||
                 other.observacao == observacao) &&
+            (identical(other.tipo, tipo) || other.tipo == tipo) &&
             (identical(other.valor, valor) || other.valor == valor) &&
+            (identical(other.litros, litros) || other.litros == litros) &&
             (identical(other.odometro, odometro) ||
                 other.odometro == odometro) &&
-            (identical(other.date, date) || other.date == date));
+            (identical(other.veiculoId, veiculoId) ||
+                other.veiculoId == veiculoId) &&
+            (identical(other.data, data) || other.data == data));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, id, tipo, titulo, observacao, valor, odometro, date);
+  int get hashCode => Object.hash(runtimeType, id, titulo, observacao, tipo,
+      valor, litros, odometro, veiculoId, data);
 
   @JsonKey(ignore: true)
   @override
@@ -262,14 +303,17 @@ class _$LinhaDoTempoImpl extends _LinhaDoTempo {
 
 abstract class _LinhaDoTempo extends LinhaDoTempo {
   const factory _LinhaDoTempo(
-          {@JsonKey(includeIfNull: false) required final int id,
-          @JsonKey(includeIfNull: false) required final TipoLinhaDoTempo tipo,
-          @JsonKey(includeIfNull: false) required final String titulo,
-          @JsonKey(includeIfNull: false) required final String observacao,
-          @JsonKey(includeIfNull: false) required final double valor,
-          @JsonKey(includeIfNull: false) required final int odometro,
-          @JsonKey(includeIfNull: false) required final DateTime date}) =
-      _$LinhaDoTempoImpl;
+      {@JsonKey(includeIfNull: false) required final int id,
+      @JsonKey(includeIfNull: false) required final String titulo,
+      @JsonKey(includeIfNull: false) required final String? observacao,
+      @JsonKey(includeIfNull: false) required final TipoLinhaDoTempo tipo,
+      @JsonKey(includeIfNull: false) required final double valor,
+      @JsonKey(includeIfNull: false) required final double? litros,
+      @JsonKey(includeIfNull: false) required final double? odometro,
+      @JsonKey(includeIfNull: false) required final int? veiculoId,
+      @JsonKey(includeIfNull: false)
+      @AppDateTimeConverter()
+      final DateTime? data}) = _$LinhaDoTempoImpl;
   const _LinhaDoTempo._() : super._();
 
   factory _LinhaDoTempo.fromJson(Map<String, dynamic> json) =
@@ -280,22 +324,29 @@ abstract class _LinhaDoTempo extends LinhaDoTempo {
   int get id;
   @override
   @JsonKey(includeIfNull: false)
-  TipoLinhaDoTempo get tipo;
-  @override
-  @JsonKey(includeIfNull: false)
   String get titulo;
   @override
   @JsonKey(includeIfNull: false)
-  String get observacao;
+  String? get observacao;
+  @override
+  @JsonKey(includeIfNull: false)
+  TipoLinhaDoTempo get tipo;
   @override
   @JsonKey(includeIfNull: false)
   double get valor;
   @override
   @JsonKey(includeIfNull: false)
-  int get odometro;
+  double? get litros;
   @override
   @JsonKey(includeIfNull: false)
-  DateTime get date;
+  double? get odometro;
+  @override
+  @JsonKey(includeIfNull: false)
+  int? get veiculoId;
+  @override
+  @JsonKey(includeIfNull: false)
+  @AppDateTimeConverter()
+  DateTime? get data;
   @override
   @JsonKey(ignore: true)
   _$$LinhaDoTempoImplCopyWith<_$LinhaDoTempoImpl> get copyWith =>

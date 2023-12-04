@@ -90,6 +90,63 @@ CREATE TABLE IF NOT EXISTS servico (
     veiculoId   INTEGER CONSTRAINT fk_servico_veiculoId_veiculo_id REFERENCES veiculo (id) 
                         NOT NULL
 );''');
+            await db.execute('''
+CREATE VIEW linha_do_tempo_view (
+    id,
+    tipo,
+    titulo,
+    odometro,
+    observacao,
+    valor,
+    data,
+    litros,
+    veiculoId
+)
+AS
+    SELECT a.id,
+           'abastecimento' AS tipo,
+           a.tipoCombustivel AS titulo,
+           a.odometro,
+           a.observacao AS observacao,
+           a.valor,
+           a.data,
+           a.litros,
+           a.veiculoId
+      FROM abastecimento a
+    UNION ALL
+    SELECT d.id,
+           'despesa' AS tipo,
+           d.tipoDespesa AS titulo,
+           d.odometro,
+           d.observacao,
+           d.valor,
+           d.data,
+           NULL AS litros,
+           d.veiculoId
+      FROM despesa d
+    UNION ALL
+    SELECT r.id,
+           'receita' AS tipo,
+           r.tipoReceita AS titulo,
+           r.odometro,
+           r.observacao,
+           r.valor,
+           r.data,
+           NULL AS litros,
+           r.veiculoId
+      FROM receita r
+    UNION ALL
+    SELECT s.id,
+           'servico' AS tipo,
+           s.tipoServico AS titulo,
+           s.odometro,
+           s.observacao,
+           s.valor,
+           s.data,
+           NULL AS litros,
+           s.veiculoId
+      FROM servico s;
+''');
           }
         },
         // Set the version. This executes the onCreate function and provides a

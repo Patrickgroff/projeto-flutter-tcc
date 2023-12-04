@@ -1,3 +1,4 @@
+import 'package:common_widgets/common_widgets.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:gest_car/domain/linha_do_tempo/entities/tipo_linha_do_tempo.enum.dart';
 
@@ -11,12 +12,14 @@ class LinhaDoTempo with _$LinhaDoTempo {
   @JsonSerializable()
   const factory LinhaDoTempo({
     @JsonKey(includeIfNull: false) required final int id,
-    @JsonKey(includeIfNull: false) required final TipoLinhaDoTempo tipo,
     @JsonKey(includeIfNull: false) required final String titulo,
-    @JsonKey(includeIfNull: false) required final String observacao,
+    @JsonKey(includeIfNull: false) required final String? observacao,
+    @JsonKey(includeIfNull: false) required final TipoLinhaDoTempo tipo,
     @JsonKey(includeIfNull: false) required final double valor,
-    @JsonKey(includeIfNull: false) required final int odometro,
-    @JsonKey(includeIfNull: false) required final DateTime date,
+    @JsonKey(includeIfNull: false) required final double? litros,
+    @JsonKey(includeIfNull: false) required final double? odometro,
+    @JsonKey(includeIfNull: false) required final int? veiculoId,
+    @JsonKey(includeIfNull: false) @AppDateTimeConverter() final DateTime? data,
     //TODO Add all atributes
   }) = _LinhaDoTempo;
 

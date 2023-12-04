@@ -63,6 +63,7 @@ class RegistrarAbastecimentoPage extends StatelessWidget {
                                       ReactiveTextField(
                                         formControlName: 'odometro',
                                         decoration: const InputDecoration(labelText: 'Odômetro', prefixIcon: Icon(Icons.pin)),
+                                        keyboardType: TextInputType.number,
                                         textInputAction: TextInputAction.next,
                                       ),
                                       Spacing.v12,
@@ -75,13 +76,23 @@ class RegistrarAbastecimentoPage extends StatelessWidget {
                                       ReactiveTextField(
                                         formControlName: 'valor',
                                         decoration: const InputDecoration(labelText: 'Valor', prefixIcon: Icon(Icons.paid)),
+                                        keyboardType: TextInputType.number,
                                         textInputAction: TextInputAction.next,
+                                        validationMessages: {
+                                          ValidationMessage.required: (error) => 'O valor é obrigatório!',
+                                          ValidationMessage.min: (error) => 'valor inválido!',
+                                        },
                                       ),
                                       Spacing.v12,
                                       ReactiveTextField(
                                         formControlName: 'litros',
                                         decoration: const InputDecoration(labelText: 'Litros', prefixIcon: Icon(Icons.oil_barrel)),
+                                        keyboardType: TextInputType.number,
                                         textInputAction: TextInputAction.next,
+                                        validationMessages: {
+                                          ValidationMessage.required: (error) => 'Litros é obrigatório!',
+                                          ValidationMessage.min: (error) => 'Litros inválido!',
+                                        },
                                       ),
                                       Spacing.v12,
                                       ReactiveTextField(

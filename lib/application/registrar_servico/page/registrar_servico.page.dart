@@ -61,6 +61,7 @@ class RegistrarServicoPage extends StatelessWidget {
                                   ReactiveTextField(
                                     formControlName: 'odometro',
                                     decoration: const InputDecoration(labelText: 'Odômetro', prefixIcon: Icon(Icons.pin)),
+                                    keyboardType: TextInputType.number,
                                     textInputAction: TextInputAction.next,
                                   ),
                                   Spacing.v12,
@@ -71,10 +72,14 @@ class RegistrarServicoPage extends StatelessWidget {
                                   ),
                                   Spacing.v12,
                                   ReactiveTextField(
-                                    formControlName: 'valor',
-                                    decoration: const InputDecoration(labelText: 'Valor', prefixIcon: Icon(Icons.paid)),
-                                    textInputAction: TextInputAction.next,
-                                  ),
+                                      formControlName: 'valor',
+                                      decoration: const InputDecoration(labelText: 'Valor', prefixIcon: Icon(Icons.paid)),
+                                      keyboardType: TextInputType.number,
+                                      textInputAction: TextInputAction.next,
+                                      validationMessages: {
+                                        ValidationMessage.required: (error) => 'O Valor é obrigatório!',
+                                        ValidationMessage.min: (error) => 'Valor inválido!',
+                                      }),
                                   Spacing.v12,
                                   ReactiveTextField(
                                     formControlName: 'observacao',

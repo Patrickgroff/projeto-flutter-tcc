@@ -16,21 +16,33 @@ class LinhaDoTempoPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      drawer: const AppDrawerWidget(),
-      body: SafeArea(
-        child: BlocProvider(
-          create: (_) => getIt<LinhaDoTempoBloc>()..add(const LinhaDoTempoEvent.garregar()),
+    return BlocProvider(
+      create: (_) => getIt<LinhaDoTempoBloc>()
+        ..add(const LinhaDoTempoEvent.carregar())
+        ..add(const LinhaDoTempoEvent.iniciarFiltroListener()),
+      child: Scaffold(
+        drawer: const AppDrawerWidget(),
+        body: SafeArea(
           child: CustomScrollView(
             slivers: [
               const SliverAppBar(title: Text('Linha Do Tempo')),
-              LinhaDoTempoHeaderFiltroWidget(),
+              const LinhaDoTempoHeaderFiltroWidget(),
               BlocBuilder<LinhaDoTempoBloc, LinhaDoTempoState>(
                 buildWhen: (p, c) => c.maybeWhen(orElse: () => true, erro: (_) => false),
                 builder: (context, state) => state.maybeWhen(
                   orElse: () => SliverList.builder(itemCount: 6, itemBuilder: (context, index) => LinhaDoTempoSkeletonItemWidget(isFirst: index == 0, isLast: index == 5)),
                   vazio: () => const SliverFillRemaining(
                     child: Center(child: EmptyContainerWidget(icon: Icon(Icons.insights_rounded), title: Text('Vazio'), subTitle: Text('Nenhum evento encontrado!'))),
+                  ),
+                  erro: (message) => SliverFillRemaining(
+                    child: Center(
+                      child: ErrorContainerWidget(
+                        message: Column(
+                          children: [const Icon(Icons.warning_rounded, size: Layout.xlarge), Spacing.v12, Text(message)],
+                        ),
+                        onPressed: () => context.read<LinhaDoTempoBloc>().add(const LinhaDoTempoEvent.carregar()),
+                      ),
+                    ),
                   ),
                   successo: (items) => SliverList.builder(
                     itemCount: items.length,

@@ -19,7 +19,7 @@ class LinhaDoTempoItemWidget extends StatelessWidget {
     final title = theme.textTheme.titleLarge;
     final subtitle = theme.textTheme.bodyMedium?.copyWith(color: theme.textTheme.bodyMedium?.color?.withOpacity(0.72));
     final timeNow = DateTime.now().subtract(const Duration(days: 1));
-    final dataFormatada = item.date.isAfter(timeNow) ? timeago.format(item.date, locale: 'pt') : DateFormat.MMMd().add_Hm().format(item.date);
+    final dataFormatada = item.data?.isAfter(timeNow) == true ? timeago.format(item.data!, locale: 'pt') : DateFormat.MMMd().add_Hm().format(item.data!);
     final valorFormatado = NumberFormat.compactCurrency(locale: 'pt_BR', symbol: r'R$').format(item.valor);
     return TimelineTile(
       alignment: TimelineAlign.start,
@@ -28,9 +28,15 @@ class LinhaDoTempoItemWidget extends StatelessWidget {
       indicatorStyle: IndicatorStyle(
           width: 36,
           height: 36,
+          indicator: Material(
+            color: item.tipo.color,
+            shadowColor: item.tipo.color,
+            surfaceTintColor: Colors.white,
+            type: MaterialType.circle,
+            elevation: 4,
+            child: Icon(item.tipo.icon, color: Colors.white, size: 18),
+          ),
           padding: const EdgeInsets.fromLTRB(8, 2, 12, 2),
-          color: item.tipo.color,
-          iconStyle: IconStyle(color: Colors.white, iconData: item.tipo.icon, fontSize: 18),
           indicatorXY: 0.4),
       beforeLineStyle: const LineStyle(
         color: Colors.black12,
@@ -67,7 +73,7 @@ class LinhaDoTempoItemWidget extends StatelessWidget {
                     children: [
                       _TextWithIcon(text: '${item.odometro}', icon: const Icon(Icons.speed_rounded), textStyle: subtitle!),
                       Spacing.v4,
-                      _TextWithIcon(text: item.observacao, icon: const Icon(Icons.subject_rounded), textStyle: subtitle),
+                      _TextWithIcon(text: item.observacao ?? '', icon: const Icon(Icons.subject_rounded), textStyle: subtitle),
                     ],
                   )),
                   Spacing.h8,

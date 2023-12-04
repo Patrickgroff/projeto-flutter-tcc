@@ -113,7 +113,7 @@ class RegistrarVeiculoPage extends StatelessWidget {
                                     inputFormatters: [
                                       LengthLimitingTextInputFormatter(8),
                                       FilteringTextInputFormatter.singleLineFormatter,
-                                      //AppBRPlacaVeiculoTextInputFormatter(),
+                                      AppBRPlacaVeiculoTextInputFormatter(),
                                     ],
                                     keyboardType: TextInputType.text,
                                     textInputAction: TextInputAction.next,
@@ -126,11 +126,12 @@ class RegistrarVeiculoPage extends StatelessWidget {
                                   Spacing.v12,
                                   ReactiveTextField(
                                     formControlName: 'odometro',
-                                    decoration: const InputDecoration(labelText: 'Odômetro', prefixIcon: Icon(Icons.pin)),
+                                    textDirection: TextDirection.rtl,
+                                    decoration: const InputDecoration(labelText: 'Odômetro', prefixIcon: Icon(Icons.pin), suffixText: 'KM'),
                                     keyboardType: TextInputType.number,
                                     textInputAction: TextInputAction.next,
                                     validationMessages: {
-                                      ValidationMessage.required: (error) => 'O Odômetro é obrigatória!',
+                                      ValidationMessage.required: (error) => 'O Odômetro é obrigatório!',
                                       ValidationMessage.min: (error) => 'Odômetro inválido!',
                                     },
                                   ),

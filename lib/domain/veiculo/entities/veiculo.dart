@@ -19,5 +19,7 @@ class Veiculo with _$Veiculo {
     //TODO Add all atributes
   }) = _Veiculo;
 
+  String get iniciais => veiculo?.trim().isNotEmpty == true ? veiculo!.trim().split(RegExp(' +')).map((s) => s[0]).take(2).join().toUpperCase() : '';
+
   factory Veiculo.fromJson(Map<String, dynamic> json) => _$VeiculoFromJson(json);
 }

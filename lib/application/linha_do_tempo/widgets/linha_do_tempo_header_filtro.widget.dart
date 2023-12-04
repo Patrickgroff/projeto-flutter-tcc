@@ -2,33 +2,13 @@ import 'dart:math';
 
 import 'package:common_widgets/common_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:gest_car/application/linha_do_tempo/bloc/linha_do_tempo_bloc.dart';
 import 'package:gest_car/domain/linha_do_tempo/entities/tipo_linha_do_tempo.enum.dart';
 import 'package:reactive_forms/reactive_forms.dart';
 
-class LinhaDoTempoHeaderFiltroWidget extends StatefulWidget {
+class LinhaDoTempoHeaderFiltroWidget extends StatelessWidget {
   const LinhaDoTempoHeaderFiltroWidget({super.key});
-
-  @override
-  State<LinhaDoTempoHeaderFiltroWidget> createState() => _LinhaDoTempoHeaderFiltroWidgetState();
-}
-
-class _LinhaDoTempoHeaderFiltroWidgetState extends State<LinhaDoTempoHeaderFiltroWidget> {
-  late final FormGroup form;
-  @override
-  void initState() {
-    form = fb.group({
-      TipoLinhaDoTempo.abastecimento.name: true,
-      TipoLinhaDoTempo.despesa.name: true,
-      TipoLinhaDoTempo.receita.name: true,
-      TipoLinhaDoTempo.servico.name: true,
-    });
-
-    form.valueChanges.listen((dynamic value) {
-      //TODO atualizar a lista da linha do tempo
-    });
-
-    super.initState();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +21,7 @@ class _LinhaDoTempoHeaderFiltroWidgetState extends State<LinhaDoTempoHeaderFiltr
           minHeight: 52,
           maxHeight: 64,
           child: ReactiveForm(
-              formGroup: form,
+              formGroup: context.read<LinhaDoTempoBloc>().form,
               child: ListView.separated(
                 padding: const EdgeInsets.symmetric(horizontal: 12),
                 scrollDirection: Axis.horizontal,
